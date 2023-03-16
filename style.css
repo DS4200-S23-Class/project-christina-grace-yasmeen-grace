@@ -5,3 +5,15 @@ body {
 h1 {
     text-align: center;
 }
+
+
+.state {
+  stroke-width: 1;
+  stroke: #ffffff;
+}
+
+
+.state:hover {
+  fill: red;
+  cursor: pointer;
+}

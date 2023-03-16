@@ -1,0 +1,1721 @@
+State,Category,Year,AverageUnitPrice
+Alabama,Alcohol,2019.0,8.116496319181648
+Alabama,Alcohol,2020.0,8.532276032532742
+Alabama,Alcohol,2021.0,8.679920920003285
+Alabama,Alcohol,2022.0,8.837420914014942
+Alabama,Beverages,2019.0,2.2895191817170253
+Alabama,Beverages,2020.0,2.3889089229595735
+Alabama,Beverages,2021.0,2.57333750762896
+Alabama,Beverages,2022.0,2.8942914347264526
+Alabama,Commercially prepared items,2019.0,2.421890939123966
+Alabama,Commercially prepared items,2020.0,2.517346643601898
+Alabama,Commercially prepared items,2021.0,2.6995407828357707
+Alabama,Commercially prepared items,2022.0,3.0895401947160646
+Alabama,Dairy,2019.0,2.752352992659331
+Alabama,Dairy,2020.0,2.854251346762653
+Alabama,Dairy,2021.0,2.9519797818613855
+Alabama,Dairy,2022.0,3.3415436000549836
+Alabama,Fats and oils,2019.0,3.2521756499348156
+Alabama,Fats and oils,2020.0,3.3800737178393683
+Alabama,Fats and oils,2021.0,3.7233100902184555
+Alabama,Fats and oils,2022.0,4.679907769326369
+Alabama,Fruits,2019.0,2.545731314918583
+Alabama,Fruits,2020.0,2.648215733140112
+Alabama,Fruits,2021.0,2.8283925449501766
+Alabama,Fruits,2022.0,3.078671437741009
+Alabama,Grains,2019.0,2.1369278126568987
+Alabama,Grains,2020.0,2.201811024660572
+Alabama,Grains,2021.0,2.3076659879096937
+Alabama,Grains,2022.0,2.639098578383279
+Alabama,"Meats, eggs, and nuts",2019.0,4.164380440236103
+Alabama,"Meats, eggs, and nuts",2020.0,4.3547334348432845
+Alabama,"Meats, eggs, and nuts",2021.0,4.628393196352727
+Alabama,"Meats, eggs, and nuts",2022.0,5.183245633107275
+Alabama,Sugar and sweeteners,2019.0,2.7547759381511323
+Alabama,Sugar and sweeteners,2020.0,3.1812861088931923
+Alabama,Sugar and sweeteners,2021.0,3.486840887830618
+Alabama,Sugar and sweeteners,2022.0,3.9507635633738327
+Alabama,Vegetables,2019.0,1.7560909130055138
+Alabama,Vegetables,2020.0,1.8746463190704223
+Alabama,Vegetables,2021.0,1.9662899310913897
+Alabama,Vegetables,2022.0,2.196941700339194
+Arizona,Alcohol,2019.0,7.9754776237580565
+Arizona,Alcohol,2020.0,8.381013342422243
+Arizona,Alcohol,2021.0,8.525801500612054
+Arizona,Alcohol,2022.0,8.728740544758763
+Arizona,Beverages,2019.0,2.454311756368878
+Arizona,Beverages,2020.0,2.478936373079264
+Arizona,Beverages,2021.0,2.627039389849465
+Arizona,Beverages,2022.0,3.011618307127957
+Arizona,Commercially prepared items,2019.0,2.5877233157678154
+Arizona,Commercially prepared items,2020.0,2.6832085716628242
+Arizona,Commercially prepared items,2021.0,2.855152404016759
+Arizona,Commercially prepared items,2022.0,3.2481007930106247
+Arizona,Dairy,2019.0,2.581566002827384
+Arizona,Dairy,2020.0,2.7191423181096774
+Arizona,Dairy,2021.0,2.8221241932922547
+Arizona,Dairy,2022.0,3.1975846279776814
+Arizona,Fats and oils,2019.0,3.425718309568499
+Arizona,Fats and oils,2020.0,3.5892471513357997
+Arizona,Fats and oils,2021.0,3.7736606408110203
+Arizona,Fats and oils,2022.0,4.664536855674409
+Arizona,Fruits,2019.0,2.0534582548987577
+Arizona,Fruits,2020.0,2.114428011419199
+Arizona,Fruits,2021.0,2.2825629068219735
+Arizona,Fruits,2022.0,2.536313141626461
+Arizona,Grains,2019.0,2.148555765420214
+Arizona,Grains,2020.0,2.30157541454483
+Arizona,Grains,2021.0,2.397786193450864
+Arizona,Grains,2022.0,2.7026106246941137
+Arizona,"Meats, eggs, and nuts",2019.0,4.379858525364113
+Arizona,"Meats, eggs, and nuts",2020.0,4.545916396727405
+Arizona,"Meats, eggs, and nuts",2021.0,4.809481705105851
+Arizona,"Meats, eggs, and nuts",2022.0,5.3680457540792546
+Arizona,Sugar and sweeteners,2019.0,3.046449803808601
+Arizona,Sugar and sweeteners,2020.0,3.600097165930696
+Arizona,Sugar and sweeteners,2021.0,3.8117367441723484
+Arizona,Sugar and sweeteners,2022.0,4.29084538567466
+Arizona,Vegetables,2019.0,1.5653989506546162
+Arizona,Vegetables,2020.0,1.614026417346813
+Arizona,Vegetables,2021.0,1.653770398395129
+Arizona,Vegetables,2022.0,1.7976239127197593
+Arkansas,Alcohol,2019.0,7.553592174667873
+Arkansas,Alcohol,2020.0,8.123521924881693
+Arkansas,Alcohol,2021.0,8.507624228590952
+Arkansas,Alcohol,2022.0,9.029690535879418
+Arkansas,Beverages,2019.0,2.481428110805712
+Arkansas,Beverages,2020.0,2.56991787144207
+Arkansas,Beverages,2021.0,2.7268562963845264
+Arkansas,Beverages,2022.0,3.057531983125705
+Arkansas,Commercially prepared items,2019.0,2.3921516111989325
+Arkansas,Commercially prepared items,2020.0,2.504562019346225
+Arkansas,Commercially prepared items,2021.0,2.664439389067748
+Arkansas,Commercially prepared items,2022.0,3.0271707228962548
+Arkansas,Dairy,2019.0,2.7137718585512665
+Arkansas,Dairy,2020.0,2.852826914919996
+Arkansas,Dairy,2021.0,2.948382805143501
+Arkansas,Dairy,2022.0,3.338513692517939
+Arkansas,Fats and oils,2019.0,3.2832192577070605
+Arkansas,Fats and oils,2020.0,3.394150810262923
+Arkansas,Fats and oils,2021.0,3.7085204535583927
+Arkansas,Fats and oils,2022.0,4.651334520966361
+Arkansas,Fruits,2019.0,2.2557086039602092
+Arkansas,Fruits,2020.0,2.339294570935365
+Arkansas,Fruits,2021.0,2.5160454836703323
+Arkansas,Fruits,2022.0,2.7217779551433074
+Arkansas,Grains,2019.0,2.0734445754509854
+Arkansas,Grains,2020.0,2.1358360798702583
+Arkansas,Grains,2021.0,2.2464432691257814
+Arkansas,Grains,2022.0,2.560717761122653
+Arkansas,"Meats, eggs, and nuts",2019.0,4.187297432134098
+Arkansas,"Meats, eggs, and nuts",2020.0,4.310171329367446
+Arkansas,"Meats, eggs, and nuts",2021.0,4.635828201019385
+Arkansas,"Meats, eggs, and nuts",2022.0,5.135343486905572
+Arkansas,Sugar and sweeteners,2019.0,2.9867269789271114
+Arkansas,Sugar and sweeteners,2020.0,3.397385241520827
+Arkansas,Sugar and sweeteners,2021.0,3.5877382587596847
+Arkansas,Sugar and sweeteners,2022.0,4.073947456036241
+Arkansas,Vegetables,2019.0,1.6062889092678936
+Arkansas,Vegetables,2020.0,1.7211839434294764
+Arkansas,Vegetables,2021.0,1.7865308092799146
+Arkansas,Vegetables,2022.0,1.9760594307880475
+California,Alcohol,2019.0,9.601381799079151
+California,Alcohol,2020.0,9.992391973904294
+California,Alcohol,2021.0,10.09594088695823
+California,Alcohol,2022.0,10.235320296969286
+California,Beverages,2019.0,2.5888758185060987
+California,Beverages,2020.0,2.66580526084482
+California,Beverages,2021.0,2.8219510104098973
+California,Beverages,2022.0,3.1571530230235783
+California,Commercially prepared items,2019.0,2.8795407403202202
+California,Commercially prepared items,2020.0,2.981399128752287
+California,Commercially prepared items,2021.0,3.1270277814637932
+California,Commercially prepared items,2022.0,3.562750936711845
+California,Dairy,2019.0,3.1543358379071
+California,Dairy,2020.0,3.2686802044895966
+California,Dairy,2021.0,3.336189925296833
+California,Dairy,2022.0,3.684319911200743
+California,Fats and oils,2019.0,4.148789479434113
+California,Fats and oils,2020.0,4.374690944450081
+California,Fats and oils,2021.0,4.482289611882295
+California,Fats and oils,2022.0,5.438830281195025
+California,Fruits,2019.0,2.583537685776866
+California,Fruits,2020.0,2.675366540791976
+California,Fruits,2021.0,2.8139298413213876
+California,Fruits,2022.0,3.1141294979315752
+California,Grains,2019.0,2.477084459170927
+California,Grains,2020.0,2.6775738384126013
+California,Grains,2021.0,2.7810660728322314
+California,Grains,2022.0,3.0822323840287695
+California,"Meats, eggs, and nuts",2019.0,4.896820688598422
+California,"Meats, eggs, and nuts",2020.0,5.133633067319171
+California,"Meats, eggs, and nuts",2021.0,5.447238594822607
+California,"Meats, eggs, and nuts",2022.0,5.979815348672427
+California,Sugar and sweeteners,2019.0,3.286917745714203
+California,Sugar and sweeteners,2020.0,3.7620673994016696
+California,Sugar and sweeteners,2021.0,3.937748992427759
+California,Sugar and sweeteners,2022.0,4.505676589192309
+California,Vegetables,2019.0,1.9298631182529842
+California,Vegetables,2020.0,1.9967817639969483
+California,Vegetables,2021.0,2.02684295370204
+California,Vegetables,2022.0,2.1834138802175476
+Colorado,Alcohol,2019.0,8.655283056131934
+Colorado,Alcohol,2020.0,8.716978190946113
+Colorado,Alcohol,2021.0,9.014823502739535
+Colorado,Alcohol,2022.0,9.298979106946371
+Colorado,Beverages,2019.0,2.707386902283554
+Colorado,Beverages,2020.0,2.771647433531795
+Colorado,Beverages,2021.0,2.909440654081868
+Colorado,Beverages,2022.0,3.2876594531690237
+Colorado,Commercially prepared items,2019.0,2.7654798555239455
+Colorado,Commercially prepared items,2020.0,2.8363674782710415
+Colorado,Commercially prepared items,2021.0,2.99181233248026
+Colorado,Commercially prepared items,2022.0,3.441912815040969
+Colorado,Dairy,2019.0,2.913749438671936
+Colorado,Dairy,2020.0,3.0503094412407106
+Colorado,Dairy,2021.0,3.10805770897862
+Colorado,Dairy,2022.0,3.4691724220970506
+Colorado,Fats and oils,2019.0,3.982666174472492
+Colorado,Fats and oils,2020.0,4.100132201790251
+Colorado,Fats and oils,2021.0,4.263547607730437
+Colorado,Fats and oils,2022.0,5.263543071960942
+Colorado,Fruits,2019.0,2.3280941883417348
+Colorado,Fruits,2020.0,2.4143797751481575
+Colorado,Fruits,2021.0,2.577667841036051
+Colorado,Fruits,2022.0,2.856593159785973
+Colorado,Grains,2019.0,2.4241717498206232
+Colorado,Grains,2020.0,2.520606374778503
+Colorado,Grains,2021.0,2.617142757331624
+Colorado,Grains,2022.0,3.002924816495293
+Colorado,"Meats, eggs, and nuts",2019.0,4.892530831040668
+Colorado,"Meats, eggs, and nuts",2020.0,4.962802320586764
+Colorado,"Meats, eggs, and nuts",2021.0,5.238045180563717
+Colorado,"Meats, eggs, and nuts",2022.0,5.814656429707809
+Colorado,Sugar and sweeteners,2019.0,3.491115216321401
+Colorado,Sugar and sweeteners,2020.0,3.972420845320308
+Colorado,Sugar and sweeteners,2021.0,4.078846586196852
+Colorado,Sugar and sweeteners,2022.0,4.722229911621626
+Colorado,Vegetables,2019.0,1.8320539142266397
+Colorado,Vegetables,2020.0,1.8447129069505084
+Colorado,Vegetables,2021.0,1.9155683297993535
+Colorado,Vegetables,2022.0,2.0879124568535414
+Connecticut,Alcohol,2019.0,9.183857739830367
+Connecticut,Alcohol,2020.0,9.584503575893681
+Connecticut,Alcohol,2021.0,9.585344989252679
+Connecticut,Alcohol,2022.0,10.444052028226158
+Connecticut,Beverages,2019.0,2.6622806366650833
+Connecticut,Beverages,2020.0,2.7828153904945165
+Connecticut,Beverages,2021.0,2.9291924701209995
+Connecticut,Beverages,2022.0,3.2811582354052646
+Connecticut,Commercially prepared items,2019.0,2.9343837166397004
+Connecticut,Commercially prepared items,2020.0,3.0626095705641827
+Connecticut,Commercially prepared items,2021.0,3.194541339618569
+Connecticut,Commercially prepared items,2022.0,3.595667640669913
+Connecticut,Dairy,2019.0,2.918274501888625
+Connecticut,Dairy,2020.0,3.104371298012704
+Connecticut,Dairy,2021.0,3.15616060082358
+Connecticut,Dairy,2022.0,3.4855823923050426
+Connecticut,Fats and oils,2019.0,4.262422798221791
+Connecticut,Fats and oils,2020.0,4.446068026971869
+Connecticut,Fats and oils,2021.0,4.521254789000986
+Connecticut,Fats and oils,2022.0,5.488268269639513
+Connecticut,Fruits,2019.0,2.9248812199738166
+Connecticut,Fruits,2020.0,3.0557560055205526
+Connecticut,Fruits,2021.0,3.2269468832756156
+Connecticut,Fruits,2022.0,3.4850551178734555
+Connecticut,Grains,2019.0,2.394934209258155
+Connecticut,Grains,2020.0,2.616510257114282
+Connecticut,Grains,2021.0,2.7162377121751984
+Connecticut,Grains,2022.0,3.061863447490792
+Connecticut,"Meats, eggs, and nuts",2019.0,5.11168869842284
+Connecticut,"Meats, eggs, and nuts",2020.0,5.327874994549011
+Connecticut,"Meats, eggs, and nuts",2021.0,5.571059952634755
+Connecticut,"Meats, eggs, and nuts",2022.0,6.0049067037113515
+Connecticut,Sugar and sweeteners,2019.0,3.074149481747208
+Connecticut,Sugar and sweeteners,2020.0,3.6682917622786513
+Connecticut,Sugar and sweeteners,2021.0,3.882826735489205
+Connecticut,Sugar and sweeteners,2022.0,4.396055958336794
+Connecticut,Vegetables,2019.0,2.1546277786371437
+Connecticut,Vegetables,2020.0,2.2061693905647486
+Connecticut,Vegetables,2021.0,2.2667093471604063
+Connecticut,Vegetables,2022.0,2.425185312490283
+Florida,Alcohol,2019.0,8.69839380555288
+Florida,Alcohol,2020.0,8.981009168587118
+Florida,Alcohol,2021.0,9.14894490607434
+Florida,Alcohol,2022.0,9.43896149061356
+Florida,Beverages,2019.0,2.604809395413497
+Florida,Beverages,2020.0,2.7107960955947834
+Florida,Beverages,2021.0,2.861056032099126
+Florida,Beverages,2022.0,3.204396984623513
+Florida,Commercially prepared items,2019.0,2.9614687849159975
+Florida,Commercially prepared items,2020.0,3.043951749841216
+Florida,Commercially prepared items,2021.0,3.199439626539333
+Florida,Commercially prepared items,2022.0,3.593176388427599
+Florida,Dairy,2019.0,3.002417450023015
+Florida,Dairy,2020.0,3.1310834957950187
+Florida,Dairy,2021.0,3.212830331731079
+Florida,Dairy,2022.0,3.559509949475249
+Florida,Fats and oils,2019.0,3.990323880370958
+Florida,Fats and oils,2020.0,4.161216057688107
+Florida,Fats and oils,2021.0,4.354515064062743
+Florida,Fats and oils,2022.0,5.313871521152499
+Florida,Fruits,2019.0,2.5665217757458025
+Florida,Fruits,2020.0,2.68602974903125
+Florida,Fruits,2021.0,2.850054408252379
+Florida,Fruits,2022.0,3.07797746203593
+Florida,Grains,2019.0,2.436322579793704
+Florida,Grains,2020.0,2.5462279449928946
+Florida,Grains,2021.0,2.6303810014881455
+Florida,Grains,2022.0,2.980489629659052
+Florida,"Meats, eggs, and nuts",2019.0,4.964438961077572
+Florida,"Meats, eggs, and nuts",2020.0,5.19695748919471
+Florida,"Meats, eggs, and nuts",2021.0,5.442715353351297
+Florida,"Meats, eggs, and nuts",2022.0,5.964919851215411
+Florida,Sugar and sweeteners,2019.0,3.1984974291184853
+Florida,Sugar and sweeteners,2020.0,3.6617606641750178
+Florida,Sugar and sweeteners,2021.0,3.814738927020151
+Florida,Sugar and sweeteners,2022.0,4.24435995143573
+Florida,Vegetables,2019.0,2.063126048673119
+Florida,Vegetables,2020.0,2.1381998652502427
+Florida,Vegetables,2021.0,2.185626183410295
+Florida,Vegetables,2022.0,2.378664928390188
+Georgia,Alcohol,2019.0,6.629534710244082
+Georgia,Alcohol,2020.0,6.971731525614197
+Georgia,Alcohol,2021.0,7.111776990111159
+Georgia,Alcohol,2022.0,7.409430151187689
+Georgia,Beverages,2019.0,2.4001404948494836
+Georgia,Beverages,2020.0,2.4806294853461357
+Georgia,Beverages,2021.0,2.6526949471645582
+Georgia,Beverages,2022.0,2.9880536307113936
+Georgia,Commercially prepared items,2019.0,2.5061629671910293
+Georgia,Commercially prepared items,2020.0,2.606810542380766
+Georgia,Commercially prepared items,2021.0,2.7771213039482796
+Georgia,Commercially prepared items,2022.0,3.188489097842813
+Georgia,Dairy,2019.0,2.718376138244624
+Georgia,Dairy,2020.0,2.822129582491857
+Georgia,Dairy,2021.0,2.9029876180706444
+Georgia,Dairy,2022.0,3.2878026711173507
+Georgia,Fats and oils,2019.0,3.4093548202935016
+Georgia,Fats and oils,2020.0,3.5368233836911807
+Georgia,Fats and oils,2021.0,3.818821567421859
+Georgia,Fats and oils,2022.0,4.83490814089857
+Georgia,Fruits,2019.0,2.488052358614048
+Georgia,Fruits,2020.0,2.545298100583175
+Georgia,Fruits,2021.0,2.7016849618784486
+Georgia,Fruits,2022.0,2.9745092119591607
+Georgia,Grains,2019.0,2.2277092215955516
+Georgia,Grains,2020.0,2.321854667167315
+Georgia,Grains,2021.0,2.4258258753528343
+Georgia,Grains,2022.0,2.7859442117736157
+Georgia,"Meats, eggs, and nuts",2019.0,4.274152499361299
+Georgia,"Meats, eggs, and nuts",2020.0,4.509362737908654
+Georgia,"Meats, eggs, and nuts",2021.0,4.789741444680169
+Georgia,"Meats, eggs, and nuts",2022.0,5.367879809897182
+Georgia,Sugar and sweeteners,2019.0,2.980094369564795
+Georgia,Sugar and sweeteners,2020.0,3.432928865670107
+Georgia,Sugar and sweeteners,2021.0,3.620661731139999
+Georgia,Sugar and sweeteners,2022.0,4.128021452574745
+Georgia,Vegetables,2019.0,1.8041723498441655
+Georgia,Vegetables,2020.0,1.9021324086796543
+Georgia,Vegetables,2021.0,1.9759483655327033
+Georgia,Vegetables,2022.0,2.189568937538317
+Illinois,Alcohol,2019.0,8.983786760567524
+Illinois,Alcohol,2020.0,9.282170574133312
+Illinois,Alcohol,2021.0,9.423435587428813
+Illinois,Alcohol,2022.0,9.638994093317171
+Illinois,Beverages,2019.0,2.6298257675331227
+Illinois,Beverages,2020.0,2.7123439827710203
+Illinois,Beverages,2021.0,2.8765445469377164
+Illinois,Beverages,2022.0,3.248776940421798
+Illinois,Commercially prepared items,2019.0,2.7352940394517913
+Illinois,Commercially prepared items,2020.0,2.8257575800241828
+Illinois,Commercially prepared items,2021.0,2.9790479854757885
+Illinois,Commercially prepared items,2022.0,3.3673079783256443
+Illinois,Dairy,2019.0,2.6377296482059274
+Illinois,Dairy,2020.0,2.765838981720155
+Illinois,Dairy,2021.0,2.8723674503697842
+Illinois,Dairy,2022.0,3.2359311118952205
+Illinois,Fats and oils,2019.0,3.479284147503485
+Illinois,Fats and oils,2020.0,3.7275928370959823
+Illinois,Fats and oils,2021.0,3.939461902552853
+Illinois,Fats and oils,2022.0,4.87641150605858
+Illinois,Fruits,2019.0,2.5244553219564896
+Illinois,Fruits,2020.0,2.537072175005835
+Illinois,Fruits,2021.0,2.6645032877926034
+Illinois,Fruits,2022.0,2.900690608087349
+Illinois,Grains,2019.0,2.0366814746415574
+Illinois,Grains,2020.0,2.152417400444088
+Illinois,Grains,2021.0,2.2619365992702325
+Illinois,Grains,2022.0,2.634377625331314
+Illinois,"Meats, eggs, and nuts",2019.0,4.385574752942265
+Illinois,"Meats, eggs, and nuts",2020.0,4.561148520961837
+Illinois,"Meats, eggs, and nuts",2021.0,4.813028247553994
+Illinois,"Meats, eggs, and nuts",2022.0,5.339660958294467
+Illinois,Sugar and sweeteners,2019.0,2.980124575601123
+Illinois,Sugar and sweeteners,2020.0,3.506741712629448
+Illinois,Sugar and sweeteners,2021.0,3.682530444998661
+Illinois,Sugar and sweeteners,2022.0,4.174568023712705
+Illinois,Vegetables,2019.0,1.8138119571436928
+Illinois,Vegetables,2020.0,1.895601082525786
+Illinois,Vegetables,2021.0,1.9619103249592962
+Illinois,Vegetables,2022.0,2.157477570216217
+Indiana,Alcohol,2019.0,11.117063342752969
+Indiana,Alcohol,2020.0,11.41511448124174
+Indiana,Alcohol,2021.0,11.686413639884309
+Indiana,Alcohol,2022.0,12.413037439513737
+Indiana,Beverages,2019.0,2.5039189151343355
+Indiana,Beverages,2020.0,2.555801557364792
+Indiana,Beverages,2021.0,2.717108100326419
+Indiana,Beverages,2022.0,3.0932130393459265
+Indiana,Commercially prepared items,2019.0,2.489027534904489
+Indiana,Commercially prepared items,2020.0,2.568371655657349
+Indiana,Commercially prepared items,2021.0,2.721867366634709
+Indiana,Commercially prepared items,2022.0,3.1092634787709046
+Indiana,Dairy,2019.0,2.4653392655151163
+Indiana,Dairy,2020.0,2.560960150358899
+Indiana,Dairy,2021.0,2.6818688902122534
+Indiana,Dairy,2022.0,3.068068777192023
+Indiana,Fats and oils,2019.0,3.249973953381591
+Indiana,Fats and oils,2020.0,3.3711157059697956
+Indiana,Fats and oils,2021.0,3.607825027744497
+Indiana,Fats and oils,2022.0,4.505304493752943
+Indiana,Fruits,2019.0,2.27205936042355
+Indiana,Fruits,2020.0,2.3203115455163767
+Indiana,Fruits,2021.0,2.5143695272966626
+Indiana,Fruits,2022.0,2.804858078276516
+Indiana,Grains,2019.0,2.020273906719799
+Indiana,Grains,2020.0,2.07062905435134
+Indiana,Grains,2021.0,2.1990864740514438
+Indiana,Grains,2022.0,2.5346872352060266
+Indiana,"Meats, eggs, and nuts",2019.0,4.007953926250403
+Indiana,"Meats, eggs, and nuts",2020.0,4.16085454742627
+Indiana,"Meats, eggs, and nuts",2021.0,4.431692834322262
+Indiana,"Meats, eggs, and nuts",2022.0,4.970750023984603
+Indiana,Sugar and sweeteners,2019.0,2.7590043544578458
+Indiana,Sugar and sweeteners,2020.0,3.2002643781062496
+Indiana,Sugar and sweeteners,2021.0,3.3767167786751604
+Indiana,Sugar and sweeteners,2022.0,3.8553378006282037
+Indiana,Vegetables,2019.0,1.6773889615636353
+Indiana,Vegetables,2020.0,1.7519526708760802
+Indiana,Vegetables,2021.0,1.8323769715667693
+Indiana,Vegetables,2022.0,2.037096719211836
+Iowa,Alcohol,2019.0,9.543092742460423
+Iowa,Alcohol,2020.0,9.891103312829895
+Iowa,Alcohol,2021.0,10.133383047513663
+Iowa,Alcohol,2022.0,10.404558183740326
+Iowa,Beverages,2019.0,2.476388671009436
+Iowa,Beverages,2020.0,2.5437996144778343
+Iowa,Beverages,2021.0,2.6649602125323613
+Iowa,Beverages,2022.0,2.9777518802341603
+Iowa,Commercially prepared items,2019.0,2.675064695791263
+Iowa,Commercially prepared items,2020.0,2.793286230577618
+Iowa,Commercially prepared items,2021.0,2.9229534483588555
+Iowa,Commercially prepared items,2022.0,3.290690785986284
+Iowa,Dairy,2019.0,2.6188144779398383
+Iowa,Dairy,2020.0,2.7507677403732873
+Iowa,Dairy,2021.0,2.8229334531130172
+Iowa,Dairy,2022.0,3.184831578017407
+Iowa,Fats and oils,2019.0,3.3018353976480883
+Iowa,Fats and oils,2020.0,3.4134716077874057
+Iowa,Fats and oils,2021.0,3.6452828455933712
+Iowa,Fats and oils,2022.0,4.413073528233755
+Iowa,Fruits,2019.0,2.650870410061493
+Iowa,Fruits,2020.0,2.7353836262029083
+Iowa,Fruits,2021.0,2.9186185429018208
+Iowa,Fruits,2022.0,3.0947159953345422
+Iowa,Grains,2019.0,2.2091547678655488
+Iowa,Grains,2020.0,2.2518517348242257
+Iowa,Grains,2021.0,2.359435823196163
+Iowa,Grains,2022.0,2.690528754735405
+Iowa,"Meats, eggs, and nuts",2019.0,4.341651056775268
+Iowa,"Meats, eggs, and nuts",2020.0,4.471559240521649
+Iowa,"Meats, eggs, and nuts",2021.0,4.677747042677551
+Iowa,"Meats, eggs, and nuts",2022.0,5.173329963298774
+Iowa,Sugar and sweeteners,2019.0,2.6256120490791064
+Iowa,Sugar and sweeteners,2020.0,3.1153800710471478
+Iowa,Sugar and sweeteners,2021.0,3.3155057628829807
+Iowa,Sugar and sweeteners,2022.0,3.6926378964352593
+Iowa,Vegetables,2019.0,1.759065489133057
+Iowa,Vegetables,2020.0,1.8731738204170396
+Iowa,Vegetables,2021.0,1.9454372987991542
+Iowa,Vegetables,2022.0,2.1433048623159188
+Kansas,Alcohol,2019.0,8.876812208403932
+Kansas,Alcohol,2020.0,9.411234054574347
+Kansas,Alcohol,2021.0,9.989766295691876
+Kansas,Alcohol,2022.0,10.527766967431043
+Kansas,Beverages,2019.0,2.5645948564078234
+Kansas,Beverages,2020.0,2.6079515835776226
+Kansas,Beverages,2021.0,2.751147959612072
+Kansas,Beverages,2022.0,3.11656491186513
+Kansas,Commercially prepared items,2019.0,2.6126159143217955
+Kansas,Commercially prepared items,2020.0,2.687685904188042
+Kansas,Commercially prepared items,2021.0,2.839052197075049
+Kansas,Commercially prepared items,2022.0,3.2409124063503287
+Kansas,Dairy,2019.0,2.6323068661461524
+Kansas,Dairy,2020.0,2.7422086078544865
+Kansas,Dairy,2021.0,2.827068516073572
+Kansas,Dairy,2022.0,3.224202456202376
+Kansas,Fats and oils,2019.0,3.3185563835552925
+Kansas,Fats and oils,2020.0,3.4257489531041347
+Kansas,Fats and oils,2021.0,3.667917715436279
+Kansas,Fats and oils,2022.0,4.614886299704843
+Kansas,Fruits,2019.0,2.4200291985559144
+Kansas,Fruits,2020.0,2.4612804462800044
+Kansas,Fruits,2021.0,2.658634384725721
+Kansas,Fruits,2022.0,2.9138407761411713
+Kansas,Grains,2019.0,2.1113468964863804
+Kansas,Grains,2020.0,2.2119000405108427
+Kansas,Grains,2021.0,2.3044985878667616
+Kansas,Grains,2022.0,2.64941428511502
+Kansas,"Meats, eggs, and nuts",2019.0,4.340998928573499
+Kansas,"Meats, eggs, and nuts",2020.0,4.447943659257559
+Kansas,"Meats, eggs, and nuts",2021.0,4.7108185601158645
+Kansas,"Meats, eggs, and nuts",2022.0,5.267331781041978
+Kansas,Sugar and sweeteners,2019.0,2.810387068304151
+Kansas,Sugar and sweeteners,2020.0,3.264715769853978
+Kansas,Sugar and sweeteners,2021.0,3.4009941546246196
+Kansas,Sugar and sweeteners,2022.0,3.9056842769793367
+Kansas,Vegetables,2019.0,1.6314477601091704
+Kansas,Vegetables,2020.0,1.731148027884943
+Kansas,Vegetables,2021.0,1.8036305514914057
+Kansas,Vegetables,2022.0,1.9998804859628452
+Kentucky,Alcohol,2019.0,8.62032134882208
+Kentucky,Alcohol,2020.0,9.077360948785993
+Kentucky,Alcohol,2021.0,9.28403235852992
+Kentucky,Alcohol,2022.0,9.670620698005104
+Kentucky,Beverages,2019.0,2.4596010551006935
+Kentucky,Beverages,2020.0,2.5432349735670194
+Kentucky,Beverages,2021.0,2.717787159001627
+Kentucky,Beverages,2022.0,3.07502958049967
+Kentucky,Commercially prepared items,2019.0,2.376150123865259
+Kentucky,Commercially prepared items,2020.0,2.455637653958683
+Kentucky,Commercially prepared items,2021.0,2.617445364265379
+Kentucky,Commercially prepared items,2022.0,2.983689404874261
+Kentucky,Dairy,2019.0,2.4399321470732036
+Kentucky,Dairy,2020.0,2.5349522481168174
+Kentucky,Dairy,2021.0,2.649572451159435
+Kentucky,Dairy,2022.0,3.0478893341146645
+Kentucky,Fats and oils,2019.0,3.0747560221396597
+Kentucky,Fats and oils,2020.0,3.2008186263132083
+Kentucky,Fats and oils,2021.0,3.4672370742150593
+Kentucky,Fats and oils,2022.0,4.337958520722875
+Kentucky,Fruits,2019.0,2.2866418236842367
+Kentucky,Fruits,2020.0,2.343751628463697
+Kentucky,Fruits,2021.0,2.521973928091538
+Kentucky,Fruits,2022.0,2.7443777780975505
+Kentucky,Grains,2019.0,1.9893791263738931
+Kentucky,Grains,2020.0,2.036664897795481
+Kentucky,Grains,2021.0,2.164451586174892
+Kentucky,Grains,2022.0,2.502023585544826
+Kentucky,"Meats, eggs, and nuts",2019.0,3.9455865086467585
+Kentucky,"Meats, eggs, and nuts",2020.0,4.038893841410073
+Kentucky,"Meats, eggs, and nuts",2021.0,4.312922968860953
+Kentucky,"Meats, eggs, and nuts",2022.0,4.786164895219421
+Kentucky,Sugar and sweeteners,2019.0,2.6709087982839463
+Kentucky,Sugar and sweeteners,2020.0,3.062030604426604
+Kentucky,Sugar and sweeteners,2021.0,3.3195032656550216
+Kentucky,Sugar and sweeteners,2022.0,3.80582111035886
+Kentucky,Vegetables,2019.0,1.640910575348113
+Kentucky,Vegetables,2020.0,1.7347445476770953
+Kentucky,Vegetables,2021.0,1.8157603694767717
+Kentucky,Vegetables,2022.0,2.0196244730786943
+Louisiana,Alcohol,2019.0,8.101758444623691
+Louisiana,Alcohol,2020.0,8.433731747268371
+Louisiana,Alcohol,2021.0,8.772675803479054
+Louisiana,Alcohol,2022.0,9.115849809688907
+Louisiana,Beverages,2019.0,2.5378448354955085
+Louisiana,Beverages,2020.0,2.625472279435652
+Louisiana,Beverages,2021.0,2.7780978483893017
+Louisiana,Beverages,2022.0,3.104171624542715
+Louisiana,Commercially prepared items,2019.0,2.457153444216623
+Louisiana,Commercially prepared items,2020.0,2.562705298995889
+Louisiana,Commercially prepared items,2021.0,2.7049223568530563
+Louisiana,Commercially prepared items,2022.0,3.055539311298887
+Louisiana,Dairy,2019.0,2.9533699346001305
+Louisiana,Dairy,2020.0,3.0700294469673564
+Louisiana,Dairy,2021.0,3.1172706330268323
+Louisiana,Dairy,2022.0,3.4555462452741175
+Louisiana,Fats and oils,2019.0,3.5386281572437523
+Louisiana,Fats and oils,2020.0,3.6744063595695846
+Louisiana,Fats and oils,2021.0,3.9941354179194017
+Louisiana,Fats and oils,2022.0,4.930959088107467
+Louisiana,Fruits,2019.0,2.5162851554608308
+Louisiana,Fruits,2020.0,2.6165940031022887
+Louisiana,Fruits,2021.0,2.7756327613636147
+Louisiana,Fruits,2022.0,3.018779084517338
+Louisiana,Grains,2019.0,2.2810136744222484
+Louisiana,Grains,2020.0,2.387531705168924
+Louisiana,Grains,2021.0,2.4735536928905266
+Louisiana,Grains,2022.0,2.7975219863254153
+Louisiana,"Meats, eggs, and nuts",2019.0,4.392492675748934
+Louisiana,"Meats, eggs, and nuts",2020.0,4.530357127782973
+Louisiana,"Meats, eggs, and nuts",2021.0,4.890801858364182
+Louisiana,"Meats, eggs, and nuts",2022.0,5.363005279836678
+Louisiana,Sugar and sweeteners,2019.0,2.984652288905885
+Louisiana,Sugar and sweeteners,2020.0,3.3807774329349334
+Louisiana,Sugar and sweeteners,2021.0,3.6029655100993363
+Louisiana,Sugar and sweeteners,2022.0,4.0727991655809985
+Louisiana,Vegetables,2019.0,1.7404657599933027
+Louisiana,Vegetables,2020.0,1.8574959859446207
+Louisiana,Vegetables,2021.0,1.9219310782982435
+Louisiana,Vegetables,2022.0,2.1065958682805515
+Maine,Alcohol,2019.0,8.59461644033773
+Maine,Alcohol,2020.0,9.21008257870447
+Maine,Alcohol,2021.0,9.377835622168963
+Maine,Alcohol,2022.0,9.791681191583942
+Maine,Beverages,2019.0,2.579729403580651
+Maine,Beverages,2020.0,2.6875623925770324
+Maine,Beverages,2021.0,2.8159968092780194
+Maine,Beverages,2022.0,3.115780905677813
+Maine,Commercially prepared items,2019.0,2.852722709930584
+Maine,Commercially prepared items,2020.0,2.958214626731205
+Maine,Commercially prepared items,2021.0,3.0942495358721462
+Maine,Commercially prepared items,2022.0,3.4808803683159186
+Maine,Dairy,2019.0,2.9222158958937503
+Maine,Dairy,2020.0,3.0736026641075203
+Maine,Dairy,2021.0,3.120950799507995
+Maine,Dairy,2022.0,3.4027589289611555
+Maine,Fats and oils,2019.0,3.8792629067621336
+Maine,Fats and oils,2020.0,4.049774216331198
+Maine,Fats and oils,2021.0,4.199948819518779
+Maine,Fats and oils,2022.0,4.964776377814325
+Maine,Fruits,2019.0,2.637522323295019
+Maine,Fruits,2020.0,2.857814087371536
+Maine,Fruits,2021.0,3.030443934107384
+Maine,Fruits,2022.0,3.2448628187122295
+Maine,Grains,2019.0,2.6435484650649337
+Maine,Grains,2020.0,2.7007257224234844
+Maine,Grains,2021.0,2.807736925868198
+Maine,Grains,2022.0,3.1200026981233404
+Maine,"Meats, eggs, and nuts",2019.0,4.740780654277506
+Maine,"Meats, eggs, and nuts",2020.0,4.956849502466178
+Maine,"Meats, eggs, and nuts",2021.0,5.24737252114186
+Maine,"Meats, eggs, and nuts",2022.0,5.6959892050081615
+Maine,Sugar and sweeteners,2019.0,3.1208227358941047
+Maine,Sugar and sweeteners,2020.0,3.617243868534901
+Maine,Sugar and sweeteners,2021.0,3.8314675216711365
+Maine,Sugar and sweeteners,2022.0,4.3284959645466
+Maine,Vegetables,2019.0,2.0989644635204154
+Maine,Vegetables,2020.0,2.145813830264057
+Maine,Vegetables,2021.0,2.220728885857316
+Maine,Vegetables,2022.0,2.36553384006538
+Maryland,Alcohol,2019.0,8.363140736264922
+Maryland,Alcohol,2020.0,8.667723449054536
+Maryland,Alcohol,2021.0,8.667141576883228
+Maryland,Alcohol,2022.0,7.792388410705912
+Maryland,Beverages,2019.0,2.6223240774485834
+Maryland,Beverages,2020.0,2.746415346415171
+Maryland,Beverages,2021.0,2.9066450584257972
+Maryland,Beverages,2022.0,3.2639513913055165
+Maryland,Commercially prepared items,2019.0,2.8297047424834103
+Maryland,Commercially prepared items,2020.0,2.9172054858511207
+Maryland,Commercially prepared items,2021.0,3.0539093607130257
+Maryland,Commercially prepared items,2022.0,3.4589005602503105
+Maryland,Dairy,2019.0,2.907284364405176
+Maryland,Dairy,2020.0,3.0253612552755706
+Maryland,Dairy,2021.0,3.0879083400333935
+Maryland,Dairy,2022.0,3.421605115204716
+Maryland,Fats and oils,2019.0,4.010907409996821
+Maryland,Fats and oils,2020.0,4.18765836553304
+Maryland,Fats and oils,2021.0,4.382123298910771
+Maryland,Fats and oils,2022.0,5.329683644095337
+Maryland,Fruits,2019.0,2.914407395704505
+Maryland,Fruits,2020.0,3.0258305953941234
+Maryland,Fruits,2021.0,3.1981632851189112
+Maryland,Fruits,2022.0,3.4797666635456217
+Maryland,Grains,2019.0,2.485974913669836
+Maryland,Grains,2020.0,2.6336667527588835
+Maryland,Grains,2021.0,2.72850690229203
+Maryland,Grains,2022.0,3.071956711760027
+Maryland,"Meats, eggs, and nuts",2019.0,5.003507049693022
+Maryland,"Meats, eggs, and nuts",2020.0,5.227343749385922
+Maryland,"Meats, eggs, and nuts",2021.0,5.540989285371486
+Maryland,"Meats, eggs, and nuts",2022.0,5.975766757756087
+Maryland,Sugar and sweeteners,2019.0,3.1422104233784527
+Maryland,Sugar and sweeteners,2020.0,3.7035225665169262
+Maryland,Sugar and sweeteners,2021.0,3.9791632560721064
+Maryland,Sugar and sweeteners,2022.0,4.505498683856686
+Maryland,Vegetables,2019.0,2.1015793813528605
+Maryland,Vegetables,2020.0,2.1836286690268865
+Maryland,Vegetables,2021.0,2.258058127520863
+Maryland,Vegetables,2022.0,2.4415580862087016
+Massachusetts,Alcohol,2019.0,10.551165392436758
+Massachusetts,Alcohol,2020.0,10.178985813762267
+Massachusetts,Alcohol,2021.0,9.815847389882096
+Massachusetts,Alcohol,2022.0,9.730947073695779
+Massachusetts,Beverages,2019.0,2.716645472782192
+Massachusetts,Beverages,2020.0,2.8274232795552363
+Massachusetts,Beverages,2021.0,2.9777578980201884
+Massachusetts,Beverages,2022.0,3.3056195784755373
+Massachusetts,Commercially prepared items,2019.0,2.9325366138879763
+Massachusetts,Commercially prepared items,2020.0,3.0143051445563813
+Massachusetts,Commercially prepared items,2021.0,3.1584341028193017
+Massachusetts,Commercially prepared items,2022.0,3.5606792026041294
+Massachusetts,Dairy,2019.0,2.8627734812356667
+Massachusetts,Dairy,2020.0,3.032473398663013
+Massachusetts,Dairy,2021.0,3.094035244822982
+Massachusetts,Dairy,2022.0,3.4013005627412447
+Massachusetts,Fats and oils,2019.0,4.188294789906919
+Massachusetts,Fats and oils,2020.0,4.393423020258973
+Massachusetts,Fats and oils,2021.0,4.568357630174814
+Massachusetts,Fats and oils,2022.0,5.4438820280020765
+Massachusetts,Fruits,2019.0,2.9126358263364054
+Massachusetts,Fruits,2020.0,3.0786374901635294
+Massachusetts,Fruits,2021.0,3.251795888781582
+Massachusetts,Fruits,2022.0,3.5042998838487613
+Massachusetts,Grains,2019.0,2.474748839150643
+Massachusetts,Grains,2020.0,2.6444818989792718
+Massachusetts,Grains,2021.0,2.7563922146343334
+Massachusetts,Grains,2022.0,3.116018228138687
+Massachusetts,"Meats, eggs, and nuts",2019.0,5.099498173824033
+Massachusetts,"Meats, eggs, and nuts",2020.0,5.35451011081784
+Massachusetts,"Meats, eggs, and nuts",2021.0,5.593072136633039
+Massachusetts,"Meats, eggs, and nuts",2022.0,6.101667943097978
+Massachusetts,Sugar and sweeteners,2019.0,3.0867626859527144
+Massachusetts,Sugar and sweeteners,2020.0,3.645115131876275
+Massachusetts,Sugar and sweeteners,2021.0,3.8255715156213914
+Massachusetts,Sugar and sweeteners,2022.0,4.273440447283707
+Massachusetts,Vegetables,2019.0,2.149549194206225
+Massachusetts,Vegetables,2020.0,2.2009146649421862
+Massachusetts,Vegetables,2021.0,2.2799647872181676
+Massachusetts,Vegetables,2022.0,2.431774236196872
+Michigan,Alcohol,2019.0,8.128289581609014
+Michigan,Alcohol,2020.0,8.658118610417505
+Michigan,Alcohol,2021.0,8.79394683230474
+Michigan,Alcohol,2022.0,8.957258751681142
+Michigan,Beverages,2019.0,2.413037158973335
+Michigan,Beverages,2020.0,2.498611350554512
+Michigan,Beverages,2021.0,2.657964677498562
+Michigan,Beverages,2022.0,3.007150249450296
+Michigan,Commercially prepared items,2019.0,2.536853343683643
+Michigan,Commercially prepared items,2020.0,2.641366128220634
+Michigan,Commercially prepared items,2021.0,2.7955554554609403
+Michigan,Commercially prepared items,2022.0,3.1996233496080797
+Michigan,Dairy,2019.0,2.512568159180546
+Michigan,Dairy,2020.0,2.6272342541341973
+Michigan,Dairy,2021.0,2.7229994601479746
+Michigan,Dairy,2022.0,3.098898404211035
+Michigan,Fats and oils,2019.0,3.452888834204589
+Michigan,Fats and oils,2020.0,3.62163532386729
+Michigan,Fats and oils,2021.0,3.7923017074562875
+Michigan,Fats and oils,2022.0,4.648210622745692
+Michigan,Fruits,2019.0,2.454800678669574
+Michigan,Fruits,2020.0,2.5142184398047913
+Michigan,Fruits,2021.0,2.7491661812120074
+Michigan,Fruits,2022.0,2.980691746326398
+Michigan,Grains,2019.0,2.185714582129291
+Michigan,Grains,2020.0,2.2674701004367397
+Michigan,Grains,2021.0,2.389519123799678
+Michigan,Grains,2022.0,2.7174660423437387
+Michigan,"Meats, eggs, and nuts",2019.0,4.19710938378036
+Michigan,"Meats, eggs, and nuts",2020.0,4.369720777416211
+Michigan,"Meats, eggs, and nuts",2021.0,4.688768464712871
+Michigan,"Meats, eggs, and nuts",2022.0,5.291854499660178
+Michigan,Sugar and sweeteners,2019.0,2.8709167119703976
+Michigan,Sugar and sweeteners,2020.0,3.322370922864053
+Michigan,Sugar and sweeteners,2021.0,3.5484257902021885
+Michigan,Sugar and sweeteners,2022.0,4.083932088399356
+Michigan,Vegetables,2019.0,1.7711526418195331
+Michigan,Vegetables,2020.0,1.8368306428113048
+Michigan,Vegetables,2021.0,1.9271599922260152
+Michigan,Vegetables,2022.0,2.1310581873838803
+Minnesota,Alcohol,2019.0,11.893417775385824
+Minnesota,Alcohol,2020.0,12.294345948396536
+Minnesota,Alcohol,2021.0,12.796780549353182
+Minnesota,Alcohol,2022.0,13.245743376894323
+Minnesota,Beverages,2019.0,2.722767845320831
+Minnesota,Beverages,2020.0,2.7899927423740625
+Minnesota,Beverages,2021.0,2.9083746172716944
+Minnesota,Beverages,2022.0,3.2580854502811376
+Minnesota,Commercially prepared items,2019.0,2.78988114642138
+Minnesota,Commercially prepared items,2020.0,2.9047688041533375
+Minnesota,Commercially prepared items,2021.0,3.058687262054501
+Minnesota,Commercially prepared items,2022.0,3.483626579683539
+Minnesota,Dairy,2019.0,2.766521685260897
+Minnesota,Dairy,2020.0,2.896481422680461
+Minnesota,Dairy,2021.0,2.9974062680145273
+Minnesota,Dairy,2022.0,3.3892699807111586
+Minnesota,Fats and oils,2019.0,3.797673484917882
+Minnesota,Fats and oils,2020.0,3.8399053530513068
+Minnesota,Fats and oils,2021.0,4.044444781891576
+Minnesota,Fats and oils,2022.0,4.981114947189571
+Minnesota,Fruits,2019.0,2.882479810761246
+Minnesota,Fruits,2020.0,3.0074697115144935
+Minnesota,Fruits,2021.0,3.208167907150584
+Minnesota,Fruits,2022.0,3.477716927343384
+Minnesota,Grains,2019.0,2.460923817607335
+Minnesota,Grains,2020.0,2.5211896550373583
+Minnesota,Grains,2021.0,2.630745500446712
+Minnesota,Grains,2022.0,2.9727444687271265
+Minnesota,"Meats, eggs, and nuts",2019.0,4.646303911145726
+Minnesota,"Meats, eggs, and nuts",2020.0,4.826900173202795
+Minnesota,"Meats, eggs, and nuts",2021.0,5.123934653887388
+Minnesota,"Meats, eggs, and nuts",2022.0,5.672286003002957
+Minnesota,Sugar and sweeteners,2019.0,2.919031366404127
+Minnesota,Sugar and sweeteners,2020.0,3.448459158563412
+Minnesota,Sugar and sweeteners,2021.0,3.602531955349696
+Minnesota,Sugar and sweeteners,2022.0,4.068253301599831
+Minnesota,Vegetables,2019.0,2.012667544411266
+Minnesota,Vegetables,2020.0,2.087896057877066
+Minnesota,Vegetables,2021.0,2.176153313318421
+Minnesota,Vegetables,2022.0,2.3820317918166776
+Mississippi,Alcohol,2019.0,5.109985289906902
+Mississippi,Alcohol,2020.0,5.552873482331904
+Mississippi,Alcohol,2021.0,5.703767182136459
+Mississippi,Alcohol,2022.0,5.927927308869774
+Mississippi,Beverages,2019.0,2.250856058132132
+Mississippi,Beverages,2020.0,2.3557262470344
+Mississippi,Beverages,2021.0,2.5186316348941085
+Mississippi,Beverages,2022.0,2.8075473600242042
+Mississippi,Commercially prepared items,2019.0,2.152327885666246
+Mississippi,Commercially prepared items,2020.0,2.273128621283114
+Mississippi,Commercially prepared items,2021.0,2.430083162944497
+Mississippi,Commercially prepared items,2022.0,2.7400703337995456
+Mississippi,Dairy,2019.0,2.6373597772404866
+Mississippi,Dairy,2020.0,2.770867040443247
+Mississippi,Dairy,2021.0,2.8666283977606093
+Mississippi,Dairy,2022.0,3.2375919057225175
+Mississippi,Fats and oils,2019.0,3.050955509105052
+Mississippi,Fats and oils,2020.0,3.166351787498122
+Mississippi,Fats and oils,2021.0,3.5260875801806786
+Mississippi,Fats and oils,2022.0,4.4639942164524555
+Mississippi,Fruits,2019.0,2.3343884233529453
+Mississippi,Fruits,2020.0,2.4180707859421777
+Mississippi,Fruits,2021.0,2.611407809084712
+Mississippi,Fruits,2022.0,2.831779566890287
+Mississippi,Grains,2019.0,2.0691330191793487
+Mississippi,Grains,2020.0,2.139462017628957
+Mississippi,Grains,2021.0,2.2460032253888977
+Mississippi,Grains,2022.0,2.5568857063207715
+Mississippi,"Meats, eggs, and nuts",2019.0,3.871000971543646
+Mississippi,"Meats, eggs, and nuts",2020.0,4.040755503924158
+Mississippi,"Meats, eggs, and nuts",2021.0,4.371889040655951
+Mississippi,"Meats, eggs, and nuts",2022.0,4.901776042222585
+Mississippi,Sugar and sweeteners,2019.0,2.732297371423488
+Mississippi,Sugar and sweeteners,2020.0,3.134223162357878
+Mississippi,Sugar and sweeteners,2021.0,3.4782209606846095
+Mississippi,Sugar and sweeteners,2022.0,3.9208540025297083
+Mississippi,Vegetables,2019.0,1.6307841832290015
+Mississippi,Vegetables,2020.0,1.7681322928532586
+Mississippi,Vegetables,2021.0,1.8489272392549994
+Mississippi,Vegetables,2022.0,2.0497173687183676
+Missouri,Alcohol,2019.0,6.863457771957055
+Missouri,Alcohol,2020.0,7.241280694379806
+Missouri,Alcohol,2021.0,7.197894256040149
+Missouri,Alcohol,2022.0,6.981718224613175
+Missouri,Beverages,2019.0,2.553027890867289
+Missouri,Beverages,2020.0,2.6120131710834125
+Missouri,Beverages,2021.0,2.7466842074223745
+Missouri,Beverages,2022.0,3.077160607339213
+Missouri,Commercially prepared items,2019.0,2.604895764991615
+Missouri,Commercially prepared items,2020.0,2.709098463085903
+Missouri,Commercially prepared items,2021.0,2.8280605408058324
+Missouri,Commercially prepared items,2022.0,3.190937415818278
+Missouri,Dairy,2019.0,2.7620968660297347
+Missouri,Dairy,2020.0,2.887515449465812
+Missouri,Dairy,2021.0,2.94024624989382
+Missouri,Dairy,2022.0,3.3277786448989883
+Missouri,Fats and oils,2019.0,3.369749706948052
+Missouri,Fats and oils,2020.0,3.515698871670801
+Missouri,Fats and oils,2021.0,3.7854577271171865
+Missouri,Fats and oils,2022.0,4.70138481823458
+Missouri,Fruits,2019.0,2.6125858539868365
+Missouri,Fruits,2020.0,2.6583795200677915
+Missouri,Fruits,2021.0,2.773708032506032
+Missouri,Fruits,2022.0,3.020608201800474
+Missouri,Grains,2019.0,2.189538695130042
+Missouri,Grains,2020.0,2.2484059870911466
+Missouri,Grains,2021.0,2.3296382293419886
+Missouri,Grains,2022.0,2.6412933940466488
+Missouri,"Meats, eggs, and nuts",2019.0,4.378260332449103
+Missouri,"Meats, eggs, and nuts",2020.0,4.5122762766876185
+Missouri,"Meats, eggs, and nuts",2021.0,4.769851085183335
+Missouri,"Meats, eggs, and nuts",2022.0,5.302065726797131
+Missouri,Sugar and sweeteners,2019.0,2.824134799275168
+Missouri,Sugar and sweeteners,2020.0,3.3287164590342253
+Missouri,Sugar and sweeteners,2021.0,3.4938051994107644
+Missouri,Sugar and sweeteners,2022.0,3.940084130855427
+Missouri,Vegetables,2019.0,1.7913995302255055
+Missouri,Vegetables,2020.0,1.9073026203709174
+Missouri,Vegetables,2021.0,1.9841012742413395
+Missouri,Vegetables,2022.0,2.1795137815287244
+Nebraska,Alcohol,2019.0,7.544028069368944
+Nebraska,Alcohol,2020.0,7.837228070687756
+Nebraska,Alcohol,2021.0,7.794285719753862
+Nebraska,Alcohol,2022.0,7.720543727156035
+Nebraska,Beverages,2019.0,2.5382799852543587
+Nebraska,Beverages,2020.0,2.5979696147131475
+Nebraska,Beverages,2021.0,2.71403120468506
+Nebraska,Beverages,2022.0,3.011699816357521
+Nebraska,Commercially prepared items,2019.0,2.647899035737266
+Nebraska,Commercially prepared items,2020.0,2.737878053899891
+Nebraska,Commercially prepared items,2021.0,2.874268399945318
+Nebraska,Commercially prepared items,2022.0,3.2394739994558694
+Nebraska,Dairy,2019.0,2.6972473712904224
+Nebraska,Dairy,2020.0,2.8048600844647833
+Nebraska,Dairy,2021.0,2.8761437806429964
+Nebraska,Dairy,2022.0,3.202071710111829
+Nebraska,Fats and oils,2019.0,3.448912843895352
+Nebraska,Fats and oils,2020.0,3.5314222135950306
+Nebraska,Fats and oils,2021.0,3.7769458208323994
+Nebraska,Fats and oils,2022.0,4.60696671657798
+Nebraska,Fruits,2019.0,2.4700228275113028
+Nebraska,Fruits,2020.0,2.5275994168658587
+Nebraska,Fruits,2021.0,2.720835415417617
+Nebraska,Fruits,2022.0,2.8985744779019904
+Nebraska,Grains,2019.0,2.2680313847033466
+Nebraska,Grains,2020.0,2.3130761976557546
+Nebraska,Grains,2021.0,2.4068525361077144
+Nebraska,Grains,2022.0,2.731605248214338
+Nebraska,"Meats, eggs, and nuts",2019.0,4.399217009542537
+Nebraska,"Meats, eggs, and nuts",2020.0,4.521522825913023
+Nebraska,"Meats, eggs, and nuts",2021.0,4.787767802252808
+Nebraska,"Meats, eggs, and nuts",2022.0,5.325261032208814
+Nebraska,Sugar and sweeteners,2019.0,2.8397012331081717
+Nebraska,Sugar and sweeteners,2020.0,3.401298926675451
+Nebraska,Sugar and sweeteners,2021.0,3.5354973080874816
+Nebraska,Sugar and sweeteners,2022.0,3.9487634244813563
+Nebraska,Vegetables,2019.0,1.7193511363195242
+Nebraska,Vegetables,2020.0,1.799695470834923
+Nebraska,Vegetables,2021.0,1.8637774787147185
+Nebraska,Vegetables,2022.0,2.0233938814095596
+Nevada,Alcohol,2019.0,6.546071692238477
+Nevada,Alcohol,2020.0,7.027304042893298
+Nevada,Alcohol,2021.0,7.162316161985918
+Nevada,Alcohol,2022.0,7.178366169768221
+Nevada,Beverages,2019.0,2.4577647012665955
+Nevada,Beverages,2020.0,2.5198140537854843
+Nevada,Beverages,2021.0,2.6918424404722217
+Nevada,Beverages,2022.0,3.05450241047423
+Nevada,Commercially prepared items,2019.0,2.5918942865541412
+Nevada,Commercially prepared items,2020.0,2.703242382474929
+Nevada,Commercially prepared items,2021.0,2.8753892681376216
+Nevada,Commercially prepared items,2022.0,3.2852011928462495
+Nevada,Dairy,2019.0,2.921313394161549
+Nevada,Dairy,2020.0,3.0289058699829834
+Nevada,Dairy,2021.0,3.0842603014578676
+Nevada,Dairy,2022.0,3.4452424870915657
+Nevada,Fats and oils,2019.0,3.8218391291261087
+Nevada,Fats and oils,2020.0,3.9580068642305433
+Nevada,Fats and oils,2021.0,4.127366106858675
+Nevada,Fats and oils,2022.0,5.069806140852399
+Nevada,Fruits,2019.0,2.375367371405603
+Nevada,Fruits,2020.0,2.442797369887633
+Nevada,Fruits,2021.0,2.5957062975396137
+Nevada,Fruits,2022.0,2.8021112216913195
+Nevada,Grains,2019.0,2.2833554395622024
+Nevada,Grains,2020.0,2.4545789282188326
+Nevada,Grains,2021.0,2.567724461912048
+Nevada,Grains,2022.0,2.900976008283136
+Nevada,"Meats, eggs, and nuts",2019.0,4.580914122777383
+Nevada,"Meats, eggs, and nuts",2020.0,4.80673841722416
+Nevada,"Meats, eggs, and nuts",2021.0,5.13180068640954
+Nevada,"Meats, eggs, and nuts",2022.0,5.718755340588178
+Nevada,Sugar and sweeteners,2019.0,3.4051610592662596
+Nevada,Sugar and sweeteners,2020.0,3.8931203949701296
+Nevada,Sugar and sweeteners,2021.0,4.118509613256849
+Nevada,Sugar and sweeteners,2022.0,4.6653363227369615
+Nevada,Vegetables,2019.0,1.7983168132833063
+Nevada,Vegetables,2020.0,1.8501793633552284
+Nevada,Vegetables,2021.0,1.896825753047548
+Nevada,Vegetables,2022.0,2.0512684983754377
+New Hampshire,Alcohol,2019.0,8.888918466363183
+New Hampshire,Alcohol,2020.0,9.321111787032729
+New Hampshire,Alcohol,2021.0,9.531404255428422
+New Hampshire,Alcohol,2022.0,9.821634040346664
+New Hampshire,Beverages,2019.0,2.7042191990940725
+New Hampshire,Beverages,2020.0,2.7806074738917976
+New Hampshire,Beverages,2021.0,2.9005337858904245
+New Hampshire,Beverages,2022.0,3.20392734301371
+New Hampshire,Commercially prepared items,2019.0,2.7799463099536776
+New Hampshire,Commercially prepared items,2020.0,2.853589987261681
+New Hampshire,Commercially prepared items,2021.0,2.9801739220851853
+New Hampshire,Commercially prepared items,2022.0,3.361528429422542
+New Hampshire,Dairy,2019.0,2.7081775768213605
+New Hampshire,Dairy,2020.0,2.843539027734698
+New Hampshire,Dairy,2021.0,2.9024907498304042
+New Hampshire,Dairy,2022.0,3.167610216342592
+New Hampshire,Fats and oils,2019.0,3.8378585875594777
+New Hampshire,Fats and oils,2020.0,3.992018952556632
+New Hampshire,Fats and oils,2021.0,4.136886859203538
+New Hampshire,Fats and oils,2022.0,4.909559550143497
+New Hampshire,Fruits,2019.0,2.6198598085677256
+New Hampshire,Fruits,2020.0,2.840141832598238
+New Hampshire,Fruits,2021.0,2.993910715560892
+New Hampshire,Fruits,2022.0,3.235623959365912
+New Hampshire,Grains,2019.0,2.4798639054381693
+New Hampshire,Grains,2020.0,2.5508411672161295
+New Hampshire,Grains,2021.0,2.6499311537026937
+New Hampshire,Grains,2022.0,2.9888401345271816
+New Hampshire,"Meats, eggs, and nuts",2019.0,4.868159221483323
+New Hampshire,"Meats, eggs, and nuts",2020.0,5.088422714976145
+New Hampshire,"Meats, eggs, and nuts",2021.0,5.334529955489627
+New Hampshire,"Meats, eggs, and nuts",2022.0,5.798666595989058
+New Hampshire,Sugar and sweeteners,2019.0,3.026390851412743
+New Hampshire,Sugar and sweeteners,2020.0,3.4750820181821576
+New Hampshire,Sugar and sweeteners,2021.0,3.6734977576477323
+New Hampshire,Sugar and sweeteners,2022.0,4.127433386807165
+New Hampshire,Vegetables,2019.0,1.9606348873375952
+New Hampshire,Vegetables,2020.0,2.0200214281419453
+New Hampshire,Vegetables,2021.0,2.082767851489163
+New Hampshire,Vegetables,2022.0,2.24734429925459
+New Mexico,Alcohol,2019.0,6.349117616102224
+New Mexico,Alcohol,2020.0,6.815090419942174
+New Mexico,Alcohol,2021.0,7.6861869373897385
+New Mexico,Alcohol,2022.0,8.240450478957325
+New Mexico,Beverages,2019.0,2.6190345076422656
+New Mexico,Beverages,2020.0,2.7195451286969163
+New Mexico,Beverages,2021.0,2.8796722036668423
+New Mexico,Beverages,2022.0,3.253562789025936
+New Mexico,Commercially prepared items,2019.0,2.6608437232236968
+New Mexico,Commercially prepared items,2020.0,2.762142965463232
+New Mexico,Commercially prepared items,2021.0,2.936328690847397
+New Mexico,Commercially prepared items,2022.0,3.3394402812399355
+New Mexico,Dairy,2019.0,2.938585614209954
+New Mexico,Dairy,2020.0,3.090146051097633
+New Mexico,Dairy,2021.0,3.1357544417613568
+New Mexico,Dairy,2022.0,3.458145727603357
+New Mexico,Fats and oils,2019.0,3.6881065053626845
+New Mexico,Fats and oils,2020.0,3.8598421556092366
+New Mexico,Fats and oils,2021.0,4.0823021104877215
+New Mexico,Fats and oils,2022.0,5.069023184877196
+New Mexico,Fruits,2019.0,2.419478378735305
+New Mexico,Fruits,2020.0,2.5248131302163612
+New Mexico,Fruits,2021.0,2.626381217012165
+New Mexico,Fruits,2022.0,2.817899072066482
+New Mexico,Grains,2019.0,2.286015327040714
+New Mexico,Grains,2020.0,2.367608200394077
+New Mexico,Grains,2021.0,2.4711649987275623
+New Mexico,Grains,2022.0,2.8016365710481015
+New Mexico,"Meats, eggs, and nuts",2019.0,4.629643397521357
+New Mexico,"Meats, eggs, and nuts",2020.0,4.772600050217356
+New Mexico,"Meats, eggs, and nuts",2021.0,5.15059663590092
+New Mexico,"Meats, eggs, and nuts",2022.0,5.716762590968272
+New Mexico,Sugar and sweeteners,2019.0,3.304566398969601
+New Mexico,Sugar and sweeteners,2020.0,3.7970243501190004
+New Mexico,Sugar and sweeteners,2021.0,4.001873105629832
+New Mexico,Sugar and sweeteners,2022.0,4.488954137709153
+New Mexico,Vegetables,2019.0,1.701142219557667
+New Mexico,Vegetables,2020.0,1.7413603236343005
+New Mexico,Vegetables,2021.0,1.7971286701781166
+New Mexico,Vegetables,2022.0,1.9480831189571097
+New York,Alcohol,2019.0,6.498560896579082
+New York,Alcohol,2020.0,7.151619134517772
+New York,Alcohol,2021.0,7.340421828383654
+New York,Alcohol,2022.0,7.76636016457302
+New York,Beverages,2019.0,2.5936799928636995
+New York,Beverages,2020.0,2.7348788529066947
+New York,Beverages,2021.0,2.8899416324535543
+New York,Beverages,2022.0,3.2063471856990584
+New York,Commercially prepared items,2019.0,2.9478996730268916
+New York,Commercially prepared items,2020.0,3.064297516935191
+New York,Commercially prepared items,2021.0,3.207356744758496
+New York,Commercially prepared items,2022.0,3.6017945220999312
+New York,Dairy,2019.0,2.9099786318774434
+New York,Dairy,2020.0,3.1120343691811647
+New York,Dairy,2021.0,3.1722314661230744
+New York,Dairy,2022.0,3.5122332916750008
+New York,Fats and oils,2019.0,4.358607667591599
+New York,Fats and oils,2020.0,4.6730111090715445
+New York,Fats and oils,2021.0,4.833396444092325
+New York,Fats and oils,2022.0,5.824298471345435
+New York,Fruits,2019.0,2.899627038864154
+New York,Fruits,2020.0,3.0748685108037233
+New York,Fruits,2021.0,3.2360906893423333
+New York,Fruits,2022.0,3.487874546501098
+New York,Grains,2019.0,2.4607783942695933
+New York,Grains,2020.0,2.6734266478532396
+New York,Grains,2021.0,2.747002525270669
+New York,Grains,2022.0,3.1008870608237196
+New York,"Meats, eggs, and nuts",2019.0,4.995427610521552
+New York,"Meats, eggs, and nuts",2020.0,5.206147471078529
+New York,"Meats, eggs, and nuts",2021.0,5.457204123982596
+New York,"Meats, eggs, and nuts",2022.0,5.9251530448858345
+New York,Sugar and sweeteners,2019.0,3.217249526717884
+New York,Sugar and sweeteners,2020.0,3.8695369925916063
+New York,Sugar and sweeteners,2021.0,4.065979294680789
+New York,Sugar and sweeteners,2022.0,4.568975221124557
+New York,Vegetables,2019.0,2.1542128734486385
+New York,Vegetables,2020.0,2.227111323718505
+New York,Vegetables,2021.0,2.2884081315646743
+New York,Vegetables,2022.0,2.4761051143615274
+North Carolina,Alcohol,2019.0,6.579749276034625
+North Carolina,Alcohol,2020.0,7.023709001502538
+North Carolina,Alcohol,2021.0,7.26626229502044
+North Carolina,Alcohol,2022.0,7.669804577457186
+North Carolina,Beverages,2019.0,2.411541503568022
+North Carolina,Beverages,2020.0,2.5102167887579556
+North Carolina,Beverages,2021.0,2.70008605082243
+North Carolina,Beverages,2022.0,3.0652749141173725
+North Carolina,Commercially prepared items,2019.0,2.542322765424177
+North Carolina,Commercially prepared items,2020.0,2.622655007548033
+North Carolina,Commercially prepared items,2021.0,2.7981278032920893
+North Carolina,Commercially prepared items,2022.0,3.201727818494376
+North Carolina,Dairy,2019.0,2.6929181812723906
+North Carolina,Dairy,2020.0,2.782422593853217
+North Carolina,Dairy,2021.0,2.8600842873896397
+North Carolina,Dairy,2022.0,3.2287793592921545
+North Carolina,Fats and oils,2019.0,3.4977785637243852
+North Carolina,Fats and oils,2020.0,3.600553145868477
+North Carolina,Fats and oils,2021.0,3.9038259446341566
+North Carolina,Fats and oils,2022.0,4.8189691725590205
+North Carolina,Fruits,2019.0,2.4822132902931715
+North Carolina,Fruits,2020.0,2.574412265056185
+North Carolina,Fruits,2021.0,2.754769765912725
+North Carolina,Fruits,2022.0,3.0631617320577234
+North Carolina,Grains,2019.0,2.325907247348812
+North Carolina,Grains,2020.0,2.4187225807499035
+North Carolina,Grains,2021.0,2.5149627257693683
+North Carolina,Grains,2022.0,2.8674244227480745
+North Carolina,"Meats, eggs, and nuts",2019.0,4.308428824593904
+North Carolina,"Meats, eggs, and nuts",2020.0,4.531833753186813
+North Carolina,"Meats, eggs, and nuts",2021.0,4.874030195637766
+North Carolina,"Meats, eggs, and nuts",2022.0,5.380580120252577
+North Carolina,Sugar and sweeteners,2019.0,2.875095238298873
+North Carolina,Sugar and sweeteners,2020.0,3.404774715954311
+North Carolina,Sugar and sweeteners,2021.0,3.611903693531038
+North Carolina,Sugar and sweeteners,2022.0,4.105946241807629
+North Carolina,Vegetables,2019.0,1.7685055082946468
+North Carolina,Vegetables,2020.0,1.840501089845058
+North Carolina,Vegetables,2021.0,1.9287933114529308
+North Carolina,Vegetables,2022.0,2.129141178221231
+Ohio,Alcohol,2019.0,8.293682865373745
+Ohio,Alcohol,2020.0,8.688595588262967
+Ohio,Alcohol,2021.0,8.799022697056994
+Ohio,Alcohol,2022.0,8.951134436368593
+Ohio,Beverages,2019.0,2.521340864978014
+Ohio,Beverages,2020.0,2.5773998749954923
+Ohio,Beverages,2021.0,2.7380949231232803
+Ohio,Beverages,2022.0,3.11013125591454
+Ohio,Commercially prepared items,2019.0,2.5730568728556866
+Ohio,Commercially prepared items,2020.0,2.644644919439781
+Ohio,Commercially prepared items,2021.0,2.8058121733724097
+Ohio,Commercially prepared items,2022.0,3.2099921892790264
+Ohio,Dairy,2019.0,2.501744349463067
+Ohio,Dairy,2020.0,2.608106144838879
+Ohio,Dairy,2021.0,2.72420151743858
+Ohio,Dairy,2022.0,3.0821676087092933
+Ohio,Fats and oils,2019.0,3.4742379945819715
+Ohio,Fats and oils,2020.0,3.6413862061675104
+Ohio,Fats and oils,2021.0,3.834374899072254
+Ohio,Fats and oils,2022.0,4.717051612306358
+Ohio,Fruits,2019.0,2.3356706412093913
+Ohio,Fruits,2020.0,2.4167489853759765
+Ohio,Fruits,2021.0,2.6381054711366505
+Ohio,Fruits,2022.0,2.899043225733049
+Ohio,Grains,2019.0,2.1481891389342738
+Ohio,Grains,2020.0,2.2126625767253185
+Ohio,Grains,2021.0,2.349691444394178
+Ohio,Grains,2022.0,2.686697172413004
+Ohio,"Meats, eggs, and nuts",2019.0,4.219588912798426
+Ohio,"Meats, eggs, and nuts",2020.0,4.408398480800681
+Ohio,"Meats, eggs, and nuts",2021.0,4.69591257814143
+Ohio,"Meats, eggs, and nuts",2022.0,5.210797126167586
+Ohio,Sugar and sweeteners,2019.0,2.7917146178339562
+Ohio,Sugar and sweeteners,2020.0,3.2126295182361835
+Ohio,Sugar and sweeteners,2021.0,3.515612469666652
+Ohio,Sugar and sweeteners,2022.0,4.0350866039208775
+Ohio,Vegetables,2019.0,1.7942336920975608
+Ohio,Vegetables,2020.0,1.8594723591425544
+Ohio,Vegetables,2021.0,1.9510780627151616
+Ohio,Vegetables,2022.0,2.1702490561887564
+Oklahoma,Alcohol,2019.0,8.67257645862824
+Oklahoma,Alcohol,2020.0,8.856069244471946
+Oklahoma,Alcohol,2021.0,8.952120647230835
+Oklahoma,Alcohol,2022.0,9.296358511785149
+Oklahoma,Beverages,2019.0,2.5308821132381536
+Oklahoma,Beverages,2020.0,2.6020883434426207
+Oklahoma,Beverages,2021.0,2.756337138281793
+Oklahoma,Beverages,2022.0,3.1244680875685926
+Oklahoma,Commercially prepared items,2019.0,2.5503395922153795
+Oklahoma,Commercially prepared items,2020.0,2.6323310944259717
+Oklahoma,Commercially prepared items,2021.0,2.7727268073573708
+Oklahoma,Commercially prepared items,2022.0,3.170200025305577
+Oklahoma,Dairy,2019.0,2.899929775223438
+Oklahoma,Dairy,2020.0,3.0253732110417215
+Oklahoma,Dairy,2021.0,3.0740500969400335
+Oklahoma,Dairy,2022.0,3.4342530557275914
+Oklahoma,Fats and oils,2019.0,3.485102892588252
+Oklahoma,Fats and oils,2020.0,3.5635891588794757
+Oklahoma,Fats and oils,2021.0,3.8800986195313394
+Oklahoma,Fats and oils,2022.0,4.880031594564125
+Oklahoma,Fruits,2019.0,2.419283541479336
+Oklahoma,Fruits,2020.0,2.466751270134716
+Oklahoma,Fruits,2021.0,2.687664573188886
+Oklahoma,Fruits,2022.0,2.9579442202280934
+Oklahoma,Grains,2019.0,2.196988178298711
+Oklahoma,Grains,2020.0,2.250489727631897
+Oklahoma,Grains,2021.0,2.3471571704605316
+Oklahoma,Grains,2022.0,2.65500318208538
+Oklahoma,"Meats, eggs, and nuts",2019.0,4.341692878356924
+Oklahoma,"Meats, eggs, and nuts",2020.0,4.4194760233984915
+Oklahoma,"Meats, eggs, and nuts",2021.0,4.719020690855726
+Oklahoma,"Meats, eggs, and nuts",2022.0,5.27024006105514
+Oklahoma,Sugar and sweeteners,2019.0,3.0721630320754727
+Oklahoma,Sugar and sweeteners,2020.0,3.5236996213495226
+Oklahoma,Sugar and sweeteners,2021.0,3.761943385400876
+Oklahoma,Sugar and sweeteners,2022.0,4.204652833070335
+Oklahoma,Vegetables,2019.0,1.5957514321361435
+Oklahoma,Vegetables,2020.0,1.6776476598096077
+Oklahoma,Vegetables,2021.0,1.763431435508799
+Oklahoma,Vegetables,2022.0,1.98515367832956
+Oregon,Alcohol,2019.0,7.836618552146283
+Oregon,Alcohol,2020.0,8.337443442789954
+Oregon,Alcohol,2021.0,8.610933819097282
+Oregon,Alcohol,2022.0,8.844828697142276
+Oregon,Beverages,2019.0,2.5203104796875095
+Oregon,Beverages,2020.0,2.583404362325471
+Oregon,Beverages,2021.0,2.7229248090345504
+Oregon,Beverages,2022.0,3.0284956079289596
+Oregon,Commercially prepared items,2019.0,2.730610455244343
+Oregon,Commercially prepared items,2020.0,2.8226959100690507
+Oregon,Commercially prepared items,2021.0,2.999200429349839
+Oregon,Commercially prepared items,2022.0,3.4359863351135242
+Oregon,Dairy,2019.0,2.7983700346758913
+Oregon,Dairy,2020.0,2.937909895832499
+Oregon,Dairy,2021.0,3.013634820943861
+Oregon,Dairy,2022.0,3.3585536783676737
+Oregon,Fats and oils,2019.0,3.8324554330014142
+Oregon,Fats and oils,2020.0,3.9844368907363927
+Oregon,Fats and oils,2021.0,4.091235802038735
+Oregon,Fats and oils,2022.0,4.863942094105609
+Oregon,Fruits,2019.0,2.492795650206005
+Oregon,Fruits,2020.0,2.583636318094779
+Oregon,Fruits,2021.0,2.76380416499676
+Oregon,Fruits,2022.0,3.034152647623523
+Oregon,Grains,2019.0,2.4742289559797324
+Oregon,Grains,2020.0,2.607195516672742
+Oregon,Grains,2021.0,2.7190081003278475
+Oregon,Grains,2022.0,3.0912705698197507
+Oregon,"Meats, eggs, and nuts",2019.0,4.736372893754168
+Oregon,"Meats, eggs, and nuts",2020.0,4.905996917054579
+Oregon,"Meats, eggs, and nuts",2021.0,5.2252830678267195
+Oregon,"Meats, eggs, and nuts",2022.0,5.76895710911818
+Oregon,Sugar and sweeteners,2019.0,3.3062230971737585
+Oregon,Sugar and sweeteners,2020.0,3.818063770352005
+Oregon,Sugar and sweeteners,2021.0,3.9768177892659202
+Oregon,Sugar and sweeteners,2022.0,4.54060200067195
+Oregon,Vegetables,2019.0,1.9857599017691447
+Oregon,Vegetables,2020.0,2.0020549395198435
+Oregon,Vegetables,2021.0,2.0622748560631328
+Oregon,Vegetables,2022.0,2.238450357645956
+Pennsylvania,Alcohol,2019.0,8.941404036788509
+Pennsylvania,Alcohol,2020.0,9.635411738586427
+Pennsylvania,Alcohol,2021.0,9.449554040132229
+Pennsylvania,Alcohol,2022.0,9.667153928420246
+Pennsylvania,Beverages,2019.0,2.587413627106004
+Pennsylvania,Beverages,2020.0,2.685531913922761
+Pennsylvania,Beverages,2021.0,2.8358131615028133
+Pennsylvania,Beverages,2022.0,3.185437890117234
+Pennsylvania,Commercially prepared items,2019.0,2.7712953064361843
+Pennsylvania,Commercially prepared items,2020.0,2.8476778616673823
+Pennsylvania,Commercially prepared items,2021.0,2.9982061051341495
+Pennsylvania,Commercially prepared items,2022.0,3.4017828248117294
+Pennsylvania,Dairy,2019.0,2.796417292861686
+Pennsylvania,Dairy,2020.0,2.9041240102632595
+Pennsylvania,Dairy,2021.0,2.959245979200353
+Pennsylvania,Dairy,2022.0,3.277578721390265
+Pennsylvania,Fats and oils,2019.0,3.7043814246165394
+Pennsylvania,Fats and oils,2020.0,3.8650984441911693
+Pennsylvania,Fats and oils,2021.0,4.062323165446973
+Pennsylvania,Fats and oils,2022.0,4.962470120159538
+Pennsylvania,Fruits,2019.0,2.7939909989357474
+Pennsylvania,Fruits,2020.0,2.8886246228065144
+Pennsylvania,Fruits,2021.0,3.067125187323633
+Pennsylvania,Fruits,2022.0,3.3626353599243264
+Pennsylvania,Grains,2019.0,2.2668586982550143
+Pennsylvania,Grains,2020.0,2.3909050981956463
+Pennsylvania,Grains,2021.0,2.4883287239202585
+Pennsylvania,Grains,2022.0,2.811427662724551
+Pennsylvania,"Meats, eggs, and nuts",2019.0,4.812720141483642
+Pennsylvania,"Meats, eggs, and nuts",2020.0,5.003924497903741
+Pennsylvania,"Meats, eggs, and nuts",2021.0,5.307408468145872
+Pennsylvania,"Meats, eggs, and nuts",2022.0,5.7517777034098385
+Pennsylvania,Sugar and sweeteners,2019.0,2.8539506138428012
+Pennsylvania,Sugar and sweeteners,2020.0,3.365865161162229
+Pennsylvania,Sugar and sweeteners,2021.0,3.6124107539717656
+Pennsylvania,Sugar and sweeteners,2022.0,4.119281837857432
+Pennsylvania,Vegetables,2019.0,2.0382279206742284
+Pennsylvania,Vegetables,2020.0,2.0956893530114415
+Pennsylvania,Vegetables,2021.0,2.1709904653610526
+Pennsylvania,Vegetables,2022.0,2.365835723543941
+Rhode Island,Alcohol,2019.0,12.751685136076427
+Rhode Island,Alcohol,2020.0,12.194985579454302
+Rhode Island,Alcohol,2021.0,12.160908217682419
+Rhode Island,Alcohol,2022.0,11.76779950473854
+Rhode Island,Beverages,2019.0,2.604865831467287
+Rhode Island,Beverages,2020.0,2.6935720600957334
+Rhode Island,Beverages,2021.0,2.8359171308334847
+Rhode Island,Beverages,2022.0,3.1478405286239837
+Rhode Island,Commercially prepared items,2019.0,2.848147229816263
+Rhode Island,Commercially prepared items,2020.0,2.9862216145023135
+Rhode Island,Commercially prepared items,2021.0,3.0847112476399454
+Rhode Island,Commercially prepared items,2022.0,3.4438582230458117
+Rhode Island,Dairy,2019.0,2.9522346805409465
+Rhode Island,Dairy,2020.0,3.1429012636166034
+Rhode Island,Dairy,2021.0,3.172717943730359
+Rhode Island,Dairy,2022.0,3.4312482138698943
+Rhode Island,Fats and oils,2019.0,4.225322446875457
+Rhode Island,Fats and oils,2020.0,4.409034928540142
+Rhode Island,Fats and oils,2021.0,4.447150330381135
+Rhode Island,Fats and oils,2022.0,5.316521178617717
+Rhode Island,Fruits,2019.0,2.797651787502588
+Rhode Island,Fruits,2020.0,3.0117249400330026
+Rhode Island,Fruits,2021.0,3.1881864615788134
+Rhode Island,Fruits,2022.0,3.415694687048713
+Rhode Island,Grains,2019.0,2.404595098268447
+Rhode Island,Grains,2020.0,2.5755326283685602
+Rhode Island,Grains,2021.0,2.665693938898661
+Rhode Island,Grains,2022.0,2.998137012877379
+Rhode Island,"Meats, eggs, and nuts",2019.0,4.964861061271317
+Rhode Island,"Meats, eggs, and nuts",2020.0,5.231682764826924
+Rhode Island,"Meats, eggs, and nuts",2021.0,5.408320616933233
+Rhode Island,"Meats, eggs, and nuts",2022.0,5.838264414653465
+Rhode Island,Sugar and sweeteners,2019.0,3.1335003397055172
+Rhode Island,Sugar and sweeteners,2020.0,3.8096894959122816
+Rhode Island,Sugar and sweeteners,2021.0,3.9002682412268106
+Rhode Island,Sugar and sweeteners,2022.0,4.2732141842456715
+Rhode Island,Vegetables,2019.0,2.179028628524922
+Rhode Island,Vegetables,2020.0,2.2379087433812446
+Rhode Island,Vegetables,2021.0,2.3158366127836083
+Rhode Island,Vegetables,2022.0,2.4370515559797465
+South Carolina,Alcohol,2019.0,7.018691830069904
+South Carolina,Alcohol,2020.0,7.387923658963823
+South Carolina,Alcohol,2021.0,7.579006199831554
+South Carolina,Alcohol,2022.0,7.961673122179966
+South Carolina,Beverages,2019.0,2.3497137309460396
+South Carolina,Beverages,2020.0,2.453247085758622
+South Carolina,Beverages,2021.0,2.6305203963654575
+South Carolina,Beverages,2022.0,2.9892800093284957
+South Carolina,Commercially prepared items,2019.0,2.5123902981257262
+South Carolina,Commercially prepared items,2020.0,2.6130249723986196
+South Carolina,Commercially prepared items,2021.0,2.76703239508793
+South Carolina,Commercially prepared items,2022.0,3.1732687063080394
+South Carolina,Dairy,2019.0,2.699001127465231
+South Carolina,Dairy,2020.0,2.820646796423586
+South Carolina,Dairy,2021.0,2.8827731813999806
+South Carolina,Dairy,2022.0,3.2487496047509197
+South Carolina,Fats and oils,2019.0,3.3932197185325035
+South Carolina,Fats and oils,2020.0,3.479365208581706
+South Carolina,Fats and oils,2021.0,3.750866113416463
+South Carolina,Fats and oils,2022.0,4.714046591983256
+South Carolina,Fruits,2019.0,2.4817807506692184
+South Carolina,Fruits,2020.0,2.5849158867861592
+South Carolina,Fruits,2021.0,2.7299142745869327
+South Carolina,Fruits,2022.0,2.9895990796923684
+South Carolina,Grains,2019.0,2.2723635728317877
+South Carolina,Grains,2020.0,2.362664840792284
+South Carolina,Grains,2021.0,2.456420559075786
+South Carolina,Grains,2022.0,2.805480367008587
+South Carolina,"Meats, eggs, and nuts",2019.0,4.286654317105517
+South Carolina,"Meats, eggs, and nuts",2020.0,4.537446421574919
+South Carolina,"Meats, eggs, and nuts",2021.0,4.791912477902609
+South Carolina,"Meats, eggs, and nuts",2022.0,5.3434659977186465
+South Carolina,Sugar and sweeteners,2019.0,2.791012232432966
+South Carolina,Sugar and sweeteners,2020.0,3.3044429318905304
+South Carolina,Sugar and sweeteners,2021.0,3.5265065903537196
+South Carolina,Sugar and sweeteners,2022.0,4.014217469872003
+South Carolina,Vegetables,2019.0,1.8241275568379913
+South Carolina,Vegetables,2020.0,1.9066272617593834
+South Carolina,Vegetables,2021.0,1.9716696632047155
+South Carolina,Vegetables,2022.0,2.1853789865372715
+South Dakota,Alcohol,2019.0,8.89591971561666
+South Dakota,Alcohol,2020.0,9.090215506902743
+South Dakota,Alcohol,2021.0,8.915819875737416
+South Dakota,Alcohol,2022.0,8.969028851022271
+South Dakota,Beverages,2019.0,2.6732712651044515
+South Dakota,Beverages,2020.0,2.7286595272780505
+South Dakota,Beverages,2021.0,2.8216214219129587
+South Dakota,Beverages,2022.0,3.0857088667530714
+South Dakota,Commercially prepared items,2019.0,2.71188258156191
+South Dakota,Commercially prepared items,2020.0,2.812663232016192
+South Dakota,Commercially prepared items,2021.0,2.934581513944549
+South Dakota,Commercially prepared items,2022.0,3.300627094115169
+South Dakota,Dairy,2019.0,2.822284786624086
+South Dakota,Dairy,2020.0,2.9513021512853306
+South Dakota,Dairy,2021.0,3.031115425898981
+South Dakota,Dairy,2022.0,3.406962796953273
+South Dakota,Fats and oils,2019.0,3.6587540628511324
+South Dakota,Fats and oils,2020.0,3.713586452063228
+South Dakota,Fats and oils,2021.0,3.936503499604813
+South Dakota,Fats and oils,2022.0,4.82334819939049
+South Dakota,Fruits,2019.0,2.83812705558568
+South Dakota,Fruits,2020.0,2.902397851079135
+South Dakota,Fruits,2021.0,3.0409874800417396
+South Dakota,Fruits,2022.0,3.200951151994875
+South Dakota,Grains,2019.0,2.3391305580914072
+South Dakota,Grains,2020.0,2.3917283408757397
+South Dakota,Grains,2021.0,2.4757924786048062
+South Dakota,Grains,2022.0,2.7759125088589545
+South Dakota,"Meats, eggs, and nuts",2019.0,4.892411745828896
+South Dakota,"Meats, eggs, and nuts",2020.0,4.853532271144104
+South Dakota,"Meats, eggs, and nuts",2021.0,5.110933233522587
+South Dakota,"Meats, eggs, and nuts",2022.0,5.618159342710332
+South Dakota,Sugar and sweeteners,2019.0,2.8669733101053536
+South Dakota,Sugar and sweeteners,2020.0,3.4068355816348164
+South Dakota,Sugar and sweeteners,2021.0,3.533229428513004
+South Dakota,Sugar and sweeteners,2022.0,3.9564912516876376
+South Dakota,Vegetables,2019.0,1.8834104242753016
+South Dakota,Vegetables,2020.0,1.9690658019509386
+South Dakota,Vegetables,2021.0,2.039384713636742
+South Dakota,Vegetables,2022.0,2.2261306254071838
+Tennessee,Alcohol,2019.0,6.329316696163374
+Tennessee,Alcohol,2020.0,6.837773090067917
+Tennessee,Alcohol,2021.0,7.141704279821203
+Tennessee,Alcohol,2022.0,7.497844148467518
+Tennessee,Beverages,2019.0,2.413524315754039
+Tennessee,Beverages,2020.0,2.4744377969569404
+Tennessee,Beverages,2021.0,2.6619869013844584
+Tennessee,Beverages,2022.0,3.0055537448909777
+Tennessee,Commercially prepared items,2019.0,2.4657247409909795
+Tennessee,Commercially prepared items,2020.0,2.5387712883229407
+Tennessee,Commercially prepared items,2021.0,2.719607532105999
+Tennessee,Commercially prepared items,2022.0,3.124558195161189
+Tennessee,Dairy,2019.0,2.712563056984062
+Tennessee,Dairy,2020.0,2.7978919126243857
+Tennessee,Dairy,2021.0,2.894408542251888
+Tennessee,Dairy,2022.0,3.29606618285276
+Tennessee,Fats and oils,2019.0,3.242558725163509
+Tennessee,Fats and oils,2020.0,3.3353063801771805
+Tennessee,Fats and oils,2021.0,3.65504543592792
+Tennessee,Fats and oils,2022.0,4.577248983306979
+Tennessee,Fruits,2019.0,2.4033290217996313
+Tennessee,Fruits,2020.0,2.4502877838638684
+Tennessee,Fruits,2021.0,2.674850971502422
+Tennessee,Fruits,2022.0,2.936583173534977
+Tennessee,Grains,2019.0,2.1562778342079367
+Tennessee,Grains,2020.0,2.1970643229441302
+Tennessee,Grains,2021.0,2.3315293028287294
+Tennessee,Grains,2022.0,2.675175785376395
+Tennessee,"Meats, eggs, and nuts",2019.0,4.2136054353109405
+Tennessee,"Meats, eggs, and nuts",2020.0,4.347041529067119
+Tennessee,"Meats, eggs, and nuts",2021.0,4.659877238810467
+Tennessee,"Meats, eggs, and nuts",2022.0,5.195362440808017
+Tennessee,Sugar and sweeteners,2019.0,2.824372208591718
+Tennessee,Sugar and sweeteners,2020.0,3.240583364274096
+Tennessee,Sugar and sweeteners,2021.0,3.549194762187425
+Tennessee,Sugar and sweeteners,2022.0,4.060118710622325
+Tennessee,Vegetables,2019.0,1.7096763982641165
+Tennessee,Vegetables,2020.0,1.8025422807033349
+Tennessee,Vegetables,2021.0,1.8935889211621795
+Tennessee,Vegetables,2022.0,2.104375202941362
+Texas,Alcohol,2019.0,7.610295457430153
+Texas,Alcohol,2020.0,7.986246305376814
+Texas,Alcohol,2021.0,8.242417866180078
+Texas,Alcohol,2022.0,8.408765011901611
+Texas,Beverages,2019.0,2.594848844486828
+Texas,Beverages,2020.0,2.6721187591424727
+Texas,Beverages,2021.0,2.8599112675941405
+Texas,Beverages,2022.0,3.2155311349870765
+Texas,Commercially prepared items,2019.0,2.5223188219877537
+Texas,Commercially prepared items,2020.0,2.5986046831629475
+Texas,Commercially prepared items,2021.0,2.750479017391034
+Texas,Commercially prepared items,2022.0,3.153884364957509
+Texas,Dairy,2019.0,2.796159517658746
+Texas,Dairy,2020.0,2.9259097753272787
+Texas,Dairy,2021.0,3.015702602267255
+Texas,Dairy,2022.0,3.3830583919954265
+Texas,Fats and oils,2019.0,3.5217955273677166
+Texas,Fats and oils,2020.0,3.649132144550277
+Texas,Fats and oils,2021.0,3.9990045739347937
+Texas,Fats and oils,2022.0,4.907448946748779
+Texas,Fruits,2019.0,2.142868685238512
+Texas,Fruits,2020.0,2.1971250162988176
+Texas,Fruits,2021.0,2.4040864193876836
+Texas,Fruits,2022.0,2.8028633517147163
+Texas,Grains,2019.0,1.9355916933183754
+Texas,Grains,2020.0,2.1235045637261374
+Texas,Grains,2021.0,2.2363005457692973
+Texas,Grains,2022.0,2.6463274349830153
+Texas,"Meats, eggs, and nuts",2019.0,4.209052195239386
+Texas,"Meats, eggs, and nuts",2020.0,4.370134409386054
+Texas,"Meats, eggs, and nuts",2021.0,4.706914986552752
+Texas,"Meats, eggs, and nuts",2022.0,5.316312134553056
+Texas,Sugar and sweeteners,2019.0,3.0922172484724415
+Texas,Sugar and sweeteners,2020.0,3.552192272238626
+Texas,Sugar and sweeteners,2021.0,3.757033389597424
+Texas,Sugar and sweeteners,2022.0,4.3342502766823925
+Texas,Vegetables,2019.0,1.503929056738985
+Texas,Vegetables,2020.0,1.5238859304439498
+Texas,Vegetables,2021.0,1.5839369152041756
+Texas,Vegetables,2022.0,1.8364435959364107
+Utah,Alcohol,2019.0,7.528769513435891
+Utah,Alcohol,2020.0,7.918519752201643
+Utah,Alcohol,2021.0,7.921828926042542
+Utah,Alcohol,2022.0,8.110201693123459
+Utah,Beverages,2019.0,2.4197287298036896
+Utah,Beverages,2020.0,2.485641384082404
+Utah,Beverages,2021.0,2.6289849635196543
+Utah,Beverages,2022.0,2.98015117553887
+Utah,Commercially prepared items,2019.0,2.544592112648947
+Utah,Commercially prepared items,2020.0,2.64975520564892
+Utah,Commercially prepared items,2021.0,2.7945759152108596
+Utah,Commercially prepared items,2022.0,3.22293859982406
+Utah,Dairy,2019.0,2.530202637604636
+Utah,Dairy,2020.0,2.6988645111995413
+Utah,Dairy,2021.0,2.821686462850077
+Utah,Dairy,2022.0,3.2263334181942542
+Utah,Fats and oils,2019.0,3.5378375853381785
+Utah,Fats and oils,2020.0,3.650430175229988
+Utah,Fats and oils,2021.0,3.8466047707391984
+Utah,Fats and oils,2022.0,4.88241216662829
+Utah,Fruits,2019.0,2.2518158756682833
+Utah,Fruits,2020.0,2.3048229310904627
+Utah,Fruits,2021.0,2.4608577062395973
+Utah,Fruits,2022.0,2.6266910268435026
+Utah,Grains,2019.0,2.208322192596589
+Utah,Grains,2020.0,2.3225966570629564
+Utah,Grains,2021.0,2.4422173398683173
+Utah,Grains,2022.0,2.7740732485798922
+Utah,"Meats, eggs, and nuts",2019.0,4.284987953025993
+Utah,"Meats, eggs, and nuts",2020.0,4.414293630689503
+Utah,"Meats, eggs, and nuts",2021.0,4.741748569164432
+Utah,"Meats, eggs, and nuts",2022.0,5.4061193488044665
+Utah,Sugar and sweeteners,2019.0,3.0453977178578615
+Utah,Sugar and sweeteners,2020.0,3.5187241611313587
+Utah,Sugar and sweeteners,2021.0,3.73598633337659
+Utah,Sugar and sweeteners,2022.0,4.268684264750813
+Utah,Vegetables,2019.0,1.6811348885653614
+Utah,Vegetables,2020.0,1.7232936028553225
+Utah,Vegetables,2021.0,1.7698957379798075
+Utah,Vegetables,2022.0,1.9395084914149858
+Vermont,Alcohol,2019.0,7.264653916886134
+Vermont,Alcohol,2020.0,7.9229668895923515
+Vermont,Alcohol,2021.0,7.994369816182029
+Vermont,Alcohol,2022.0,8.2010904428721
+Vermont,Beverages,2019.0,2.5926574137951244
+Vermont,Beverages,2020.0,2.6788467319437452
+Vermont,Beverages,2021.0,2.789631131479456
+Vermont,Beverages,2022.0,3.064133396015271
+Vermont,Commercially prepared items,2019.0,2.830526227303551
+Vermont,Commercially prepared items,2020.0,2.938160826546171
+Vermont,Commercially prepared items,2021.0,3.0857732542345646
+Vermont,Commercially prepared items,2022.0,3.487245988408265
+Vermont,Dairy,2019.0,2.9745935733187463
+Vermont,Dairy,2020.0,3.1559022743997684
+Vermont,Dairy,2021.0,3.2505419185191324
+Vermont,Dairy,2022.0,3.5257995372201454
+Vermont,Fats and oils,2019.0,3.8621661420402518
+Vermont,Fats and oils,2020.0,4.120995304866942
+Vermont,Fats and oils,2021.0,4.130157310317563
+Vermont,Fats and oils,2022.0,4.854324146503244
+Vermont,Fruits,2019.0,2.8928088228382944
+Vermont,Fruits,2020.0,3.0630189662491727
+Vermont,Fruits,2021.0,3.147592966403522
+Vermont,Fruits,2022.0,3.369616114913605
+Vermont,Grains,2019.0,2.6664216938490974
+Vermont,Grains,2020.0,2.7494848430878793
+Vermont,Grains,2021.0,2.8760223816429065
+Vermont,Grains,2022.0,3.2090351064727183
+Vermont,"Meats, eggs, and nuts",2019.0,4.77101160420518
+Vermont,"Meats, eggs, and nuts",2020.0,5.009377449400644
+Vermont,"Meats, eggs, and nuts",2021.0,5.204799042568894
+Vermont,"Meats, eggs, and nuts",2022.0,5.620022693970121
+Vermont,Sugar and sweeteners,2019.0,2.9069899166673983
+Vermont,Sugar and sweeteners,2020.0,3.405373916694295
+Vermont,Sugar and sweeteners,2021.0,3.5723383104675954
+Vermont,Sugar and sweeteners,2022.0,4.009762652432104
+Vermont,Vegetables,2019.0,2.2837948945087487
+Vermont,Vegetables,2020.0,2.3195898994320485
+Vermont,Vegetables,2021.0,2.3633385406690888
+Vermont,Vegetables,2022.0,2.5299165596935262
+Virginia,Alcohol,2019.0,7.664843557858272
+Virginia,Alcohol,2020.0,7.968663307224547
+Virginia,Alcohol,2021.0,8.004814367564846
+Virginia,Alcohol,2022.0,8.175509153808433
+Virginia,Beverages,2019.0,2.4872004386593027
+Virginia,Beverages,2020.0,2.577735945118309
+Virginia,Beverages,2021.0,2.715444806170425
+Virginia,Beverages,2022.0,3.0630666922901373
+Virginia,Commercially prepared items,2019.0,2.660919383952876
+Virginia,Commercially prepared items,2020.0,2.7123165154225215
+Virginia,Commercially prepared items,2021.0,2.860436081980935
+Virginia,Commercially prepared items,2022.0,3.264960101300643
+Virginia,Dairy,2019.0,2.7591000078863597
+Virginia,Dairy,2020.0,2.8539862008518333
+Virginia,Dairy,2021.0,2.922538583498015
+Virginia,Dairy,2022.0,3.30438958557656
+Virginia,Fats and oils,2019.0,3.622081952478583
+Virginia,Fats and oils,2020.0,3.7267112159926588
+Virginia,Fats and oils,2021.0,3.9358809747671333
+Virginia,Fats and oils,2022.0,4.867351715662983
+Virginia,Fruits,2019.0,2.573938014510093
+Virginia,Fruits,2020.0,2.6487127365074894
+Virginia,Fruits,2021.0,2.8151546003751866
+Virginia,Fruits,2022.0,3.103526529906857
+Virginia,Grains,2019.0,2.399834388341286
+Virginia,Grains,2020.0,2.503432196376245
+Virginia,Grains,2021.0,2.5913023470497225
+Virginia,Grains,2022.0,2.9475298998955215
+Virginia,"Meats, eggs, and nuts",2019.0,4.528166682962022
+Virginia,"Meats, eggs, and nuts",2020.0,4.688605831124087
+Virginia,"Meats, eggs, and nuts",2021.0,4.96141175973141
+Virginia,"Meats, eggs, and nuts",2022.0,5.422007188000417
+Virginia,Sugar and sweeteners,2019.0,2.9379959414605845
+Virginia,Sugar and sweeteners,2020.0,3.42388490158864
+Virginia,Sugar and sweeteners,2021.0,3.7041184882382137
+Virginia,Sugar and sweeteners,2022.0,4.209284104162545
+Virginia,Vegetables,2019.0,1.852169292341755
+Virginia,Vegetables,2020.0,1.9194074869618123
+Virginia,Vegetables,2021.0,2.001251924630272
+Virginia,Vegetables,2022.0,2.19819187938443
+Washington,Alcohol,2019.0,9.052677281904703
+Washington,Alcohol,2020.0,9.487730864812399
+Washington,Alcohol,2021.0,9.691930225189902
+Washington,Alcohol,2022.0,9.928704866811334
+Washington,Beverages,2019.0,2.6150568969227326
+Washington,Beverages,2020.0,2.7003156001808692
+Washington,Beverages,2021.0,2.808083423689313
+Washington,Beverages,2022.0,3.1144674452419374
+Washington,Commercially prepared items,2019.0,2.823924267301871
+Washington,Commercially prepared items,2020.0,2.920268729865715
+Washington,Commercially prepared items,2021.0,3.107786138348111
+Washington,Commercially prepared items,2022.0,3.547404327557731
+Washington,Dairy,2019.0,2.8801249982110724
+Washington,Dairy,2020.0,3.0002510066242163
+Washington,Dairy,2021.0,3.089728901162209
+Washington,Dairy,2022.0,3.440550051657439
+Washington,Fats and oils,2019.0,3.9165866756680767
+Washington,Fats and oils,2020.0,4.073786149919887
+Washington,Fats and oils,2021.0,4.21165200237979
+Washington,Fats and oils,2022.0,5.051867948685485
+Washington,Fruits,2019.0,2.7034284547285314
+Washington,Fruits,2020.0,2.805961486922307
+Washington,Fruits,2021.0,2.975735109177301
+Washington,Fruits,2022.0,3.2525876148614667
+Washington,Grains,2019.0,2.5369320604843297
+Washington,Grains,2020.0,2.6615423354513643
+Washington,Grains,2021.0,2.7712987038182217
+Washington,Grains,2022.0,3.155078400070312
+Washington,"Meats, eggs, and nuts",2019.0,4.944145192961418
+Washington,"Meats, eggs, and nuts",2020.0,5.131304041142091
+Washington,"Meats, eggs, and nuts",2021.0,5.411111094001488
+Washington,"Meats, eggs, and nuts",2022.0,5.863585998375648
+Washington,Sugar and sweeteners,2019.0,3.382142461643785
+Washington,Sugar and sweeteners,2020.0,3.859613096458978
+Washington,Sugar and sweeteners,2021.0,4.0507615862500135
+Washington,Sugar and sweeteners,2022.0,4.707453838333067
+Washington,Vegetables,2019.0,2.0695022672710928
+Washington,Vegetables,2020.0,2.0797008293809456
+Washington,Vegetables,2021.0,2.1282330583810025
+Washington,Vegetables,2022.0,2.3441629491690987
+West Virginia,Alcohol,2019.0,7.707503298519863
+West Virginia,Alcohol,2020.0,7.975678894112336
+West Virginia,Alcohol,2021.0,8.020706768665336
+West Virginia,Alcohol,2022.0,8.198345080795638
+West Virginia,Beverages,2019.0,2.4818691259284376
+West Virginia,Beverages,2020.0,2.5562843346443738
+West Virginia,Beverages,2021.0,2.7236915447891556
+West Virginia,Beverages,2022.0,3.0658381970322384
+West Virginia,Commercially prepared items,2019.0,2.388230090398426
+West Virginia,Commercially prepared items,2020.0,2.458348403531362
+West Virginia,Commercially prepared items,2021.0,2.601438133240957
+West Virginia,Commercially prepared items,2022.0,2.9523089748883713
+West Virginia,Dairy,2019.0,2.550140984575802
+West Virginia,Dairy,2020.0,2.643121790202641
+West Virginia,Dairy,2021.0,2.726920186890563
+West Virginia,Dairy,2022.0,3.0842057394592497
+West Virginia,Fats and oils,2019.0,3.1214378777561014
+West Virginia,Fats and oils,2020.0,3.248897406779418
+West Virginia,Fats and oils,2021.0,3.465462222376732
+West Virginia,Fats and oils,2022.0,4.326864537203166
+West Virginia,Fruits,2019.0,2.3881495898274876
+West Virginia,Fruits,2020.0,2.4269387217182476
+West Virginia,Fruits,2021.0,2.5999300970089956
+West Virginia,Fruits,2022.0,2.8332858266877907
+West Virginia,Grains,2019.0,2.185301045511412
+West Virginia,Grains,2020.0,2.225208897345327
+West Virginia,Grains,2021.0,2.3579765081063115
+West Virginia,Grains,2022.0,2.6853275462120023
+West Virginia,"Meats, eggs, and nuts",2019.0,4.012726675406187
+West Virginia,"Meats, eggs, and nuts",2020.0,4.098116656698957
+West Virginia,"Meats, eggs, and nuts",2021.0,4.392278612723792
+West Virginia,"Meats, eggs, and nuts",2022.0,4.853894531311886
+West Virginia,Sugar and sweeteners,2019.0,2.7431623746370946
+West Virginia,Sugar and sweeteners,2020.0,3.1612338298733103
+West Virginia,Sugar and sweeteners,2021.0,3.4591835552760988
+West Virginia,Sugar and sweeteners,2022.0,3.861496691436899
+West Virginia,Vegetables,2019.0,1.743516958094492
+West Virginia,Vegetables,2020.0,1.7876203894666285
+West Virginia,Vegetables,2021.0,1.8873122624070644
+West Virginia,Vegetables,2022.0,2.093292495967377
+Wisconsin,Alcohol,2019.0,9.60304564803143
+Wisconsin,Alcohol,2020.0,9.84185022871556
+Wisconsin,Alcohol,2021.0,9.98275052396383
+Wisconsin,Alcohol,2022.0,10.131709182228033
+Wisconsin,Beverages,2019.0,2.595547651195685
+Wisconsin,Beverages,2020.0,2.6509284479572246
+Wisconsin,Beverages,2021.0,2.776481310161773
+Wisconsin,Beverages,2022.0,3.1072778890033455
+Wisconsin,Commercially prepared items,2019.0,2.6510799014294415
+Wisconsin,Commercially prepared items,2020.0,2.7353280438027174
+Wisconsin,Commercially prepared items,2021.0,2.881673826411984
+Wisconsin,Commercially prepared items,2022.0,3.25967086301967
+Wisconsin,Dairy,2019.0,2.5638418440703563
+Wisconsin,Dairy,2020.0,2.680725121487216
+Wisconsin,Dairy,2021.0,2.7845167532173565
+Wisconsin,Dairy,2022.0,3.1597505886645525
+Wisconsin,Fats and oils,2019.0,3.4745985504252337
+Wisconsin,Fats and oils,2020.0,3.4800758636722144
+Wisconsin,Fats and oils,2021.0,3.6964702975108636
+Wisconsin,Fats and oils,2022.0,4.672318905074063
+Wisconsin,Fruits,2019.0,2.445679086619899
+Wisconsin,Fruits,2020.0,2.5028604433129336
+Wisconsin,Fruits,2021.0,2.690634069372246
+Wisconsin,Fruits,2022.0,2.9502962896800873
+Wisconsin,Grains,2019.0,2.1247201092986088
+Wisconsin,Grains,2020.0,2.242443335126768
+Wisconsin,Grains,2021.0,2.3755680167495297
+Wisconsin,Grains,2022.0,2.7134192619516306
+Wisconsin,"Meats, eggs, and nuts",2019.0,4.431109531255891
+Wisconsin,"Meats, eggs, and nuts",2020.0,4.538377172129646
+Wisconsin,"Meats, eggs, and nuts",2021.0,4.8036059949620835
+Wisconsin,"Meats, eggs, and nuts",2022.0,5.408292472631163
+Wisconsin,Sugar and sweeteners,2019.0,2.8041822695780234
+Wisconsin,Sugar and sweeteners,2020.0,3.2434070307601814
+Wisconsin,Sugar and sweeteners,2021.0,3.4100895673135767
+Wisconsin,Sugar and sweeteners,2022.0,3.834273054677847
+Wisconsin,Vegetables,2019.0,1.770486971059261
+Wisconsin,Vegetables,2020.0,1.841782848611234
+Wisconsin,Vegetables,2021.0,1.923757820759651
+Wisconsin,Vegetables,2022.0,2.1101675693778357
+Wyoming,Alcohol,2019.0,10.316451798718536
+Wyoming,Alcohol,2020.0,10.754521355778738
+Wyoming,Alcohol,2021.0,10.54284854574911
+Wyoming,Alcohol,2022.0,10.910536567364838
+Wyoming,Beverages,2019.0,2.6132186854837918
+Wyoming,Beverages,2020.0,2.667644632930934
+Wyoming,Beverages,2021.0,2.7764731349840677
+Wyoming,Beverages,2022.0,3.0817452802242467
+Wyoming,Commercially prepared items,2019.0,2.755891470901562
+Wyoming,Commercially prepared items,2020.0,2.825367964902237
+Wyoming,Commercially prepared items,2021.0,2.9573647670956698
+Wyoming,Commercially prepared items,2022.0,3.3821141003340176
+Wyoming,Dairy,2019.0,2.936926875807763
+Wyoming,Dairy,2020.0,3.0730984769252285
+Wyoming,Dairy,2021.0,3.133807136218344
+Wyoming,Dairy,2022.0,3.4941434270173395
+Wyoming,Fats and oils,2019.0,3.8982135667644826
+Wyoming,Fats and oils,2020.0,3.946575414282234
+Wyoming,Fats and oils,2021.0,4.118560175849503
+Wyoming,Fats and oils,2022.0,5.031491683142828
+Wyoming,Fruits,2019.0,2.6593896223356808
+Wyoming,Fruits,2020.0,2.6917419837995284
+Wyoming,Fruits,2021.0,2.8274706963719534
+Wyoming,Fruits,2022.0,3.0185845660467705
+Wyoming,Grains,2019.0,2.3959910708369963
+Wyoming,Grains,2020.0,2.466001025283745
+Wyoming,Grains,2021.0,2.5422803377661625
+Wyoming,Grains,2022.0,2.881921156475137
+Wyoming,"Meats, eggs, and nuts",2019.0,4.997261612989883
+Wyoming,"Meats, eggs, and nuts",2020.0,5.013735737326552
+Wyoming,"Meats, eggs, and nuts",2021.0,5.324222363448674
+Wyoming,"Meats, eggs, and nuts",2022.0,5.886773106992885
+Wyoming,Sugar and sweeteners,2019.0,3.430317716187971
+Wyoming,Sugar and sweeteners,2020.0,3.924759689731367
+Wyoming,Sugar and sweeteners,2021.0,4.048888788765298
+Wyoming,Sugar and sweeteners,2022.0,4.588840321736922
+Wyoming,Vegetables,2019.0,1.8956840059441167
+Wyoming,Vegetables,2020.0,1.9320092783918796
+Wyoming,Vegetables,2021.0,1.9867442816944805
+Wyoming,Vegetables,2022.0,2.1703837369219414

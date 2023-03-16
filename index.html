@@ -4,7 +4,7 @@
 <head>
     <meta charset=utf-8/>
     <link rel="stylesheet" type="text/css" href="style.css">
-
+    <script src="js/d3.v6.1.1/d3.min.js"></script>
     <title>Food Insecurity</title>
 </head>
 
@@ -23,7 +23,7 @@
         <h2>Background</h2>
         TODO: Add link to report, demo video, link to data etc. here  
         <h3>Data</h3>
-            Within our project, we plan on using and visualizing two different datasets. These two datasets contain information about food stamp usage by state over time, as well as grocery prices by state and food category over time. The data from both of these datasets are collected by the U.S. Department of Agriculture (USDA). The data about grocery prices is collected by Information Resources Inc. and updated and managed by the USDA Economic Research Service (ERS), while the data on food stamp usage is provided and managed under the USDA Food and Nutrition Service (FNS). Since both of our datasets are provided directly from agencies of the federal government, there shouldn’t be too much bias or ethical issues. The weekly grocery prices are collected by Information Resources, Inc. (IRI) using a nationally representative sample of retail food establishments and USDA’s ERS updates this data for the public monthly. There is a possibility for bias in this dataset because IRI does not collect data in 12 states/areas: Alaska, Delaware, Hawaii, Idaho, Iowa, Kansas, Nebraska, New Jersey, North Dakota, Mississippi, Montana, and Washington, D.C., so we have some missing information. 
+            Within our project, we plan on using and visualizing two different datasets. These two datasets contain information about food stamp usage by state over time, as well as grocery prices by state and food category over time. The data from both of these datasets are collected by the U.S. Department of Agriculture (USDA). The data about grocery prices is collected by Information Resources Inc. and updated and managed by the USDA Economic Research Service (ERS), while the data on food stamp usage is provided and managed under the USDA Food and Nutrition Service (FNS). Since both of our datasets are provided directly from agencies of the federal government, there should not be too much bias or ethical issues. The weekly grocery prices are collected by Information Resources, Inc. (IRI) using a nationally representative sample of retail food establishments and USDA ERS updates this data for the public monthly. There is a possibility for bias in this dataset because IRI does not collect data in 12 states/areas: Alaska, Delaware, Hawaii, Idaho, Iowa, Kansas, Nebraska, New Jersey, North Dakota, Mississippi, Montana, and Washington, D.C., so we have some missing information. 
             <br>
             <a href="data/cleanprices.csv">Grocery Store Prices Dataset</a>
             <a href="data/cleanstamps.csv">Food Stamp Usage Dataset</a>
@@ -32,7 +32,9 @@
 
     <div>
         <h2>Visualization</h2>
-        TODO: Build your visualization tool here  
+        <div id="USMap"></div> 
+        <div id="stampline"></div> 
+        <div id="priceline"></div> 
     </div>
 
     <div>
@@ -46,6 +48,8 @@
     </div>  
     </div>
 
+
+<script src="main.js"></script>
 
 </body>
 
