@@ -2,7 +2,7 @@
 
 
 const FRAME_HEIGHT = 900;
-const FRAME_WIDTH = 900; 
+const FRAME_WIDTH = 1000; 
 const MARGINS = {left: 40, right: 40, top: 40, bottom: 40};
 
 
@@ -119,32 +119,34 @@ const VIS_WIDTH = FRAME_WIDTH - MARGINS.left - MARGINS.right;
 // })
 // })
 
+ 
+const projection = d3.geoAlbersUsa().scale(1300).translate([487.5, 305])
 
-const width = 900;
-const height = 900;
-const svg = d3.select("body").append("svg")
-    .attr("width", width)
-    .attr("height", height);
- 
-const projection = d3.geoAlbersUsa()
-    .translate([width / 2, height / 2]) // translate to center of screen
-    .scale([1000]); // scale things down so see entire US
- 
 const path = d3.geoPath().projection(projection);
 console.log("hi1")
- 
-d3.csv("data/averageprices.csv").then((data) => {
 
-d3.json("us-states.json").then((json) => {
+let mapDairy = new Map()
 
 
+const promises = []
+
+promises.push(d3.json("https://gist.githubusercontent.com/Bradleykingz/3aa5206b6819a3c38b5d73cb814ed470/raw/a476b9098ba0244718b496697c5b350460d32f99/us-states.json"))
+promises.push(d3.csv("data/averageprices.csv"), (d) => mapDairy.set(d.State, + d.AverageUnitPrice))
+
+
+
+myPromises = Promise.all(promises).then((mydata) => {
+
+    const data = mydata[1]
+    const json = mydata[0]
 
     for (var i = 0; i < data.length; i++) {
     
-
+       // console.log(data[i])
     if (data[i].Category == "Dairy" && data[i].Year == 2019) {
         // Grab State Name
         var dataState = data[i].State;
+
         console.log(dataState)
 
         // Grab data value 
@@ -162,21 +164,71 @@ d3.json("us-states.json").then((json) => {
 
             // Stop looking through the JSON
             break;
+            }
         }
-    }
+        }
+
     }
 
-}
+    console.log(mydata[0].features)
 
-    let map = FRAME1.append("g")
+    FRAME1.append("g")
         .selectAll('path')
-        .data(json.features)
+        .data(mydata[0].features)
         .enter()
         .append('path')
-        .attr("d", path)
-        .attr('class', 'state')
+        .attr('d', path)
+        .attr("stroke", "black")
+        .attr("stroke-width", "3px")
+        .attr("fill", "white")
+
 })
-});
+
+ 
+// d3.csv("data/averageprices.csv").then((data) => {
+
+// d3.json("us-states.json").then((json) => {
+
+
+
+//     for (var i = 0; i < data.length; i++) {
+    
+
+//     if (data[i].Category == "Dairy" && data[i].Year == 2019) {
+//         // Grab State Name
+//         var dataState = data[i].State;
+//         console.log(dataState)
+
+//         // Grab data value 
+//         var dataValue = data[i].AverageUnitPrice;
+//         console.log(dataValue)
+
+//         // Find the corresponding state inside the GeoJSON
+//         for (var j = 0; j < json.features.length; j++)  {
+//             var jsonState = json.features[j].properties.name;
+
+//             if (dataState == jsonState) {
+
+//             // Copy the data value into the JSON
+//             json.features[j].properties.AverageUnitPrice = dataValue;
+
+//             // Stop looking through the JSON
+//             break;
+//         }
+//     }
+//     }
+
+// }
+
+//     let map = FRAME1.append("g")
+//         .selectAll('path')
+//         .data(json.features)
+//         .enter()
+//         .append('path')
+//         .attr("d", path)
+//         .attr('class', 'state')
+// })
+// });
 
 
 
