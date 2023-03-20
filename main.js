@@ -234,30 +234,101 @@ myPromises = Promise.all(promises).then((mydata) => {
 
 
 
-// LINE CHARTS CODE
-// foodstamps
-// const stampData = "data/cleanstamps.csv"; 
+//LINE CHARTS CODE
+//foodstamps
+const stampData = "data/cleanstamps.csv"; 
 
 d3.csv(stampData).then(function(datapoints){
     console.log(datapoints);
-    const Date = [];
-    const Cost_Per_Person = [];
+    const Year = [];
+    const Dates = [];
+    const Persons = [];
     const State = [];
+
+
     for (i = 0; i < datapoints.length; i++)
-    {
-        Date.push(datapoints[i].Date); 
-        Persons.push(datapoints[i].Cost_Per_Person); 
+    {   
+        Year.push(datapoints[i].Year);
+        Dates.push(datapoints[i].Date);
+        Persons.push(datapoints[i].Persons); 
         State.push(datapoints[i].State); 
     }
-    console.log(Date.getFullYear(), Cost_Per_Person,":", State); 
 
-    const data = {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr','May', 'Jun','Jul', 'Aug','Sept','Oct','Nov','Dec'],
-        datasets: [{
-            label: 'Food Stamps',
-            data:Cost_Per_Person
-        }]
+    // console.log(Year, Persons, State, Dates);
+
+
+
+    var svg = d3.select("#stampline")
+  .append("svg")
+    .attr("width", FRAME_WIDTH + MARGINS.left + MARGINS.right)
+    .attr("height", FRAME_HEIGHT + MARGINS.top + MARGINS.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + MARGINS.left + "," + MARGINS.top + ")");
+
+
+
+    const al_year = [];
+    // const al_persons = [];
+
+    for (i = 0; i < datapoints.length; i++)
+    {
+    if (Year[i] == 2020.0 && State[i] == 'Alabama') {
+        al_year.push({Months: datapoints[i].Date, Perons: datapoints[i].Persons}); 
+        // al_persons.push(datapoints[i].Persons);
+        
     }
+
+    
+
+    }
+
+    console.log(al_year);
+
+
+function(data) {
+
+
+   // Add X axis --> it is a date format
+    var x = d3.scaleTime()
+            .domain(d3.extent(data, function(d) { return d.Months; }))
+            .range([ 0, FRAME_WIDTH]);
+        svg.append("g")
+            .attr("transform", "translate(0," + FRAME_HEIGHT + ")")
+            .call(d3.axisBottom(x));
+
+    // Add Y axis
+        var y = d3.scaleLinear()
+            .domain([0, d3.max(data, function(d){ return + d.Persons; })])
+            .range([ FRAME_HEIGHT, 0 ]);
+        svg.append("g")
+            .call(d3.axisLeft(y));
+
+    // Add the line
+        svg.append("path")
+            .datum(data)
+            .attr("fill", "none")
+            .attr("stroke", "steelblue")
+            .attr("stroke-width", 1.5)
+            .attr("d", d3.line()
+                .x(function(d) { return x(d.Months) })
+                .y(function(d) { return y(d.Persons) })
+        );
+
+};
 });
+
+    // console.log(Dates.getFullYear(), Persons,":", State);
+
+    // const data = {
+    //     labels: ['Jan', 'Feb', 'Mar', 'Apr','May', 'Jun','Jul', 'Aug','Sept','Oct','Nov','Dec'],
+    //     datasets: [{
+    //         label: 'Food Stamps',
+    //         data:Persons
+    //     }]
+    // }
+
+
+
 
   
