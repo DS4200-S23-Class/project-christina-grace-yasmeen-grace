@@ -1,4 +1,4 @@
-Date,State,Persons,Cost Per Person,Population,Year,Percentage
+Date,State,Persons,Cost_Per_Person,Population,Year,Percentage
 10/1/19,Alabama,718792.0,120.07,4903185.0,2019.0,14.659695687598978
 11/1/19,Alabama,716466.0,119.89,4903185.0,2019.0,14.612257134903128
 12/1/19,Alabama,711384.0,119.58,4903185.0,2019.0,14.508610219683737

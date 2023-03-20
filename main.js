@@ -120,6 +120,8 @@ const VIS_WIDTH = FRAME_WIDTH - MARGINS.left - MARGINS.right;
 // })
 
  
+// MAP CODE
+
 const projection = d3.geoAlbersUsa().scale(1300).translate([487.5, 305])
 
 const path = d3.geoPath().projection(projection);
@@ -232,14 +234,30 @@ myPromises = Promise.all(promises).then((mydata) => {
 
 
 
-       
-
-
-
-
-
-
-
-
 // LINE CHARTS CODE
+// foodstamps
+// const stampData = "data/cleanstamps.csv"; 
 
+d3.csv(stampData).then(function(datapoints){
+    console.log(datapoints);
+    const Date = [];
+    const Cost_Per_Person = [];
+    const State = [];
+    for (i = 0; i < datapoints.length; i++)
+    {
+        Date.push(datapoints[i].Date); 
+        Persons.push(datapoints[i].Cost_Per_Person); 
+        State.push(datapoints[i].State); 
+    }
+    console.log(Date.getFullYear(), Cost_Per_Person,":", State); 
+
+    const data = {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr','May', 'Jun','Jul', 'Aug','Sept','Oct','Nov','Dec'],
+        datasets: [{
+            label: 'Food Stamps',
+            data:Cost_Per_Person
+        }]
+    }
+});
+
+  
