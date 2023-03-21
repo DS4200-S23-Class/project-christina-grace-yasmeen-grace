@@ -5,10 +5,6 @@ const FRAME_HEIGHT = 900;
 const FRAME_WIDTH = "100%"; 
 const MARGINS = {left: 40, right: 40, top: 40, bottom: 40};
 
-// Scale
-const VIS_HEIGHT = FRAME_HEIGHT - MARGINS.top - MARGINS.bottom;
-const VIS_WIDTH = FRAME_WIDTH - MARGINS.left - MARGINS.right;
-
 
 const FRAME1 = d3.select("#USMap") 
                   .append("svg") 
@@ -19,174 +15,174 @@ const FRAME1 = d3.select("#USMap")
 
 
  
-const projection = d3.geoAlbersUsa().scale(1300).translate([700, 345])
+// const projection = d3.geoAlbersUsa().scale(1300).translate([700, 345])
+// const path = d3.geoPath().projection(projection);
 
-const path = d3.geoPath().projection(projection);
-
-
-let mapDairy = new Map()
-
-
-const promises = []
+let mapDairy = new Map();
+const promises = [];
 
 promises.push(d3.json("https://gist.githubusercontent.com/Bradleykingz/3aa5206b6819a3c38b5d73cb814ed470/raw/a476b9098ba0244718b496697c5b350460d32f99/us-states.json"))
 promises.push(d3.csv("data/averageprices.csv"), (d) => mapDairy.set(d.State, + d.AverageUnitPrice))
 
+// dropdown food category selection
+let allGroup = ['Dairy', 'Alcohol', 'Fruits', 'Grains']
 
-var allGroup = []
-d3.csv("data/averageprices.csv" , (d) => {allGroup.push(d.Category)})
-
-var dropdown = d3.select("#selectButton")
-        .property('value', 'hi')
-
-
-console.log(allGroup)
-
-var options = dropdown.selectAll('option')
+d3.select("#selectButton")
+      .selectAll('myOptions')
         .data(allGroup)
-        .enter()
+      .enter()
         .append('option')
-options.text(function (d) { return d; }) // text showed in the menu
-        .attr("value", function (d) { return d; }) // corresponding value returned by the button
-        
+      .text(function (d) { return d; }) // text showed in the menu
+      .attr("value", function (d) { return d; }) // corresponding value returned by the butto
 
+// adds a slider to choose year
+let slider = d3.sliderBottom()
+    .tickFormat(function (d) {return d.toString().replace(/,/g, '')})
+    .min('2019')
+    .max('2022')
+    .default(2019)
+    .width(300)
+    .ticks(4)
+    .step(1)
+    .on('onchange', (val) => {
+        updateYr(val);
+    });
+FRAME1.append('g')
+        .call(slider)
+        .attr('id', 'yearSlider')
+        .attr('transform', 'translate(1100, 700)');
+yr = d3.select("#yearSlider").value
+console.log(yr)
 
+function updateYr(newYr) {
+    yr = newYr
+    FRAME1.select('#legendTicks').remove()
+    buildMap(yr)
+}
 
+function buildMap(yr) {
+    myPromises = Promise.all(promises).then((mydata) => {
 
+        const data = mydata[1]
+        const json = mydata[0]
+        const prices = []
 
-myPromises = Promise.all(promises).then((mydata) => {
+        for (var i = 0; i < data.length; i++) {
+            if (data[i].Category == "Dairy" && data[i].Year == Number(yr)) {
+                // Grab State Name and data value
+                var dataState = data[i].State;
+                var dataValue = data[i].AverageUnitPrice;
+                prices.push(dataValue)
 
-    const data = mydata[1]
-    const json = mydata[0]
-    const prices = []
+                // printing data into console
+                console.log(dataState, dataValue)
 
-    for (var i = 0; i < data.length; i++) {
-    
-        if (data[i].Category == "Dairy" && data[i].Year == 2019) {
-            // Grab State Name
-            var dataState = data[i].State;
+                // Find the corresponding state inside the GeoJSON
+                for (var j = 0; j < json.features.length; j++) {
+                    var jsonState = json.features[j].properties.name;
+                    if (dataState == jsonState) {
+                        // Copy the data value into the JSON
+                        json.features[j].properties.AverageUnitPrice = dataValue;
 
-
-            // Grab data value 
-            var dataValue = data[i].AverageUnitPrice;
-            prices.push(dataValue)
-
-            // printing data into console
-            console.log(dataState, dataValue)
-
-
-            // Find the corresponding state inside the GeoJSON
-            for (var j = 0; j < json.features.length; j++)  {
-                var jsonState = json.features[j].properties.name;
-
-                if (dataState == jsonState) {
-
-                // Copy the data value into the JSON
-                json.features[j].properties.AverageUnitPrice = dataValue;
-
-                // Stop looking through the JSON
-                break;
+                        // Stop looking through the JSON
+                        break;
+                    }
                 }
             }
-            }
-    }
-
-    
-
-    let max = Number(d3.max(prices));
-
-    let min = Number(d3.min(prices));
- 
-
-    const colorScale = d3.scaleLinear()
-        .domain([min, max])
-        .range(["#739BEC", "#FF6B6B"]);
+        }
 
 
-    const xScale = d3.scaleLinear()
-        .range([0, 500])
-        .domain([Math.round(min*10)/10, Math.round(max*10)/10])
+        // used to make legend and create color scale
+        let max = Number(d3.max(prices));
+        let min = Number(d3.min(prices));
+        let med = (max + min) / 2;
+
+        // used to color states
+        const colorScale = d3.scaleLinear()
+            .domain([min, med, max])
+            .range(["#0DCF00", "#FFFF4A", "#FF1818"]);
 
 
-    var xAxis = d3.axisBottom()
-        .scale(xScale)
-        .ticks(9, "$.2f");
+        // legend gradient
+        let defs = FRAME1.append("defs");
+        let gradient = defs.append("linearGradient")
+            .attr('id', 'linear-gradient')
+            .attr("x1", "0%")
+            .attr("y1", "0%")
+            .attr("x2", "100%")
+            .attr("y2", "0%");
 
+        gradient.append('stop')
+            .attr('offset', '0%')
+            .attr('stop-color', "#0DCF00");
+        gradient.append('stop')
+            .attr('offset', '50%')
+            .attr('stop-color', "#FFFF4A");
+        gradient.append('stop')
+            .attr('offset', '100%')
+            .attr('stop-color', "#FF1818");
 
-    FRAME1.append("g")
-        .selectAll('path')
-        .data(json.features)
-        .enter()
-        .append('path')
-        .attr('d', path)
-        .attr("stroke", "black")
-        .attr("stroke-width", "1.8px")
-        //.attr("fill", "white")
-        .attr("fill", function(d) {
-            // Get data value
-            var value = d.properties.AverageUnitPrice;
+        FRAME1.append("rect")
+            .attr('x', 50)
+            .attr('y', 680)
+            .attr("width", 500)
+            .attr('height', 20)
+            .attr("fill", "url(#linear-gradient)");
 
-            if (value) {
-            //If value exists…
-            return colorScale(value);
-            } else {
-            //If value is undefined…
-            return "white";
-            }
-        })
-    
-    var defs = FRAME1.append("defs");
+        // map title
+        FRAME1.append('text')
+            .attr("text-anchor", 'middle')
+            .attr("x", "50%")
+            .attr("y", 40)
+            .attr("font-size", 30)
+            .text("US ______ Map");
 
-    var gradient = defs.append("linearGradient")
-        .attr('id', 'linear-gradient')
-        .attr("x1", "0%")
-        .attr("y1", "0%")
-        .attr("x2", "100%")
-        .attr("y2", "0%");
+        // legend title
+        FRAME1.append('text')
+            .attr("x", 50)
+            .attr('y', 670)
+            .text("Average Unit Price");
 
-    gradient.append('stop')
-        .attr('offset', '0%')
-        .attr('stop-color', "#739BEC");
+        // legend ticks
+        let xScale = d3.scaleLinear()
+            .range([0, 500])
+            .domain([Math.round(min * 10) / 10, Math.round(max * 10) / 10])
+        let xAxis = d3.axisBottom()
+            .scale(xScale)
+            .ticks(9, "$.2f");
+        FRAME1.append('g')
+            .call(xAxis)
+            .attr('transform', 'translate(50, 700)')
+            .attr('id', 'legendTicks');
 
-    gradient.append('stop')
-        .attr('offset', '100%')
-        .attr('stop-color', "#FF6B6B");
+        const projection = d3.geoAlbersUsa().scale(1300).translate([700, 345]);
+        const path = d3.geoPath().projection(projection);
+        FRAME1.append("g")
+            .selectAll('path')
+            .data(json.features)
+            .enter()
+            .append('path')
+            .attr('d', path)
+            .attr("stroke", "black")
+            .attr("stroke-width", "1.8px")
+            .attr("fill", function(d) {
+                let value = d.properties.AverageUnitPrice;
 
-
-    // legend gradient
-    FRAME1.append("rect")
-        .attr('x', 50)
-        .attr('y', 680)
-        .attr("width", 500)
-        .attr('height', 20)
-        .attr("fill", "url(#linear-gradient)");
-
-    // map title
-    FRAME1.append('text')
-        .attr("text-anchor", 'middle')
-        .attr("x", "50%")
-        .attr("y", 40)
-        .attr("font-size", 30)
-        .text("US ______ Map");
-
-    // legend title
-    FRAME1.append('text')
-        .attr("x", 50)
-        .attr('y', 670)
-        .text("Average Unit Price");
-
-    // legend ticks
-    FRAME1.append('g')
-        .call(xAxis)
-        .attr('transform', 'translate(50, 700)');
-
-
-
-
-
-});
+                if (value) {
+                return colorScale(value);
+                } else {
+                return "white";
+                }
+            });
+    })
+}
+buildMap(Number(yr));
 
  
+
+
+
+
     
 //LINE CHARTS CODE
 //foodstamps
