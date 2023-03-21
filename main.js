@@ -51,7 +51,7 @@ FRAME1.append('g')
         .call(slider)
         .attr('id', 'yearSlider')
         .attr('transform', 'translate(1100, 700)');
-yr = d3.select("#yearSlider").value
+yr = 2019   //d3.select("#yearSlider").value
 console.log(yr)
 
 function updateYr(newYr) {
@@ -176,7 +176,7 @@ function buildMap(yr) {
             });
     })
 }
-buildMap(Number(yr));
+buildMap(yr);
 
  
 
