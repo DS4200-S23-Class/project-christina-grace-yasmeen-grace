@@ -180,22 +180,29 @@ buildMap(yr);
 
  
 
-
-
-
-    
 //LINE CHARTS CODE
 //foodstamps
-const timeConv = d3.timeParse("%d-%b-%Y");
-const stampData = "data/cleanstamps.csv"; 
+const stampData = "data/cleanstamps.csv";
+// console.log(stampData); 
+const yAccessor = (d) => d.Persons; 
+const timeConv = d3.timeParse("%d-%m-%Y");
+const xAccessor = (d) => timeConv(d["Date"]); 
+console.log(xAccessor(stampData[0]));  
 
 
+// const FRAME2 = d3.select("#stampline") 
+//         .append("svg") 
+//         .attr("height", FRAME_HEIGHT)   
+//         .attr("width", FRAME_WIDTH)
+//         .attr("class", "frame2");
 
-const FRAME2 = d3.select("#stampline") 
-        .append("svg") 
-        .attr("height", FRAME_HEIGHT)   
-        .attr("width", FRAME_WIDTH)
-        .attr("class", "frame2");
+var svg = d3.select("#stampline") 
+.append("svg")
+    .attr("width", FRAME_WIDTH + MARGINS.left + MARGINS.right)
+    .attr("height", FRAME_HEIGHT + MARGINS.top + MARGINS.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + MARGINS.left + "," + MARGINS.top + ")");
 
 d3.csv(stampData).then(function(datapoints){
     const Year = [];
@@ -213,6 +220,7 @@ d3.csv(stampData).then(function(datapoints){
     }
 
     // console.log(Year, Persons, State, Dates);
+    // console.log(d3.max);
 
     const al_year = [];
     // const al_persons = [];
@@ -228,7 +236,7 @@ d3.csv(stampData).then(function(datapoints){
     console.log(al_year);
 
     // find the max X
-    const MAX_X = d3.max(al_year, (d) => { return parseInt(d.Months); });
+    const MAX_X = d3.max(al_year, (d) => { return d.Months; });
 
     // find the max Y
     const MAX_Y = d3.max(al_year, (d) => { return parseInt(d.Persons); });
@@ -243,32 +251,44 @@ d3.csv(stampData).then(function(datapoints){
                     .domain([(MAX_Y + 1) ,0])
                     .range([0, VIS_HEIGHT]);
 
-    
-    // Add points to Frame
-    FRAME2.append("g")
-        .selectAll("datapoints")
-        .data(al_year)
-        .enter()
-        .append("circle")
-            .attr("cx", (d) => {return (X_SCALE(d.Months) + MARGINS.left);})
-            .attr("cy", (d) => {return (Y_SCALE(d.Persons) + MARGINS.bottom);})
-            .attr("r", 5)
+    console.log(X_SCALE(al_year[0].Months))
+    // // Add points to Frame
+    // FRAME2.append("g")
+    //     .selectAll("datapoints")
+    //     .data(al_year)
+    //     .enter()
+    //     .append("circle")
+    //         .attr("cx", (d) => {return (X_SCALE(d.Months) + MARGINS.left);})
+    //         .attr("cy", (d) => {return (Y_SCALE(d.Persons) + MARGINS.bottom);})
+    //         .attr("r", 5)
 
 
     // Add x-axis to vis1
-    FRAME2.append("g")
+    svg.append("g")
         .attr("transform", "translate(" + MARGINS.left + ","
             + (VIS_HEIGHT + MARGINS.top) + ")")
         .call(d3.axisBottom(X_SCALE).ticks(10))
             .attr("font-size", '20px');
         
     // Add y-axis to vis1
-    FRAME2.append("g")
+    svg.append("g")
         .attr("transform", "translate(" + MARGINS.left + ","
             + (MARGINS.bottom) + ")")
         .call(d3.axisLeft(Y_SCALE).ticks(15))
             .attr("font-size", '20px');
 
+
+    // Add line to Frame
+     svg.append("path") 
+        .selectAll("datapoints")
+        .data(al_year)
+        .enter()
+        .attr("fill", "none")
+        .attr("stroke", "steelblue")
+        .attr("stroke-width", 1.5)
+        .attr("d", d3.svg.line())
+            .x(function(d) {return x(d.Months);})
+            .y(function(d) {return y(d.Persons);})
 
 
 });
@@ -314,8 +334,3 @@ d3.csv(stampData).then(function(datapoints){
     //         data:Persons
     //     }]
     // }
-
-
-
-
-  
