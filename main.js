@@ -266,11 +266,15 @@ d3.csv(stampData).then(function(datapoints){
 
 
     // Add x-axis to vis1
+    // svg.append("g")
+    //     .attr("transform", "translate(" + MARGINS.left + ","
+    //         + (VIS_HEIGHT + MARGINS.top) + ")")
+    //     .call(d3.axisBottom(X_SCALE).ticks(10))
+    //         .attr("font-size", '20px');
+
     svg.append("g")
-        .attr("transform", "translate(" + MARGINS.left + ","
-            + (VIS_HEIGHT + MARGINS.top) + ")")
-        .call(d3.axisBottom(X_SCALE).ticks(10))
-            .attr("font-size", '20px');
+      .attr("transform", "translate(0," + VIS_HEIGHT + ")")
+      .call(d3.axisBottom(X_SCALE));
         
     // Add y-axis to vis1
     svg.append("g")
@@ -279,15 +283,24 @@ d3.csv(stampData).then(function(datapoints){
         .call(d3.axisLeft(Y_SCALE).ticks(15))
             .attr("font-size", '20px');
 
-    svg.append("path")
-            .datum(data)
-            .attr("fill", "none")
-            .attr("stroke", "steelblue")
-            .attr("stroke-width", 1.5)
-            .attr("d", d3.line()
-                .x(function(d) { return x(d.Months) })
-                .y(function(d) { return y(d.Persons) })
-        );
+    // svg.append("path")
+    //         .datum(data)
+    //         .attr("fill", "none")
+    //         .attr("stroke", "steelblue")
+    //         .attr("stroke-width", 1.5)
+    //         .attr("d", d3.line()
+    //             .x(function(d) { return x(d.Months) })
+    //             .y(function(d) { return y(d.Persons) })
+    //     );
+
+    svg.append("g")
+            .selectAll("datapoints")
+            .data(al_year)
+            .enter()
+            .append("circle")
+                .attr("cx", (d) => {return (X_SCALE(d.Months) + MARGINS.left);})
+                .attr("cy", (d) => {return (Y_SCALE(d.Persons) + MARGINS.bottom);})
+                .attr("r", 5)
 
 
     // Add line to Frame
