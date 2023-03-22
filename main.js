@@ -2,38 +2,55 @@
 
 
 const FRAME_HEIGHT = 900;
-const FRAME_WIDTH = "100%"; 
+const FRAME_WIDTH = "100%";
 const MARGINS = {left: 40, right: 40, top: 40, bottom: 40};
 
 
-const FRAME1 = d3.select("#USMap") 
-                  .append("svg") 
-                    .attr("height", FRAME_HEIGHT)   
+const FRAME1 = d3.select("#USMap")
+                  .append("svg")
+                    .attr("height", FRAME_HEIGHT)
                     .attr("width", FRAME_WIDTH)
                     .attr("class", "frame");
 
 
 
- 
-// const projection = d3.geoAlbersUsa().scale(1300).translate([700, 345])
-// const path = d3.geoPath().projection(projection);
+
 
 let mapDairy = new Map();
 const promises = [];
 
-promises.push(d3.json("https://gist.githubusercontent.com/Bradleykingz/3aa5206b6819a3c38b5d73cb814ed470/raw/a476b9098ba0244718b496697c5b350460d32f99/us-states.json"))
-promises.push(d3.csv("data/averageprices.csv"), (d) => mapDairy.set(d.State, + d.AverageUnitPrice))
+promises.push(d3.json("https://gist.githubusercontent.com/Bradleykingz/3aa5206b6819a3c38b5d73cb814ed470/raw/a476b9098ba0244718b496697c5b350460d32f99/us-states.json"));
+promises.push(d3.csv("data/averageprices.csv"), (d) => mapDairy.set(d.State, + d.AverageUnitPrice));
 
 // dropdown food category selection
-let allGroup = ['Dairy', 'Alcohol', 'Fruits', 'Grains']
-
+let allGroup = ['Dairy', 'Alcohol', 'Beverages', 'Commercially prepared items', 'Fats and oils', 'Fruits',
+                'Grains', 'Meats, eggs, and nuts', 'Sugar and sweeteners', 'Vegetables']
 d3.select("#selectButton")
+    .attr('transform', 'translate(1100, 650)')
       .selectAll('myOptions')
         .data(allGroup)
       .enter()
         .append('option')
-      .text(function (d) { return d; }) // text showed in the menu
-      .attr("value", function (d) { return d; }) // corresponding value returned by the butto
+      .text((d) => {return d}) // text showed in the menu
+      .attr("value", (d) => {return d}) // corresponding value returned by the button
+d3.select("#selectButton").on("change", (val) => {
+        cat = d3.select('#selectButton').property("value"); // gets selected value
+        updateCat(cat);
+    })
+cat = 'Dairy'
+
+// dropdown update map function
+function updateCat(newCat) {
+    FRAME1.select('#legendTicks').remove();
+    buildMap(yr, newCat);
+}
+
+// // dropdown title
+// FRAME1.append('text')
+//     .attr("x", 940)
+//     .attr('y', 680)
+//     .text("Select a food category");
+
 
 // adds a slider to choose year
 let slider = d3.sliderBottom()
@@ -45,37 +62,43 @@ let slider = d3.sliderBottom()
     .ticks(4)
     .step(1)
     .on('onchange', (val) => {
-        updateYr(val);
+        yr = val;
+        updateYr(yr);
     });
 FRAME1.append('g')
         .call(slider)
         .attr('id', 'yearSlider')
         .attr('transform', 'translate(1100, 700)');
-yr = 2019   //d3.select("#yearSlider").value
-console.log(yr)
+yr = 2019;   //d3.select("#yearSlider").value
 
+// slider update map function
 function updateYr(newYr) {
-    yr = newYr
-    FRAME1.select('#legendTicks').remove()
-    buildMap(yr)
-}
+    FRAME1.select('#legendTicks').remove();
+    buildMap(newYr, cat);
+};
 
-function buildMap(yr) {
+// slider title
+FRAME1.append('text')
+    .attr("x", 965)
+    .attr('y', 704)
+    .text("Drag to select year");
+
+function buildMap(yr, cat) {
     myPromises = Promise.all(promises).then((mydata) => {
 
-        const data = mydata[1]
-        const json = mydata[0]
-        const prices = []
+        const data = mydata[1];
+        const json = mydata[0];
+        const prices = [];
 
         for (var i = 0; i < data.length; i++) {
-            if (data[i].Category == "Dairy" && data[i].Year == Number(yr)) {
+            if (data[i].Category == cat && data[i].Year == Number(yr)) {
                 // Grab State Name and data value
                 var dataState = data[i].State;
                 var dataValue = data[i].AverageUnitPrice;
-                prices.push(dataValue)
+                prices.push(dataValue);
 
                 // printing data into console
-                console.log(dataState, dataValue)
+                console.log(dataState, dataValue);
 
                 // Find the corresponding state inside the GeoJSON
                 for (var j = 0; j < json.features.length; j++) {
@@ -93,8 +116,8 @@ function buildMap(yr) {
 
 
         // used to make legend and create color scale
-        let max = Number(d3.max(prices));
-        let min = Number(d3.min(prices));
+        let min = Math.floor(Number(d3.min(prices)) * 10) / 10;
+        let max = Math.ceil(Number(d3.max(prices)) * 10) / 10;
         let med = (max + min) / 2;
 
         // used to color states
@@ -135,7 +158,7 @@ function buildMap(yr) {
             .attr("x", "50%")
             .attr("y", 40)
             .attr("font-size", 30)
-            .text("US ______ Map");
+            .text("US Food Price Map");
 
         // legend title
         FRAME1.append('text')
@@ -146,7 +169,7 @@ function buildMap(yr) {
         // legend ticks
         let xScale = d3.scaleLinear()
             .range([0, 500])
-            .domain([Math.round(min * 10) / 10, Math.round(max * 10) / 10])
+            .domain([min, max]);
         let xAxis = d3.axisBottom()
             .scale(xScale)
             .ticks(9, "$.2f");
@@ -175,8 +198,9 @@ function buildMap(yr) {
                 }
             });
     })
-}
-buildMap(yr);
+};
+// builds map
+buildMap(yr, cat);
 
  
 
