@@ -186,10 +186,9 @@ const VIS_HEIGHT = FRAME_HEIGHT - MARGINS.top - MARGINS.bottom;
 const VIS_WIDTH = FRAME_WIDTH - MARGINS.left - MARGINS.right;
 const stampData = "data/cleanstamps.csv";
 // console.log(stampData); 
-const yAccessor = (d) => d.Persons; 
-const timeConv = d3.timeParse("%d-%m-%Y");
-const xAccessor = (d) => timeConv(d["Date"]); 
-console.log(xAccessor(stampData[0]));  
+// const timeConv = d3.timeParse("%d-%b-%Y");
+var timeConv = d3.timeParse("%b-%d-%Y");
+
 
 
 // const FRAME2 = d3.select("#stampline") 
@@ -359,3 +358,47 @@ d3.csv(stampData).then(function(datapoints){
     //         data:Persons
     //     }]
     // }
+
+//     /////////test code
+//     var domain = d3.extent(dates); 
+
+//     var xScale = d3.scaleTime()
+//         .domain(domain)
+//         .range([25, 555]);
+
+//     var xAxis = d3.axisBottom(xScale);
+
+//     var svg = d3.select("#stampline");
+
+//     svg.append("g")
+//         .attr("transform", "translate(0,60)")
+//         .call(xAxis);
+
+//     svg.append("g")
+//         .attr("transform", "translate(0,60)")
+//         .call(xAxis.ticks(d3.timeYear));
+
+//     domain = [d3.timeYear.floor(domain[0]), d3.timeYear.ceil(domain[1])];
+
+//     svg.append("g")
+//     .attr("transform", "translate(0,60)")
+//     .call(xAxis.ticks(d3.Months));
+
+//     svg.selectAll(".tick text").remove();
+
+//     svg.append("text")
+//        .attr("transform", "translate(300,95)")
+//        .style("text-anchor", "middle")
+//        .attr("fill", "black")
+//        .text("Dates");
+
+//     svg.selectAll("circle")
+//         .data(al_year)
+//         .enter()
+//         .append("circle")
+//         .attr("r", 5)
+//         .attr("fill", "black")
+//         .attr("cx", (d) => xScale(timeConv(d.Months)))
+//         .attr("cy", 50);
+
+//     /////////
