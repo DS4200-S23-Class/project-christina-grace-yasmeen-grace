@@ -17,3 +17,7 @@ h1 {
   fill: red;
   cursor: pointer;
 }
+
+.vis {
+    font-family: "Roboto";
+}
