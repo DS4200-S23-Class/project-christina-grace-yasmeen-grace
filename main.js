@@ -206,105 +206,105 @@ buildMap(yr, cat);
 //
 // //LINE CHARTS CODE
 // //foodstamps
-// const VIS_HEIGHT = FRAME_HEIGHT - MARGINS.top - MARGINS.bottom;
-// const VIS_WIDTH = FRAME_WIDTH - MARGINS.left - MARGINS.right;
-// const stampData = "data/cleanstamps.csv";
-// // console.log(stampData);
-// // const timeConv = d3.timeParse("%d-%b-%Y");
-// var timeConv = d3.timeParse("%b-%d-%Y");
+const VIS_HEIGHT = FRAME_HEIGHT - MARGINS.top - MARGINS.bottom;
+const VIS_WIDTH = FRAME_WIDTH - MARGINS.left - MARGINS.right;
+const stampData = "data/cleanstamps.csv";
+// console.log(stampData);
+// const timeConv = d3.timeParse("%d-%b-%Y");
+var timeConv = d3.timeParse("%b-%d-%Y");
+
+
 //
-//
-//
-// // const FRAME2 = d3.select("#stampline")
-// //         .append("svg")
-// //         .attr("height", FRAME_HEIGHT)
-// //         .attr("width", FRAME_WIDTH)
-// //         .attr("class", "frame2");
-//
-// var svg = d3.select("#stampline")
-// .append("svg")
-//     .attr("width", FRAME_WIDTH + MARGINS.left + MARGINS.right)
-//     .attr("height", FRAME_HEIGHT + MARGINS.top + MARGINS.bottom)
-//   .append("g")
-//     .attr("transform",
-//           "translate(" + MARGINS.left + "," + MARGINS.top + ")");
-//
-// d3.csv(stampData).then(function(datapoints){
-//     const Year = [];
-//     const Dates = [];
-//     const Persons = [];
-//     const State = [];
-//
-//
-//     for (i = 0; i < datapoints.length; i++)
-//     {
-//         Year.push(datapoints[i].Year);
-//         Dates.push(datapoints[i].Date);
-//         Persons.push(datapoints[i].Persons);
-//         State.push(datapoints[i].State);
-//     }
+const FRAME2 = d3.select("#stampline")
+        .append("svg")
+        .attr("height", FRAME_HEIGHT)
+        .attr("width", FRAME_WIDTH)
+        .attr("class", "frame2");
+
+var svg = d3.select("#stampline")
+.append("svg")
+    .attr("width", FRAME_WIDTH + MARGINS.left + MARGINS.right)
+    .attr("height", FRAME_HEIGHT + MARGINS.top + MARGINS.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + MARGINS.left + "," + MARGINS.top + ")");
+
+d3.csv(stampData).then(function(datapoints){
+    const Year = [];
+    const Dates = [];
+    const Persons = [];
+    const State = [];
+
+
+    for (i = 0; i < datapoints.length; i++)
+    {
+        Year.push(datapoints[i].Year);
+        Dates.push(datapoints[i].Date);
+        Persons.push(datapoints[i].Persons);
+        State.push(datapoints[i].State);
+    }
 //
 //     // console.log(Year, Persons, State, Dates);
 //     // console.log(d3.max);
 //
-//     const al_year = [];
-//     // const al_persons = [];
-//
-//     for (i = 0; i < datapoints.length; i++)
-//     {
-//     if (Year[i] == 2020.0 && State[i] == 'Alabama') {
-//         al_year.push({Months: datapoints[i].Date,Persons: datapoints[i].Persons});
-//         // al_persons.push(datapoints[i].Persons);
-//
-//     }};
+    const al_year = [];
+    // const al_persons = [];
+
+    for (i = 0; i < datapoints.length; i++)
+    {
+    if (Year[i] == 2020.0 && State[i] == 'Alabama') {
+        al_year.push({Months: datapoints[i].Date,Persons: datapoints[i].Persons});
+        // al_persons.push(datapoints[i].Persons);
+
+    }};
 //
 //     console.log(al_year);
 //
-//     // find the max X
-//     const MAX_X = d3.max(al_year, (d) => { return d.Months; });
-//
-//     // find the max Y
-//     const MAX_Y = d3.max(al_year, (d) => { return parseInt(d.Persons); });
-//
-//     console.log(MAX_X, MAX_Y);
-// ``
-//     //domain and range
-//     const X_SCALE = d3.scaleTime()
-//                     .domain([0, (MAX_X + 1)])
-//                     .range([0, VIS_WIDTH]);
-//     const Y_SCALE = d3.scaleLinear()
-//                     .domain([(MAX_Y + 1) ,0])
-//                     .range([0, VIS_HEIGHT]);
-//
-//     console.log(X_SCALE(al_year[0].Months))
-//     // // Add points to Frame
-//     // FRAME2.append("g")
-//     //     .selectAll("datapoints")
-//     //     .data(al_year)
-//     //     .enter()
-//     //     .append("circle")
-//     //         .attr("cx", (d) => {return (X_SCALE(d.Months) + MARGINS.left);})
-//     //         .attr("cy", (d) => {return (Y_SCALE(d.Persons) + MARGINS.bottom);})
-//     //         .attr("r", 5)
-//
-//
-//     // Add x-axis to vis1
-//     // svg.append("g")
-//     //     .attr("transform", "translate(" + MARGINS.left + ","
-//     //         + (VIS_HEIGHT + MARGINS.top) + ")")
-//     //     .call(d3.axisBottom(X_SCALE).ticks(10))
-//     //         .attr("font-size", '20px');
-//
-//     svg.append("g")
-//       .attr("transform", "translate(0," + VIS_HEIGHT + ")")
-//       .call(d3.axisBottom(X_SCALE));
-//
-//     // Add y-axis to vis1
-//     svg.append("g")
-//         .attr("transform", "translate(" + MARGINS.left + ","
-//             + (MARGINS.bottom) + ")")
-//         .call(d3.axisLeft(Y_SCALE).ticks(15))
-//             .attr("font-size", '20px');
+    // find the max X
+    const MAX_X = d3.max(al_year, (d) => { return d.Months; });
+
+    // find the max Y
+    const MAX_Y = d3.max(al_year, (d) => { return parseInt(d.Persons); });
+
+    console.log(MAX_X, MAX_Y);
+``
+    //domain and range
+    const X_SCALE = d3.scaleTime()
+                    .domain([0, (MAX_X + 1)])
+                    .range([0, VIS_WIDTH]);
+    const Y_SCALE = d3.scaleLinear()
+                    .domain([(MAX_Y + 1) ,0])
+                    .range([0, VIS_HEIGHT]);
+
+    console.log(X_SCALE(al_year[0].Months))
+    // // Add points to Frame
+    FRAME2.append("g")
+        .selectAll("datapoints")
+        .data(al_year)
+        .enter()
+        .append("circle")
+            .attr("cx", (d) => {return (X_SCALE(d.Months) + MARGINS.left);})
+            .attr("cy", (d) => {return (Y_SCALE(d.Persons) + MARGINS.bottom);})
+            .attr("r", 5)
+
+
+    // Add x-axis to vis1
+    svg.append("g")
+        .attr("transform", "translate(" + MARGINS.left + ","
+            + (VIS_HEIGHT + MARGINS.top) + ")")
+        .call(d3.axisBottom(X_SCALE).ticks(10))
+            .attr("font-size", '20px');
+
+    svg.append("g")
+      .attr("transform", "translate(0," + VIS_HEIGHT + ")")
+      .call(d3.axisBottom(X_SCALE));
+
+    // Add y-axis to vis1
+    svg.append("g")
+        .attr("transform", "translate(" + MARGINS.left + ","
+            + (MARGINS.bottom) + ")")
+        .call(d3.axisLeft(Y_SCALE).ticks(15))
+            .attr("font-size", '20px');
 //
 //     // svg.append("path")
 //     //         .datum(data)
@@ -316,15 +316,15 @@ buildMap(yr, cat);
 //     //             .y(function(d) { return y(d.Persons) })
 //     //     );
 //
-//     svg.append("g")
-//             .selectAll("datapoints")
-//             .data(al_year)
-//             .enter()
-//             .append("circle")
-//                 .attr("cx", (d) => {return (X_SCALE(d.Months) + MARGINS.left);})
-//                 .attr("cy", (d) => {return (Y_SCALE(d.Persons) + MARGINS.bottom);})
-//                 .attr("r", 5)
-//
+    svg.append("g")
+            .selectAll("datapoints")
+            .data(al_year)
+            .enter()
+            .append("circle")
+                .attr("cx", (d) => {return (X_SCALE(d.Months) + MARGINS.left);})
+                .attr("cy", (d) => {return (Y_SCALE(d.Persons) + MARGINS.bottom);})
+                .attr("r", 5)
+
 //
 //     // Add line to Frame
 //      // svg.append("path")
@@ -339,7 +339,7 @@ buildMap(yr, cat);
 //      //        .y(function(d) {return y(d.Persons);})
 //
 //
-// });
+ });
 //
 // // function(data) {
 //
