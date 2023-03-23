@@ -146,7 +146,7 @@ function buildMap(yr, cat) {
             .attr('stop-color', "#FF1818");
 
         FRAME1.append("rect")
-            .attr('x', 925)
+            .attr('x', 850)
             .attr('y', 680)
             .attr("width", 500)
             .attr('height', 20)
@@ -162,7 +162,7 @@ function buildMap(yr, cat) {
 
         // legend title
         FRAME1.append('text')
-            .attr("x", 925)
+            .attr("x", 850)
             .attr('y', 670)
             .text("Average Unit Price");
 
@@ -175,7 +175,7 @@ function buildMap(yr, cat) {
             .ticks(9, "$.2f");
         FRAME1.append('g')
             .call(xAxis)
-            .attr('transform', 'translate(925, 700)')
+            .attr('transform', 'translate(850, 700)')
             .attr('id', 'legendTicks');
 
         const projection = d3.geoAlbersUsa().scale(1300).translate([700, 345]);
