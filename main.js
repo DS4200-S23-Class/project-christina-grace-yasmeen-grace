@@ -1,10 +1,11 @@
 // US MAP CODE
 
 
-const FRAME_HEIGHT = 750;
-const FRAME_WIDTH = "100%";
+const FRAME_HEIGHT = 375;
+const FRAME_WIDTH = 750;
 const MARGINS = {left: 40, right: 40, top: 40, bottom: 40};
-
+const VIS_HEIGHT = FRAME_HEIGHT - MARGINS.top - MARGINS.bottom
+const VIS_WIDTH = FRAME_WIDTH - MARGINS.left - MARGINS.right
 
 const FRAME1 = d3.select("#USMap")
                   .append("svg")
@@ -51,7 +52,7 @@ let slider = d3.sliderBottom()
     .min('2019')
     .max('2022')
     .default(2019)
-    .width(300)
+    .width(VIS_WIDTH/5)
     .ticks(4)
     .step(1)
     .on('onchange', (val) => {
@@ -61,7 +62,7 @@ let slider = d3.sliderBottom()
 FRAME1.append('g')
         .call(slider)
         .attr('id', 'yearSlider')
-        .attr('transform', 'translate(140, 700)');
+        .attr('transform', 'translate(' + (MARGINS.left + 100) + "," + (VIS_HEIGHT + MARGINS.top) + ')');
 yr = 2019;   //d3.select("#yearSlider").value
 
 // slider update map function
@@ -73,7 +74,7 @@ function updateYr(newYr) {
 // slider title
 FRAME1.append('text')
     .attr("x", 0)
-    .attr('y', 703)
+    .attr('y', VIS_HEIGHT + MARGINS.top + 3)
     .text("Drag to select year");
 
 // adds tooltip
@@ -157,39 +158,39 @@ function buildMap(yr, cat) {
             .attr('stop-color', "#FF1818");
 
         FRAME1.append("rect")
-            .attr('x', 850)
-            .attr('y', 680)
-            .attr("width", 500)
-            .attr('height', 20)
+            .attr('x', FRAME_WIDTH/2 + VIS_WIDTH/12)
+            .attr('y', MARGINS.top + VIS_HEIGHT)
+            .attr("width", VIS_WIDTH/3)
+            .attr('height', 0.03 * VIS_HEIGHT)
             .attr("fill", "url(#linear-gradient)");
 
         // map title
         FRAME1.append('text')
             .attr("text-anchor", 'middle')
             .attr("x", "50%")
-            .attr("y", 40)
-            .attr("font-size", 30)
+            .attr("y", MARGINS.top/2)
+            .attr("font-size", 25)
             .text("US FOOD PRICE MAP");
 
         // legend title
         FRAME1.append('text')
-            .attr("x", 850)
-            .attr('y', 670)
+            .attr("x", FRAME_WIDTH/2 + VIS_WIDTH/12)
+            .attr('y', MARGINS.top + 0.99 * VIS_HEIGHT)
             .text("Average Unit Price");
 
         // legend ticks
         let xScale = d3.scaleLinear()
-            .range([0, 500])
+            .range([0, VIS_WIDTH/3])
             .domain([min, max]);
         let xAxis = d3.axisBottom()
             .scale(xScale)
             .ticks(9, "$.2f");
         FRAME1.append('g')
             .call(xAxis)
-            .attr('transform', 'translate(850, 700)')
+            .attr('transform', 'translate(' + (FRAME_WIDTH/2 + VIS_WIDTH/12) + ', ' + ( 0.03 * VIS_HEIGHT + VIS_HEIGHT + MARGINS.top) + ')')
             .attr('id', 'legendTicks');
 
-        const projection = d3.geoAlbersUsa().scale(1300).translate([700, 345]);
+        const projection = d3.geoAlbersUsa().scale(VIS_WIDTH).translate([VIS_WIDTH/2, VIS_WIDTH/4]);
         const path = d3.geoPath().projection(projection);
         FRAME1.append("g")
             .selectAll('path')
@@ -217,7 +218,6 @@ function buildMap(yr, cat) {
 
 // builds map
 buildMap(yr, cat);
-addTooltip();
 
 
  
@@ -226,8 +226,6 @@ addTooltip();
 
 // LINE CHARTS CODE
 // foodstamps
-const VIS_HEIGHT = FRAME_HEIGHT - MARGINS.top - MARGINS.bottom;
-const VIS_WIDTH = FRAME_WIDTH - MARGINS.left - MARGINS.right;
 const stampData = "data/cleanstamps.csv";
 // console.log(stampData);
 // const timeConv = d3.timeParse("%d-%b-%Y");
