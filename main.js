@@ -44,12 +44,6 @@ function updateCat(newCat) {
     buildMap(yr, newCat);
 }
 
-// // dropdown title
-// FRAME1.append('text')
-//     .attr("x", 940)
-//     .attr('y', 680)
-//     .text("Select a food category");
-
 
 // adds a slider to choose year
 let slider = d3.sliderBottom()
@@ -81,6 +75,24 @@ FRAME1.append('text')
     .attr("x", 0)
     .attr('y', 703)
     .text("Drag to select year");
+
+// adds tooltip
+const TOOLTIP = d3.select("#USMap")
+                    .append("div")
+                    .style("opacity", 0)
+                    .attr("class", "tooltip");
+
+// mouse move function
+function updateTooltip(event, d) {
+    TOOLTIP.style("left", (event.pageX + 10) + "px")
+            .style("top", (event.pageY - 30) + "px");
+    let p = d.properties.AverageUnitPrice
+    if (p) {
+        TOOLTIP.html("<b>" + d.properties.name + "</b><br/>Average Unit Price: $" + d3.format(".2f")(d.properties.AverageUnitPrice));
+    } else {
+        TOOLTIP.html("<b>" + d.properties.name + "</b><br/>Average Unit Price: no data");
+    }
+}
 
 function buildMap(yr, cat) {
     myPromises = Promise.all(promises).then((mydata) => {
@@ -118,7 +130,6 @@ function buildMap(yr, cat) {
         let min = Math.floor(Number(d3.min(prices)) * 10) / 10;
         let max = Math.ceil(Number(d3.max(prices)) * 10) / 10;
         let med = (max + min) / 2;
-        console.log(prices)
 
         // used to color states
         const colorScale = d3.scaleLinear()
@@ -196,16 +207,25 @@ function buildMap(yr, cat) {
                 } else {
                 return "white";
                 }
-            });
+            })
+            .on("mouseover", (d) => {TOOLTIP.style("opacity", 1);}) // adds tooltip events
+            .on("mousemove", updateTooltip)
+            .on("mouseleave", (d) => {TOOLTIP.style("opacity", 0);});
     })
+    ;
 };
+
 // builds map
 buildMap(yr, cat);
+addTooltip();
+
 
  
-//
-// //LINE CHARTS CODE
-// //foodstamps
+
+
+
+// LINE CHARTS CODE
+// foodstamps
 const VIS_HEIGHT = FRAME_HEIGHT - MARGINS.top - MARGINS.bottom;
 const VIS_WIDTH = FRAME_WIDTH - MARGINS.left - MARGINS.right;
 const stampData = "data/cleanstamps.csv";
@@ -243,10 +263,10 @@ d3.csv(stampData).then(function(datapoints){
         Persons.push(datapoints[i].Persons);
         State.push(datapoints[i].State);
     }
-//
-//     // console.log(Year, Persons, State, Dates);
-//     // console.log(d3.max);
-//
+
+     // console.log(Year, Persons, State, Dates);
+     // console.log(d3.max);
+
     const al_year = [];
     // const al_persons = [];
 
@@ -257,9 +277,9 @@ d3.csv(stampData).then(function(datapoints){
         // al_persons.push(datapoints[i].Persons);
 
     }};
-//
+
 //     console.log(al_year);
-//
+
     // find the max X
     const MAX_X = d3.max(al_year, (d) => { return d.Months; });
 
@@ -277,7 +297,7 @@ d3.csv(stampData).then(function(datapoints){
                     .range([0, VIS_HEIGHT]);
 
     console.log(X_SCALE(al_year[0].Months))
-    // // Add points to Frame
+    // Add points to Frame
     FRAME2.append("g")
         .selectAll("datapoints")
         .data(al_year)
@@ -305,17 +325,17 @@ d3.csv(stampData).then(function(datapoints){
             + (MARGINS.bottom) + ")")
         .call(d3.axisLeft(Y_SCALE).ticks(15))
             .attr("font-size", '20px');
-//
-//     // svg.append("path")
-//     //         .datum(data)
-//     //         .attr("fill", "none")
-//     //         .attr("stroke", "steelblue")
-//     //         .attr("stroke-width", 1.5)
-//     //         .attr("d", d3.line()
-//     //             .x(function(d) { return x(d.Months) })
-//     //             .y(function(d) { return y(d.Persons) })
-//     //     );
-//
+
+     // svg.append("path")
+     //         .datum(data)
+     //         .attr("fill", "none")
+     //         .attr("stroke", "steelblue")
+     //         .attr("stroke-width", 1.5)
+     //         .attr("d", d3.line()
+     //             .x(function(d) { return x(d.Months) })
+     //             .y(function(d) { return y(d.Persons) })
+     //     );
+
     svg.append("g")
             .selectAll("datapoints")
             .data(al_year)
