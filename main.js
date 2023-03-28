@@ -14,9 +14,6 @@ const FRAME1 = d3.select("#USMap")
                     .attr("class", "frame");
 
 
-
-
-
 let mapDairy = new Map();
 const promises = [];
 
@@ -220,227 +217,358 @@ function buildMap(yr, cat) {
 buildMap(yr, cat);
 
 
- 
 
+// Line Charts code:
 
+//food stamp
 
-// LINE CHARTS CODE
-// foodstamps
-const stampData = "data/cleanstamps.csv";
-// console.log(stampData);
-// const timeConv = d3.timeParse("%d-%b-%Y");
-var timeConv = d3.timeParse("%b-%d-%Y");
+// set the dimensions and margins of the first graph
+const margin = {top: 10, right: 30, bottom: 30, left: 60},
+    width = 1000 - margin.left - margin.right,
+    height = 450 - margin.top - margin.bottom;
 
-
-//
-const FRAME2 = d3.select("#stampline")
-        .append("svg")
-        .attr("height", FRAME_HEIGHT)
-        .attr("width", FRAME_WIDTH)
-        .attr("class", "frame2");
-
-var svg = d3.select("#stampline")
-.append("svg")
-    .attr("width", FRAME_WIDTH + MARGINS.left + MARGINS.right)
-    .attr("height", FRAME_HEIGHT + MARGINS.top + MARGINS.bottom)
+// append the svg object to the body of the page
+const svg = d3.select("#stampline")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
   .append("g")
-    .attr("transform",
-          "translate(" + MARGINS.left + "," + MARGINS.top + ")");
-
-d3.csv(stampData).then(function(datapoints){
-    const Year = [];
-    const Dates = [];
-    const Persons = [];
-    const State = [];
+    .attr("transform", `translate(${margin.left},${margin.top})`);
 
 
-    for (i = 0; i < datapoints.length; i++)
-    {
-        Year.push(datapoints[i].Year);
-        Dates.push(datapoints[i].Date);
-        Persons.push(datapoints[i].Persons);
-        State.push(datapoints[i].State);
-    }
+// const VIS_HEIGHT = FRAME_HEIGHT - MARGINS.top - MARGINS.bottom;
+// const VIS_WIDTH = FRAME_WIDTH - MARGINS.left - MARGINS.right;
 
-     // console.log(Year, Persons, State, Dates);
-     // console.log(d3.max);
+// const svg = d3.select("#stampline")
+//         .append("svg")
+//         .attr("height", FRAME_HEIGHT)
+//         .attr("width", FRAME_WIDTH)
+//         .attr("class", "svg");
 
-    const al_year = [];
-    // const al_persons = [];
+//Read the data
+d3.csv("data/alabama2020stamps.csv",
 
-    for (i = 0; i < datapoints.length; i++)
-    {
-    if (Year[i] == 2020.0 && State[i] == 'Alabama') {
-        al_year.push({Months: datapoints[i].Date,Persons: datapoints[i].Persons});
-        // al_persons.push(datapoints[i].Persons);
+  // When reading the csv, I must format variables:
+  function(d){
+    return { date : d3.timeParse("%Y-%m-%d")(d.date), persons : d.persons }
+  }).then(
 
-    }};
+  function(data) {
 
-//     console.log(al_year);
-
-    // find the max X
-    const MAX_X = d3.max(al_year, (d) => { return d.Months; });
-
-    // find the max Y
-    const MAX_Y = d3.max(al_year, (d) => { return parseInt(d.Persons); });
-
-    console.log(MAX_X, MAX_Y);
-``
-    //domain and range
-    const X_SCALE = d3.scaleTime()
-                    .domain([0, (MAX_X + 1)])
-                    .range([0, VIS_WIDTH]);
-    const Y_SCALE = d3.scaleLinear()
-                    .domain([(MAX_Y + 1) ,0])
-                    .range([0, VIS_HEIGHT]);
-
-    console.log(X_SCALE(al_year[0].Months))
-    // Add points to Frame
-    FRAME2.append("g")
-        .selectAll("datapoints")
-        .data(al_year)
-        .enter()
-        .append("circle")
-            .attr("cx", (d) => {return (X_SCALE(d.Months) + MARGINS.left);})
-            .attr("cy", (d) => {return (Y_SCALE(d.Persons) + MARGINS.bottom);})
-            .attr("r", 5)
-
-
-    // Add x-axis to vis1
+    // X axis -> date format
+    const x = d3.scaleTime()
+      .domain(d3.extent(data, function(d) { return d.date; }))
+      .range([ 0, FRAME_WIDTH ]);
     svg.append("g")
-        .attr("transform", "translate(" + MARGINS.left + ","
-            + (VIS_HEIGHT + MARGINS.top) + ")")
-        .call(d3.axisBottom(X_SCALE).ticks(10))
-            .attr("font-size", '20px');
+      .attr("transform", `translate(0, ${FRAME_HEIGHT})`)
+      .call(d3.axisBottom(x));
 
+    // Y axis
+    const y = d3.scaleLinear()
+      .domain([0, d3.max(data, function(d) { return +d.persons; })])
+      .range([ FRAME_HEIGHT, 0 ]);
     svg.append("g")
-      .attr("transform", "translate(0," + VIS_HEIGHT + ")")
-      .call(d3.axisBottom(X_SCALE));
+      .call(d3.axisLeft(y));
 
-    // Add y-axis to vis1
-    svg.append("g")
-        .attr("transform", "translate(" + MARGINS.left + ","
-            + (MARGINS.bottom) + ")")
-        .call(d3.axisLeft(Y_SCALE).ticks(15))
-            .attr("font-size", '20px');
+    // Add the line
+    svg.append("path")
+      .datum(data)
+      .attr("fill", "none")
+      .attr("stroke", "blue")
+      .attr("stroke-width", 2)
+      .attr("d", d3.line()
+        .x(function(d) { return x(d.date) })
+        .y(function(d) { return y(d.persons) })
+    )
 
-     // svg.append("path")
-     //         .datum(data)
-     //         .attr("fill", "none")
-     //         .attr("stroke", "steelblue")
-     //         .attr("stroke-width", 1.5)
-     //         .attr("d", d3.line()
-     //             .x(function(d) { return x(d.Months) })
-     //             .y(function(d) { return y(d.Persons) })
-     //     );
 
-    svg.append("g")
-            .selectAll("datapoints")
-            .data(al_year)
-            .enter()
-            .append("circle")
-                .attr("cx", (d) => {return (X_SCALE(d.Months) + MARGINS.left);})
-                .attr("cy", (d) => {return (Y_SCALE(d.Persons) + MARGINS.bottom);})
-                .attr("r", 5)
+    // map title
+    svg.append('text')
+        .attr("text-anchor", 'end')
+        .attr("x", "50%")
+        .attr("y", MARGINS.top+20)
+        .attr("font-size", 25)
+        .text("FOOD STAMPS in ALABAMA");
 
-//
-//     // Add line to Frame
-//      // svg.append("path")
-//      //    .selectAll("datapoints")
-//      //    .data(al_year)
-//      //    .enter()
-//      //    .attr("fill", "none")
-//      //    .attr("stroke", "steelblue")
-//      //    .attr("stroke-width", 1.5)
-//      //    .attr("d", d3.svg.line())
-//      //        .x(function(d) {return x(d.Months);})
-//      //        .y(function(d) {return y(d.Persons);})
-//
-//
- });
-//
-// // function(data) {
-//
-//
-// //    // Add X axis --> it is a date format
-// //     var x = d3.scaleTime()
-// //             .domain(d3.extent(data, function(d) { return d.Months; }))
-// //             .range([ 0, FRAME_WIDTH]);
-// //         svg.append("g")
-// //             .attr("transform", "translate(0," + FRAME_HEIGHT + ")")
-// //             .call(d3.axisBottom(x));
-//
-// //     // Add Y axis
-// //         var y = d3.scaleLinear()
-// //             .domain([0, d3.max(data, function(d){ return + d.Persons; })])
-// //             .range([ FRAME_HEIGHT, 0 ]);
-// //         svg.append("g")
-// //             .call(d3.axisLeft(y));
-//
-// //     // Add the line
-// //         svg.append("path")
-// //             .datum(data)
-// //             .attr("fill", "none")
-// //             .attr("stroke", "steelblue")
-// //             .attr("stroke-width", 1.5)
-// //             .attr("d", d3.line()
-// //                 .x(function(d) { return x(d.Months) })
-// //                 .y(function(d) { return y(d.Persons) })
-// //         );
-//
-// // };
-//
-//
-//     // console.log(Dates.getFullYear(), Persons,":", State);
-//
-//     // const data = {
-//     //     labels: ['Jan', 'Feb', 'Mar', 'Apr','May', 'Jun','Jul', 'Aug','Sept','Oct','Nov','Dec'],
-//     //     datasets: [{
-//     //         label: 'Food Stamps',
-//     //         data:Persons
-//     //     }]
-//     // }
-//
-// //     /////////test code
-// //     var domain = d3.extent(dates);
-//
-// //     var xScale = d3.scaleTime()
-// //         .domain(domain)
-// //         .range([25, 555]);
-//
-// //     var xAxis = d3.axisBottom(xScale);
-//
-// //     var svg = d3.select("#stampline");
-//
-// //     svg.append("g")
-// //         .attr("transform", "translate(0,60)")
-// //         .call(xAxis);
-//
-// //     svg.append("g")
-// //         .attr("transform", "translate(0,60)")
-// //         .call(xAxis.ticks(d3.timeYear));
-//
-// //     domain = [d3.timeYear.floor(domain[0]), d3.timeYear.ceil(domain[1])];
-//
-// //     svg.append("g")
-// //     .attr("transform", "translate(0,60)")
-// //     .call(xAxis.ticks(d3.Months));
-//
-// //     svg.selectAll(".tick text").remove();
-//
-// //     svg.append("text")
-// //        .attr("transform", "translate(300,95)")
-// //        .style("text-anchor", "middle")
-// //        .attr("fill", "black")
-// //        .text("Dates");
-//
-// //     svg.selectAll("circle")
-// //         .data(al_year)
-// //         .enter()
-// //         .append("circle")
-// //         .attr("r", 5)
-// //         .attr("fill", "black")
-// //         .attr("cx", (d) => xScale(timeConv(d.Months)))
-// //         .attr("cy", 50);
-//
-//     /////////
+    // x and y labels
+    svg.append("text")
+        .attr("text-anchor", "end")
+        .attr("x", width-150)
+        .attr("y", height + margin.top)
+        .text("Months");
+
+    svg.append("text")
+        .attr("text-anchor", "end")
+        .attr("transform", "rotate(-90)")
+        .attr("y", -margin.left+12)
+        .attr("x", -margin.top-20)
+        .text("Number of Food Stamps");
+});
+
+
+const margin2 = {top: 10, right: 30, bottom: 30, left: 60},
+    width2 = 1000 - margin2.left - margin2.right,
+    height2 = 450 - margin2.top - margin2.bottom;
+
+// category 
+const svg2 = d3.select("#priceline")
+  .append("svg")
+    .attr("width", width2 + margin2.left + margin2.right)
+    .attr("height", height2 + margin2.top + margin2.bottom)
+  .append("g")
+    .attr("transform", `translate(${margin2.left},${margin2.top})`);
+
+
+// const VIS_HEIGHT = FRAME_HEIGHT - MARGINS.top - MARGINS.bottom;
+// const VIS_WIDTH = FRAME_WIDTH - MARGINS.left - MARGINS.right;
+
+// const svg = d3.select("#stampline")
+//         .append("svg")
+//         .attr("height", FRAME_HEIGHT)
+//         .attr("width", FRAME_WIDTH)
+//         .attr("class", "svg");
+
+//Read the data
+d3.csv("data/alabama2020pricealc.csv",
+
+  function(a){
+    return { date2 : d3.timeParse("%Y-%d-%m")(a.date2), unit_price : a.unit_price }
+  }).then(
+
+  function(data2) {
+
+    // X axis -> date format
+    const x = d3.scaleTime()
+      .domain(d3.extent(data2, function(a) { return a.date2; }))
+      .range([ 0, FRAME_WIDTH ]);
+    svg2.append("g")
+      .attr("transform", `translate(0, ${FRAME_HEIGHT})`)
+      .call(d3.axisBottom(x));
+
+    // Y axis
+    const y = d3.scaleLinear()
+      .domain([0, d3.max(data2, function(a) { return +a.unit_price; })])
+      .range([ FRAME_HEIGHT, 0 ]);
+    svg2.append("g")
+      .call(d3.axisLeft(y));
+
+    // Add the line
+    svg2.append("path")
+      .datum(data2)
+      .attr("fill", "none")
+      .attr("stroke", "green")
+      .attr("stroke-width", 2)
+      .attr("d", d3.line()
+        .x(function(a) { return x(a.date2) })
+        .y(function(a) { return y(a.unit_price) })
+    )
+
+
+    // map title
+    svg2.append('text')
+        .attr("text-anchor", 'end')
+        .attr("x", "50%")
+        .attr("y", MARGINS.top+20)
+        .attr("font-size", 25)
+        .text("UNIT PRICE in ALABAMA");
+
+    // x and y labels
+    svg2.append("text")
+        .attr("text-anchor", "end")
+        .attr("x", width2-150)
+        .attr("y", height2 + margin2.top)
+        .text("Months");
+
+    svg2.append("text")
+        .attr("text-anchor", "end")
+        .attr("transform", "rotate(-90)")
+        .attr("y", -margin2.left+15)
+        .attr("x", -margin2.top-20)
+        .text("Unit Price for Alcohol");
+});
+
+
+// // // //LINE CHARTS CODE
+// // //foodstamps
+// // const VIS_HEIGHT = FRAME_HEIGHT - MARGINS.top - MARGINS.bottom;
+// // const VIS_WIDTH = FRAME_WIDTH - MARGINS.left - MARGINS.right;
+// const stampData = "data/cleanstamps.csv";
+// // console.log(stampData);
+// // const timeConv = d3.timeParse("%d-%b-%Y");
+
+// //
+// const FRAME2 = d3.select("#stampline")
+//         .append("svg")
+//         .attr("height", FRAME_HEIGHT)
+//         .attr("width", FRAME_WIDTH)
+//         .attr("class", "frame2");
+
+// var svg = d3.select("#stampline")
+// .append("svg")
+//     .attr("width", FRAME_WIDTH + MARGINS.left + MARGINS.right)
+//     .attr("height", FRAME_HEIGHT + MARGINS.top + MARGINS.bottom)
+//   .append("g")
+//     .attr("transform",
+//           "translate(" + MARGINS.left + "," + MARGINS.top + ")");
+
+// d3.csv(stampData).then(function(datapoints){
+//     const Year = [];
+//     const Dates = [];
+//     const Persons = [];
+//     const State = [];
+//     const Months = []; 
+
+//     for (i = 0; i < datapoints.length; i++)
+//     {
+//         Year.push(datapoints[i].Year);
+//         Dates.push(datapoints[i].Date);
+//         Persons.push(datapoints[i].Persons);
+//         State.push(datapoints[i].State);
+//     }
+//     // console.log(Months); 
+
+//     let formatTime = d3.timeFormat("%B");
+//     let todayString = formatTime(new Date(2019, 0, 1)); // "January 15, 2020"
+//     //console.log(todayString)
+
+//     let dateparser = function(l)
+//     {
+//         for(i = 0; i < l.length-1; i++)
+//         {
+//             let d = l[i]; 
+//             // date array
+//             let dateArr = d.split("/");
+//             const month = parseInt(dateArr[0]); 
+//             const day = parseInt(dateArr[1]);
+//             const year = parseInt("20" + dateArr[2]); 
+//             //console.log(year); 
+//             const ret = formatTime(new Date(year, month-1, day));
+//             //console.log(typeof ret); 
+//             Months.push(ret); 
+//         }
+        
+//     }
+//     dateparser(Dates); 
+
+
+//     // create dictionary
+//     const masterDict = {};
+//     const yearDict = {}; 
+//     const monthDict = {}; 
+
+
+//     for(i = 0; i < Months.length; i++)
+//     {
+//         monthDict[Months[i]] = ""; 
+//     } 
+//     // console.log(monthDict); 
+
+//     for(i = 0; i < Year.length; i++)
+//     {
+//         yearDict[Year[i]] = monthDict; 
+//     } 
+//     // console.log(yearDict); 
+
+//     for(i = 0; i < State.length; i++)
+//     {
+//         masterDict[State[i]] = yearDict; 
+//     } 
+//     //console.log(masterDict); 
+
+
+//     // function that parses individual date into month
+//     // retruns month
+//     function tparse(t){
+//         let dateArr = t.split("/");
+//         const month = parseInt(dateArr[0]); 
+//         const day = parseInt(dateArr[1]);
+//         const year = parseInt("20" + dateArr[2]); 
+//         //console.log(year); 
+//         const ret = formatTime(new Date(year, month-1, day));
+//         //console.log(ret); 
+//         return ret; 
+//     }
+
+
+//     // looping through each row in csv to populate dictionaries of dictionaries
+//     for (i = 0; i < datapoints.length; i++)
+//     {
+//         let state = datapoints[i].State;  
+//         let year = datapoints[i].Year;
+//         let month = tparse(datapoints[i].Date);
+//         let pval  = datapoints[i].Persons; 
+//         masterDict[state][year][month] = pval; 
+//     }
+//     //console.log(masterDict); 
+//     console.log(masterDict[state = "Alabama"][year = "2020.0"][month="January"]); 
+
+
+//     const al_year = [];
+//     // const al_persons = [];
+
+//     for (i = 0; i < datapoints.length; i++)
+//     {
+//     if (Year[i] == 2020.0 && State[i] == 'Alabama') {
+//         al_year.push({Months: datapoints[i].Date,Persons: datapoints[i].Persons});
+//         // al_persons.push(datapoints[i].Persons);
+
+//     }};
+
+//     // find the max X
+//     const MAX_X = d3.max(al_year, (d) => { return d.month; });
+
+//     // find the max Y
+//     const MAX_Y = d3.max(al_year, (d) => { return parseInt(d.pval); });
+
+//     //console.log(MAX_X, MAX_Y);
+
+
+//     //domain and range
+
+//     const X_SCALE = d3.scaleLinear()
+//                     .domain([0, MAX_X])
+//                     .range([0, VIS_WIDTH]);
+//     const Y_SCALE = d3.scaleLinear()
+//                     .domain([(MAX_Y + 1) ,0])
+//                     .range([0, VIS_HEIGHT]);
+
+//     //console.log(X_SCALE(al_year[0].Months))
+//     // // Add points to Frame
+//     FRAME2.append("g")
+//         .selectAll("datapoints")
+//         .data(al_year)
+//         .enter()
+//         .append("circle")
+//             .attr("cx", (d) => {return (X_SCALE(d.month) + MARGINS.left);})
+//             .attr("cy", (d) => {return (Y_SCALE(d.pval) + MARGINS.bottom);})
+//             .attr("r", 5)
+
+
+//     // Add x-axis to vis1
+//     svg.append("g")
+//         .attr("transform", "translate(" + MARGINS.left + ","
+//             + (VIS_HEIGHT + MARGINS.top) + ")")
+//         .call(d3.axisBottom(X_SCALE).ticks(10))
+//             .attr("font-size", '20px');
+
+//     svg.append("g")
+//       .attr("transform", "translate(0," + VIS_HEIGHT + ")")
+//       .call(d3.axisBottom(X_SCALE));
+
+//     // Add y-axis to vis1
+//     svg.append("g")
+//         .attr("transform", "translate(" + MARGINS.left + ","
+//             + (MARGINS.bottom) + ")")
+//         .call(d3.axisLeft(Y_SCALE).ticks(15))
+//             .attr("font-size", '20px');
+
+//     svg.append("g")
+//             .selectAll("datapoints")
+//             // .data(al_year)
+//             .enter()
+//             .append("circle")
+//                 .attr("cx", (d) => {return (X_SCALE(d.month) + MARGINS.left);})
+//                 .attr("cy", (d) => {return (Y_SCALE(d.pval) + MARGINS.bottom);})
+//                 .attr("r", 5)
+
+//  });
