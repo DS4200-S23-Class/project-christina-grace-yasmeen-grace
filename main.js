@@ -13,7 +13,6 @@ const FRAME1 = d3.select("#USMap")
                     .attr("width", FRAME_WIDTH)
                     .attr("class", "frame");
 
-
 let mapDairy = new Map();
 const promises = [];
 
@@ -49,7 +48,7 @@ let slider = d3.sliderBottom()
     .min('2019')
     .max('2022')
     .default(2019)
-    .width(VIS_WIDTH/5)
+    .width(VIS_WIDTH/4.5)
     .ticks(4)
     .step(1)
     .on('onchange', (val) => {
@@ -59,7 +58,7 @@ let slider = d3.sliderBottom()
 FRAME1.append('g')
         .call(slider)
         .attr('id', 'yearSlider')
-        .attr('transform', 'translate(' + (MARGINS.left + 100) + "," + (VIS_HEIGHT + MARGINS.top) + ')');
+        .attr('transform', 'translate(' + (MARGINS.left + 75) + "," + (VIS_HEIGHT + MARGINS.top) + ')');
 yr = 2019;   //d3.select("#yearSlider").value
 
 // slider update map function
@@ -72,7 +71,8 @@ function updateYr(newYr) {
 FRAME1.append('text')
     .attr("x", 0)
     .attr('y', VIS_HEIGHT + MARGINS.top + 3)
-    .text("Drag to select year");
+    .text("Drag to select year")
+    .attr("font-size", 13);
 
 // adds tooltip
 const TOOLTIP = d3.select("#USMap")
@@ -155,9 +155,9 @@ function buildMap(yr, cat) {
             .attr('stop-color', "#FF1818");
 
         FRAME1.append("rect")
-            .attr('x', FRAME_WIDTH/2 + VIS_WIDTH/12)
-            .attr('y', MARGINS.top + VIS_HEIGHT)
-            .attr("width", VIS_WIDTH/3)
+            .attr('x', FRAME_WIDTH/2)
+            .attr('y', 0.8 * MARGINS.top + VIS_HEIGHT)
+            .attr("width", VIS_WIDTH/2.5)
             .attr('height', 0.03 * VIS_HEIGHT)
             .attr("fill", "url(#linear-gradient)");
 
@@ -171,21 +171,30 @@ function buildMap(yr, cat) {
 
         // legend title
         FRAME1.append('text')
-            .attr("x", FRAME_WIDTH/2 + VIS_WIDTH/12)
-            .attr('y', MARGINS.top + 0.99 * VIS_HEIGHT)
-            .text("Average Unit Price");
+            .attr("x", FRAME_WIDTH/2)
+            .attr('y', 0.7 * MARGINS.top + VIS_HEIGHT)
+            .text("Average Unit Price")
+            .attr("font-size", 13);
 
         // legend ticks
         let xScale = d3.scaleLinear()
-            .range([0, VIS_WIDTH/3])
+            .range([0, VIS_WIDTH/2.5])
             .domain([min, max]);
         let xAxis = d3.axisBottom()
             .scale(xScale)
-            .ticks(9, "$.2f");
+            .ticks(7, "$.2f");
         FRAME1.append('g')
             .call(xAxis)
-            .attr('transform', 'translate(' + (FRAME_WIDTH/2 + VIS_WIDTH/12) + ', ' + ( 0.03 * VIS_HEIGHT + VIS_HEIGHT + MARGINS.top) + ')')
+            .attr('transform', 'translate(' + (FRAME_WIDTH/2) + ', ' + ( 0.03 * VIS_HEIGHT + VIS_HEIGHT + 0.8 * MARGINS.top) + ')')
             .attr('id', 'legendTicks');
+
+        // no data disclaimer
+        FRAME1.append('text')
+            .attr("text-anchor", 'end')
+            .attr("x", FRAME_WIDTH/2 + VIS_WIDTH/2.5)
+            .attr('y', MARGINS.top + VIS_HEIGHT + 0.8 * MARGINS.bottom)
+            .text("*states colored white have no data")
+            .attr("font-size", 10);
 
         const projection = d3.geoAlbersUsa().scale(VIS_WIDTH).translate([VIS_WIDTH/2, VIS_WIDTH/4]);
         const path = d3.geoPath().projection(projection);
