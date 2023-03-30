@@ -99,19 +99,19 @@ function buildMap(yr, cat) {
         const json = mydata[0];
         const prices = [];
 
-        for (var i = 0; i < data.length; i++) {
+        for (let i = 0; i < data.length; i++) {
             if (data[i].Category == cat && data[i].Year == Number(yr)) {
                 // Grab State Name and data value
-                var dataState = data[i].State;
-                var dataValue = Number(data[i].AverageUnitPrice);
+                let dataState = data[i].State;
+                let dataValue = Number(data[i].AverageUnitPrice);
                 prices.push(dataValue);
 
                 // printing data into console
                 console.log(dataState, dataValue);
 
                 // Find the corresponding state inside the GeoJSON
-                for (var j = 0; j < json.features.length; j++) {
-                    var jsonState = json.features[j].properties.name;
+                for (let j = 0; j < json.features.length; j++) {
+                    let jsonState = json.features[j].properties.name;
                     if (dataState == jsonState) {
                         // Copy the data value into the JSON
                         json.features[j].properties.AverageUnitPrice = dataValue;
