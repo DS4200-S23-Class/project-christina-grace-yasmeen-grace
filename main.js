@@ -397,187 +397,207 @@ d3.csv("data/alabama2020pricealc.csv",
 });
 
 
-// // // //LINE CHARTS CODE
-// // //foodstamps
-// // const VIS_HEIGHT = FRAME_HEIGHT - MARGINS.top - MARGINS.bottom;
-// // const VIS_WIDTH = FRAME_WIDTH - MARGINS.left - MARGINS.right;
-// const stampData = "data/cleanstamps.csv";
-// // console.log(stampData);
-// // const timeConv = d3.timeParse("%d-%b-%Y");
+// // //LINE CHARTS CODE
+// //foodstamps
+// const VIS_HEIGHT = FRAME_HEIGHT - MARGINS.top - MARGINS.bottom;
+// const VIS_WIDTH = FRAME_WIDTH - MARGINS.left - MARGINS.right;
+const stampData = "data/cleanstamps.csv";
+// console.log(stampData);
+// const timeConv = d3.timeParse("%d-%b-%Y");
 
-// //
-// const FRAME2 = d3.select("#stampline")
-//         .append("svg")
-//         .attr("height", FRAME_HEIGHT)
-//         .attr("width", FRAME_WIDTH)
-//         .attr("class", "frame2");
+//
+const FRAME2 = d3.select("#stampline")
+        .append("svg")
+        .attr("height", FRAME_HEIGHT)
+        .attr("width", FRAME_WIDTH)
+        .attr("class", "frame2");
 
-// var svg = d3.select("#stampline")
-// .append("svg")
-//     .attr("width", FRAME_WIDTH + MARGINS.left + MARGINS.right)
-//     .attr("height", FRAME_HEIGHT + MARGINS.top + MARGINS.bottom)
-//   .append("g")
-//     .attr("transform",
-//           "translate(" + MARGINS.left + "," + MARGINS.top + ")");
+var svg = d3.select("#stampline")
+.append("svg")
+    .attr("width", FRAME_WIDTH + MARGINS.left + MARGINS.right)
+    .attr("height", FRAME_HEIGHT + MARGINS.top + MARGINS.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + MARGINS.left + "," + MARGINS.top + ")");
 
-// d3.csv(stampData).then(function(datapoints){
-//     const Year = [];
-//     const Dates = [];
-//     const Persons = [];
-//     const State = [];
-//     const Months = []; 
+d3.csv(stampData).then(function(datapoints){
+    const Year = [];
+    const Dates = [];
+    const Persons = [];
+    const State = [];
+    const Months = []; 
 
-//     for (i = 0; i < datapoints.length; i++)
-//     {
-//         Year.push(datapoints[i].Year);
-//         Dates.push(datapoints[i].Date);
-//         Persons.push(datapoints[i].Persons);
-//         State.push(datapoints[i].State);
-//     }
-//     // console.log(Months); 
+    for (i = 0; i < datapoints.length; i++)
+    {
+        Year.push(datapoints[i].Year);
+        Dates.push(datapoints[i].Date);
+        Persons.push(datapoints[i].Persons);
+        State.push(datapoints[i].State);
+    }
+    // console.log(Months); 
 
-//     let formatTime = d3.timeFormat("%B");
-//     let todayString = formatTime(new Date(2019, 0, 1)); // "January 15, 2020"
-//     //console.log(todayString)
+    let formatTime = d3.timeFormat("%B");
+    let todayString = formatTime(new Date(2019, 0, 1)); // "January 15, 2020"
+    //console.log(todayString)
 
-//     let dateparser = function(l)
-//     {
-//         for(i = 0; i < l.length-1; i++)
-//         {
-//             let d = l[i]; 
-//             // date array
-//             let dateArr = d.split("/");
-//             const month = parseInt(dateArr[0]); 
-//             const day = parseInt(dateArr[1]);
-//             const year = parseInt("20" + dateArr[2]); 
-//             //console.log(year); 
-//             const ret = formatTime(new Date(year, month-1, day));
-//             //console.log(typeof ret); 
-//             Months.push(ret); 
-//         }
+    let dateparser = function(l)
+    {
+        for(i = 0; i < l.length-1; i++)
+        {
+            let d = l[i]; 
+            // date array
+            let dateArr = d.split("/");
+            const month = parseInt(dateArr[0]); 
+            const day = parseInt(dateArr[1]);
+            const year = parseInt("20" + dateArr[2]); 
+            //console.log(year); 
+            const ret = formatTime(new Date(year, month-1, day));
+            //console.log(typeof ret); 
+            Months.push(ret); 
+        }
         
-//     }
-//     dateparser(Dates); 
+    }
+    dateparser(Dates); 
 
 
-//     // create dictionary
-//     const masterDict = {};
-//     const yearDict = {}; 
-//     const monthDict = {}; 
+    // create dictionary
+    const masterDict = {};
+    const yearDict = {}; 
+    const monthDict = {}; 
 
 
-//     for(i = 0; i < Months.length; i++)
-//     {
-//         monthDict[Months[i]] = ""; 
-//     } 
-//     // console.log(monthDict); 
+    for(i = 0; i < Months.length; i++)
+    {
+        monthDict[Months[i]] = ""; 
+    } 
+    // console.log(monthDict); 
 
-//     for(i = 0; i < Year.length; i++)
-//     {
-//         yearDict[Year[i]] = monthDict; 
-//     } 
-//     // console.log(yearDict); 
+    for(i = 0; i < Year.length; i++)
+    {
+        yearDict[Year[i]] = monthDict; 
+    } 
+    // console.log(yearDict); 
 
-//     for(i = 0; i < State.length; i++)
-//     {
-//         masterDict[State[i]] = yearDict; 
-//     } 
-//     //console.log(masterDict); 
-
-
-//     // function that parses individual date into month
-//     // retruns month
-//     function tparse(t){
-//         let dateArr = t.split("/");
-//         const month = parseInt(dateArr[0]); 
-//         const day = parseInt(dateArr[1]);
-//         const year = parseInt("20" + dateArr[2]); 
-//         //console.log(year); 
-//         const ret = formatTime(new Date(year, month-1, day));
-//         //console.log(ret); 
-//         return ret; 
-//     }
+    for(i = 0; i < State.length; i++)
+    {
+        masterDict[State[i]] = yearDict; 
+    } 
+     console.log(masterDict); 
+     let randomvar = 200; 
+     
 
 
-//     // looping through each row in csv to populate dictionaries of dictionaries
-//     for (i = 0; i < datapoints.length; i++)
-//     {
-//         let state = datapoints[i].State;  
-//         let year = datapoints[i].Year;
-//         let month = tparse(datapoints[i].Date);
-//         let pval  = datapoints[i].Persons; 
-//         masterDict[state][year][month] = pval; 
-//     }
-//     //console.log(masterDict); 
-//     console.log(masterDict[state = "Alabama"][year = "2020.0"][month="January"]); 
+    // function that parses individual date into month
+    // retruns month
+    function tparse(t){
+        let dateArr = t.split("/");
+        const month = parseInt(dateArr[0]); 
+        const day = parseInt(dateArr[1]);
+        const year = parseInt("20" + dateArr[2]); 
+        //console.log(year); 
+        const ret = formatTime(new Date(year, month-1, day));
+        //console.log(ret); 
+        return ret; 
+    }
 
 
-//     const al_year = [];
-//     // const al_persons = [];
+    // looping through each row in csv to populate dictionaries of dictionaries
+    for (i = 0; i < datapoints.length; i++)
+    {
+        let state = datapoints[i].State;  
+       
+        let year = datapoints[i].Year;
+        
+        let month = tparse(datapoints[i].Date);
+       
+        let pval  = datapoints[i].Persons; 
+        let stateVar = masterDict[state];
+        let yearVar = stateVar[year];
+        let monthVar = yearVar[month]; 
+        monthVar = pval;
 
-//     for (i = 0; i < datapoints.length; i++)
-//     {
-//     if (Year[i] == 2020.0 && State[i] == 'Alabama') {
-//         al_year.push({Months: datapoints[i].Date,Persons: datapoints[i].Persons});
-//         // al_persons.push(datapoints[i].Persons);
-
-//     }};
-
-//     // find the max X
-//     const MAX_X = d3.max(al_year, (d) => { return d.month; });
-
-//     // find the max Y
-//     const MAX_Y = d3.max(al_year, (d) => { return parseInt(d.pval); });
-
-//     //console.log(MAX_X, MAX_Y);
-
-
-//     //domain and range
-
-//     const X_SCALE = d3.scaleLinear()
-//                     .domain([0, MAX_X])
-//                     .range([0, VIS_WIDTH]);
-//     const Y_SCALE = d3.scaleLinear()
-//                     .domain([(MAX_Y + 1) ,0])
-//                     .range([0, VIS_HEIGHT]);
-
-//     //console.log(X_SCALE(al_year[0].Months))
-//     // // Add points to Frame
-//     FRAME2.append("g")
-//         .selectAll("datapoints")
-//         .data(al_year)
-//         .enter()
-//         .append("circle")
-//             .attr("cx", (d) => {return (X_SCALE(d.month) + MARGINS.left);})
-//             .attr("cy", (d) => {return (Y_SCALE(d.pval) + MARGINS.bottom);})
-//             .attr("r", 5)
+        console.log(state);
+        console.log(typeof state);
+        console.log(year); 
+        console.log(typeof year);
+        console.log(month);
+        console.log(typeof month);
+        console.log(pval);
+        console.log(typeof pval);
+        console.log(masterDict);
+        console.log(); 
+    }
+    //console.log(masterDict); 
+    //console.log(masterDict);
+    // console.log(masterDict[state = 'Massachusetts'][year = '2020.0'][month = 'January']); 
 
 
-//     // Add x-axis to vis1
-//     svg.append("g")
-//         .attr("transform", "translate(" + MARGINS.left + ","
-//             + (VIS_HEIGHT + MARGINS.top) + ")")
-//         .call(d3.axisBottom(X_SCALE).ticks(10))
-//             .attr("font-size", '20px');
+    const al_year = [];
+    // const al_persons = [];
 
-//     svg.append("g")
-//       .attr("transform", "translate(0," + VIS_HEIGHT + ")")
-//       .call(d3.axisBottom(X_SCALE));
+    for (i = 0; i < datapoints.length; i++)
+    {
+    if (Year[i] == 2020.0 && State[i] == 'Alabama') {
+        al_year.push({Months: datapoints[i].Date,Persons: datapoints[i].Persons});
+        // al_persons.push(datapoints[i].Persons);
 
-//     // Add y-axis to vis1
-//     svg.append("g")
-//         .attr("transform", "translate(" + MARGINS.left + ","
-//             + (MARGINS.bottom) + ")")
-//         .call(d3.axisLeft(Y_SCALE).ticks(15))
-//             .attr("font-size", '20px');
+    }};
 
-//     svg.append("g")
-//             .selectAll("datapoints")
-//             // .data(al_year)
-//             .enter()
-//             .append("circle")
-//                 .attr("cx", (d) => {return (X_SCALE(d.month) + MARGINS.left);})
-//                 .attr("cy", (d) => {return (Y_SCALE(d.pval) + MARGINS.bottom);})
-//                 .attr("r", 5)
+    // find the max X
+    const MAX_X = d3.max(al_year, (d) => { return d.month; });
 
-//  });
+    // find the max Y
+    const MAX_Y = d3.max(al_year, (d) => { return parseInt(d.pval); });
+
+    //console.log(MAX_X, MAX_Y);
+
+
+    //domain and range
+
+    const X_SCALE = d3.scaleLinear()
+                    .domain([0, MAX_X])
+                    .range([0, VIS_WIDTH]);
+    const Y_SCALE = d3.scaleLinear()
+                    .domain([(MAX_Y + 1) ,0])
+                    .range([0, VIS_HEIGHT]);
+
+    //console.log(X_SCALE(al_year[0].Months))
+    // // Add points to Frame
+    FRAME2.append("g")
+        .selectAll("datapoints")
+        .data(al_year)
+        .enter()
+        .append("circle")
+            .attr("cx", (d) => {return (X_SCALE(d.month) + MARGINS.left);})
+            .attr("cy", (d) => {return (Y_SCALE(d.pval) + MARGINS.bottom);})
+            .attr("r", 5)
+
+
+    // Add x-axis to vis1
+    svg.append("g")
+        .attr("transform", "translate(" + MARGINS.left + ","
+            + (VIS_HEIGHT + MARGINS.top) + ")")
+        .call(d3.axisBottom(X_SCALE).ticks(10))
+            .attr("font-size", '20px');
+
+    svg.append("g")
+      .attr("transform", "translate(0," + VIS_HEIGHT + ")")
+      .call(d3.axisBottom(X_SCALE));
+
+    // Add y-axis to vis1
+    svg.append("g")
+        .attr("transform", "translate(" + MARGINS.left + ","
+            + (MARGINS.bottom) + ")")
+        .call(d3.axisLeft(Y_SCALE).ticks(15))
+            .attr("font-size", '20px');
+
+    svg.append("g")
+            .selectAll("datapoints")
+            // .data(al_year)
+            .enter()
+            .append("circle")
+                .attr("cx", (d) => {return (X_SCALE(d.month) + MARGINS.left);})
+                .attr("cy", (d) => {return (Y_SCALE(d.pval) + MARGINS.bottom);})
+                .attr("r", 5)
+
+ });
