@@ -92,6 +92,7 @@ function updateTooltip(event, d) {
     }
 }
 
+// event handler for click
 function mouseClickEvent(event, d) {
     state = d.properties.name
     
@@ -108,7 +109,7 @@ function mouseClickEvent(event, d) {
     buildStampLine(yr, state)
 }
 
-
+// create map function
 function buildMap(yr, cat) {
     myPromises = Promise.all(promises).then((mydata) => {
         
@@ -246,6 +247,7 @@ buildMap(yr, cat);
 
 
 
+// line chart charts
 const FRAME_HEIGHT = 375;
 const FRAME_WIDTH = 750;
 const MARGINS = {left: 50, right: 50, top: 40, bottom: 40};
@@ -338,7 +340,7 @@ function buildPriceLine(cat, yr, state){
 
 
     })
-}
+};
 
 
 //Food Stamps
@@ -423,10 +425,11 @@ function buildStampLine(yr, state){
                 .text("Population Percentage")
                 .attr("font-size", 13);
         }
+        // call function
         plotStampLine();
 
 
 
 
     })
-}
+};

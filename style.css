@@ -17,6 +17,7 @@ h1 {
 
 }
 
+/* map style */
 .col1 {
   float: left;
   width: 50%;
@@ -32,7 +33,7 @@ h1 {
   stroke: #ffffff;
 }
 
-
+/* hover style */
 .state:hover {
   fill: red;
   cursor: pointer;
@@ -42,6 +43,7 @@ h1 {
     font-family: "Roboto";
 }
 
+/* tooltip style */
 .tooltip {
   position: absolute;
   height: auto;
