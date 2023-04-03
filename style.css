@@ -19,12 +19,12 @@ h1 {
 
 .col1 {
   float: left;
-  width: 65%;
+  width: 50%;
 }
 
 .col2 {
   float: right;
-  width: 35%;
+  width: 50%;
 }
 
 .state {
