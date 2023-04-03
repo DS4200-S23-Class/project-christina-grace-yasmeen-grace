@@ -314,7 +314,7 @@ function buildPriceLine(cat, yr, state){
                 .attr("x", "50%")
                 .attr("y", MARGINS.top)
                 .attr("font-size", 16)
-                .text(function(d) { return "UNIT PRICE OF " + cat.toUpperCase() });
+                .text(function(d) { return "UNIT PRICE OF " + cat.toUpperCase() + " IN " + state.toUpperCase()});
         
             // x and y labels
             FRAME2.append("text")
