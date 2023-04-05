@@ -1,3 +1,4 @@
+// TAB CONTROLLING FUNCTION
 function openTab(evt, tabName) {
   // Declare all variables
   var i, tabcontent, tablinks;
@@ -19,6 +20,7 @@ function openTab(evt, tabName) {
   evt.currentTarget.className += " active";
 }
 
+// Setting motivation tab as default page
 document.getElementById("defaultOpen").click();
 
 
