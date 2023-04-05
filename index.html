@@ -13,44 +13,56 @@
 <body>
 
     <h1>Comparison of US Food Prices and Food Stamp Usage</h1>
+    <h3> Yasmeen Dao, Christina He, Grace Kelner, Grace Wang </h3>
 
-    <div>
-        <h2>Motivation</h2>
-        Our target user will be policymakers looking to understand the impacts of food prices and access to
-        food on different demographics in the US by state. This visualization would help them see which
-        states tend to have greater rates of food insecurity and the corresponding prices of produce that
-        come with it, providing them with information on what specific areas may need more assistance or
-        restructuring of the food industry in order to increase access to healthy food. Our domain situation
-        is policy makers needing to make well-informed decisions regarding food insecurity and food
-        accessibility. The domain problem is that low-income households lack financial resources for food and
-        have limited access to several categorical food options. Policymakers face challenges with designing
-        and implementing effective policies for addressing food insecurity and improving access to food for
-        low-income households. Food stamps are a tool used to address this issue, but there are many complex
-        and interrelated issues that they have to consider when analyzing the effectiveness. They need to look
-        at the trade-offs between immediate relief and promoting long-term self-sufficiency. They need to look
-        at the impact of the economy and the effects of food distributors and retailers. It is important to
-        consider the changes in consumer behavior through food stamp usage and food prices to analyze the
-        overall landscape of food assistance programs. 
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'Motivation') " id="defaultOpen">Motivation</button>
+      <button class="tablinks" onclick="openTab(event, 'Data')">Data</button>
+      <button class="tablinks" onclick="openTab(event, 'Visualization')">Visualization</button>
+      <button class="tablinks" onclick="openTab(event, 'Acknowledgements')">Acknowledgements</button>
     </div>
 
-    <div>
+    <div id="Motivation" class="tabcontent">
+        <h2>Motivation</h2>
+        <p>
+            Our target user will be policymakers looking to understand the impacts of food prices and access to
+            food on different demographics in the US by state. This visualization would help them see which
+            states tend to have greater rates of food insecurity and the corresponding prices of produce that
+            come with it, providing them with information on what specific areas may need more assistance or
+            restructuring of the food industry in order to increase access to healthy food. Our domain situation
+            is policy makers needing to make well-informed decisions regarding food insecurity and food
+            accessibility. The domain problem is that low-income households lack financial resources for food and
+            have limited access to several categorical food options. Policymakers face challenges with designing
+            and implementing effective policies for addressing food insecurity and improving access to food for
+            low-income households. Food stamps are a tool used to address this issue, but there are many complex
+            and interrelated issues that they have to consider when analyzing the effectiveness. They need to look
+            at the trade-offs between immediate relief and promoting long-term self-sufficiency. They need to look
+            at the impact of the economy and the effects of food distributors and retailers. It is important to
+            consider the changes in consumer behavior through food stamp usage and food prices to analyze the
+            overall landscape of food assistance programs. 
+        </p>
+    </div>
+
+    <div id="Data" class="tabcontent">
         <h2>Background</h2>
         TODO: Add link to report, demo video, link to data etc. here  
         <h3>Data</h3>
-            Within our project, we plan on using and visualizing two different datasets. These two datasets
-            contain information about food stamp usage by state over time, as well as grocery prices by
-            state and food category over time. The data from both of these datasets are collected by the
-            U.S. Department of Agriculture (USDA). The data about grocery prices is collected by Information
-            Resources Inc. and updated and managed by the USDA Economic Research Service (ERS), while the data
-            on food stamp usage is provided and managed under the USDA Food and Nutrition Service (FNS). Since
-            both of our datasets are provided directly from agencies of the federal government, there should not
-            be too much bias or ethical issues. The weekly grocery prices are collected by Information Resources,
-            Inc. (IRI) using a nationally representative sample of retail food establishments and USDA ERS updates
-            this data for the public monthly. There is a possibility for bias in this dataset because IRI does
-            not collect data on food prices in 8 states/areas: Alaska, Delaware, Hawaii, Idaho, New Jersey, North
-            Dakota, Montana, and Washington D.C., so we have some missing information. Similarly, there is some
-            missing data on food stamp usage for the states Kansas, Nebraska, Iowa, Mississippi, and Washington
-            D.C. which will result in some empty line charts for those states. 
+            <p>
+                Within our project, we plan on using and visualizing two different datasets. These two datasets
+                contain information about food stamp usage by state over time, as well as grocery prices by
+                state and food category over time. The data from both of these datasets are collected by the
+                U.S. Department of Agriculture (USDA). The data about grocery prices is collected by Information
+                Resources Inc. and updated and managed by the USDA Economic Research Service (ERS), while the data
+                on food stamp usage is provided and managed under the USDA Food and Nutrition Service (FNS). Since
+                both of our datasets are provided directly from agencies of the federal government, there should not
+                be too much bias or ethical issues. The weekly grocery prices are collected by Information Resources,
+                Inc. (IRI) using a nationally representative sample of retail food establishments and USDA ERS updates
+                this data for the public monthly. There is a possibility for bias in this dataset because IRI does
+                not collect data on food prices in 8 states/areas: Alaska, Delaware, Hawaii, Idaho, New Jersey, North
+                Dakota, Montana, and Washington D.C., so we have some missing information. Similarly, there is some
+                missing data on food stamp usage for the states Kansas, Nebraska, Iowa, Mississippi, and Washington
+                D.C. which will result in some empty line charts for those states. 
+            </p>
             <br>
             <br>
             Download the grocery prices data: <a href="data/cleanprices.csv">Grocery Store Prices Dataset</a>
@@ -59,7 +71,7 @@
 
     </div>
 
-    <div>
+    <div id="Visualization" class="tabcontent">
         <h2>Visualization</h2>
 
         <div class="flex">
@@ -103,7 +115,7 @@
         <br>
     </div>
 
-    <div>
+    <div id="Acknowledgements" class="tabcontent">
         <h2>Acknowledgements</h2>
         <div>
         <ul>
