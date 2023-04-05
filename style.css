@@ -11,12 +11,12 @@ h1 {
     text-align: center;
 }
 
-h3 {
-    text-align: center;
-}
-
 p {
     text-indent: 50px;
+}
+
+.names {
+    text-align: center;
 }
 
 /* flexbox styling for two columns next to each other  */
