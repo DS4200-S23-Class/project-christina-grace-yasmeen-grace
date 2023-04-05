@@ -1,6 +1,6 @@
 // US MAP CODE
-const MAP_FRAME_HEIGHT = 750;
-const MAP_FRAME_WIDTH = 1500;
+const MAP_FRAME_HEIGHT = 500;
+const MAP_FRAME_WIDTH = 900;
 const MAP_MARGINS = {left: 40, right: 40, top: 40, bottom: 40};
 const MAP_VIS_HEIGHT = MAP_FRAME_HEIGHT - MAP_MARGINS.top - MAP_MARGINS.bottom
 const MAP_VIS_WIDTH = MAP_FRAME_WIDTH - MAP_MARGINS.left - MAP_MARGINS.right
@@ -11,15 +11,56 @@ const FRAME1 = d3.select("#USMap")
                     .attr("width", MAP_FRAME_WIDTH)
                     .attr("class", "frame");
 
-let mapDairy = new Map();
+// frame for slider ticks
+const FRAME0 = d3.select("#sliderDiv")
+                  .append("svg")
+                    .attr("height", 50)
+                    .attr("width", 500)
+                    .attr("class", "frame");
+
+// years for each slider tick
+FRAME0.append('text')
+    .attr("text-anchor", 'start')
+    .attr("x", 130)
+    .attr('y', 15)
+    .text("2019")
+    .attr("font-size", 14);
+
+FRAME0.append('text')
+    .attr("text-anchor", 'start')
+    .attr("x", 195)
+    .attr('y', 15)
+    .text("2020")
+    .attr("font-size", 14);
+
+FRAME0.append('text')
+    .attr("text-anchor", 'start')
+    .attr("x", 260)
+    .attr('y', 15)
+    .text("2021")
+    .attr("font-size", 14);
+
+FRAME0.append('text')
+    .attr("text-anchor", 'start')
+    .attr("x", 325)
+    .attr('y', 15)
+    .text("2022")
+    .attr("font-size", 14);
+
+
+// creating new map for data to be pushed into
+let myMap = new Map();
 const promises = [];
 
+// pushing json and state data for the map into promises
 promises.push(d3.json("https://gist.githubusercontent.com/Bradleykingz/3aa5206b6819a3c38b5d73cb814ed470/raw/a476b9098ba0244718b496697c5b350460d32f99/us-states.json"));
-promises.push(d3.csv("data/averageprices.csv"), (d) => mapDairy.set(d.State, + d.AverageUnitPrice));
+promises.push(d3.csv("data/averageprices.csv"), (d) => myMap.set(d.State, + d.AverageUnitPrice));
 
 // dropdown food category selection
 let allGroup = ['Dairy', 'Alcohol', 'Beverages', 'Commercially prepared items', 'Fats and oils', 'Fruits',
                 'Grains', 'Meats, eggs, and nuts', 'Sugar and sweeteners', 'Vegetables']
+
+// updating category based on dropdown selection
 d3.select("#selectButton")
       .selectAll('myOptions')
         .data(allGroup)
@@ -40,25 +81,14 @@ function updateCat(newCat) {
     buildMap(yr, newCat);
 }
 
+// updating year based on slider selection
+let slider = d3.select("#mySlider").on("change", function(d){
+    yr = this.value;
+    updateYr(yr);
+  });
 
-// adds a slider to choose year
-let slider = d3.sliderBottom()
-    .tickFormat(function (d) {return d.toString().replace(/,/g, '')})
-    .min('2019')
-    .max('2022')
-    .default(2019)
-    .width(MAP_VIS_WIDTH/4.5)
-    .ticks(4)
-    .step(1)
-    .on('onchange', (val) => {
-        yr = val;
-        updateYr(yr);
-    });
-FRAME1.append('g')
-        .call(slider)
-        .attr('id', 'yearSlider')
-        .attr('transform', 'translate(' + (MAP_MARGINS.left + 75) + "," + (MAP_VIS_HEIGHT + MAP_MARGINS.top) + ')');
-let yr = 2019;   //d3.select("#yearSlider").value
+
+let yr = 2019;  
 
 // slider update map function
 function updateYr(newYr) {
@@ -67,12 +97,6 @@ function updateYr(newYr) {
     buildMap(newYr, cat);
 };
 
-// slider title
-FRAME1.append('text')
-    .attr("x", 0)
-    .attr('y', MAP_VIS_HEIGHT + MAP_MARGINS.top + 3)
-    .text("Drag to select year")
-    .attr("font-size", 13);
 
 // adds tooltip
 const TOOLTIP = d3.select("#USMap")
@@ -117,16 +141,13 @@ function buildMap(yr, cat) {
         const json = mydata[0];
         const prices = [];
         
-
+        // iterating through promises to find data specific for given category and year
         for (let i = 0; i < data.length; i++) {
             if (data[i].Category == cat && data[i].Year == Number(yr)) {
                 // Grab State Name and data value
                 let dataState = data[i].State;
                 let dataValue = Number(data[i].AverageUnitPrice);
                 prices.push(dataValue);
-
-                // printing data into console
-                console.log(dataState, dataValue);
 
                 // Find the corresponding state inside the GeoJSON
                 for (let j = 0; j < json.features.length; j++) {
@@ -215,6 +236,16 @@ function buildMap(yr, cat) {
             .text("*states colored white have no data")
             .attr("font-size", 11);
 
+        // click state to show info text
+        FRAME1.append('text')
+            .attr("text-anchor", 'start')
+            .attr("x", 0)
+            .attr('y', MAP_MARGINS.top + MAP_VIS_HEIGHT)
+            .text("Click each state to see the corresponding data over time")
+            .attr("font-size", 16)
+            .attr("font-weight", "bold");
+
+        // creating map itself with colors based on state value
         const projection = d3.geoAlbersUsa().scale(MAP_VIS_WIDTH).translate([MAP_VIS_WIDTH/2, MAP_VIS_WIDTH/4]);
         const path = d3.geoPath().projection(projection);
         FRAME1.append("g")
@@ -249,11 +280,12 @@ buildMap(yr, cat);
 
 // line chart charts
 const FRAME_HEIGHT = 375;
-const FRAME_WIDTH = 750;
+const FRAME_WIDTH = 550;
 const MARGINS = {left: 50, right: 50, top: 40, bottom: 40};
 const VIS_HEIGHT = FRAME_HEIGHT - MARGINS.top - MARGINS.bottom
 const VIS_WIDTH = FRAME_WIDTH - MARGINS.left - MARGINS.right
-// Line Charts code:
+
+// setting frame for line charts
 const FRAME2 = d3.select("#priceLineChart")
                   .append("svg")
                     .attr("height", FRAME_HEIGHT)
@@ -262,13 +294,17 @@ const FRAME2 = d3.select("#priceLineChart")
 //Unit Price
 const promises2 = [];
 
+// pushing prices data into promises 
 promises2.push(d3.csv("data/cleanprices.csv"));
+
+// function to create line chart for prices 
 function buildPriceLine(cat, yr, state){
     myPromises = Promise.all(promises2).then((mydata) => {
 
         const data = mydata[0];
         let prices = [];
 
+        // iterate through promises to get specific data for given category, year, and state
         for (let i = 0; i < data.length; i++) {
             if (data[i].Category == cat && data[i].Year == Number(yr) && data[i].State == state) {
                 // Grab State Name and data value
@@ -278,10 +314,13 @@ function buildPriceLine(cat, yr, state){
             }
         };
     
+        // plot line chart for prices of corresponding selected state 
         function plotPriceLine() {      
             let x = d3.scaleTime()
                     .domain(d3.extent(prices, function(d) { return d.dataDate; }))
                     .range([0, VIS_WIDTH]);
+
+            // adding x axis 
             FRAME2.append("g")
                     .attr('id', 'pricexaxis')
                     .call(d3.axisBottom(x))
@@ -290,8 +329,11 @@ function buildPriceLine(cat, yr, state){
             let y = d3.scaleLinear()
                           .domain(d3.extent(prices, function(d) { return d.dataValue; }))
                           .range([VIS_HEIGHT, 0]);
+
+            // adding y axis 
             FRAME2.append("g")
                     .attr('id', 'priceyaxis')
+                    .attr("class", "axis")
                     .call(d3.axisLeft(y))
                     .attr('transform', "translate(" + MARGINS.left + "," + MARGINS.top + ')');
         
@@ -318,7 +360,7 @@ function buildPriceLine(cat, yr, state){
                 .attr("font-size", 16)
                 .text(function(d) { return "UNIT PRICE OF " + cat.toUpperCase() + " IN " + state.toUpperCase()});
         
-            // x and y labels
+            // x label
             FRAME2.append("text")
                 .attr("text-anchor", "end")
                 .attr("x", VIS_WIDTH + MARGINS.left)
@@ -326,6 +368,7 @@ function buildPriceLine(cat, yr, state){
                 .text("Months")
                 .attr("font-size", 13);
         
+            // y label
             FRAME2.append("text")
                 .attr("text-anchor", "end")
                 .attr("transform", "rotate(-90)")
@@ -334,6 +377,7 @@ function buildPriceLine(cat, yr, state){
                 .text("Unit Price ($)")
                 .attr("font-size", 13);
         }
+        // call function
         plotPriceLine();
 
 
@@ -351,14 +395,18 @@ const FRAME3 = d3.select("#stampLineChart")
                     .attr("class", "frame");
 const promises3 = [];
 
+
+// pushing stamp data into promises 
 promises3.push(d3.csv("data/cleanstamps.csv"));
+
+// function to create line chart for food stamp usage 
 function buildStampLine(yr, state){
     myPromises = Promise.all(promises3).then((mydata) => {
 
         const data = mydata[0];
         let stamps = [];
-        console.log(data)
 
+        // iterating through promises to get data given year and state 
         for (let i = 0; i < data.length; i++) {
             if (data[i].Year == Number(yr) && data[i].State == state) {
                 // Grab State Name and data value
@@ -368,11 +416,14 @@ function buildStampLine(yr, state){
             }
         };
     
+        // plot line chart for stamp usage of corresponding selected state 
         function plotStampLine() {      
            console.log(stamps)
             let x = d3.scaleTime()
                     .domain(d3.extent(stamps, function(d) { return d.dataDate; }))
                     .range([0, VIS_WIDTH]);
+
+            // setting x axis
             FRAME3.append("g")
                     .attr('id', 'stampxaxis')
                     .call(d3.axisBottom(x))
@@ -381,6 +432,8 @@ function buildStampLine(yr, state){
             let y = d3.scaleLinear()
                           .domain(d3.extent(stamps, function(d) { return d.dataValue; }))
                           .range([VIS_HEIGHT, 0]);
+
+            // setting y axis
             FRAME3.append("g")
                     .attr('id', 'stampyaxis')
                     .call(d3.axisLeft(y))
@@ -409,7 +462,7 @@ function buildStampLine(yr, state){
                 .attr("font-size", 16)
                 .text(function(d) { return "FOOD STAMP USAGE IN " + state.toUpperCase(); });
         
-            // x and y labels
+            // x label
             FRAME3.append("text")
                 .attr("text-anchor", "end")
                 .attr("x", VIS_WIDTH + MARGINS.left)
@@ -417,6 +470,7 @@ function buildStampLine(yr, state){
                 .text("Months")
                 .attr("font-size", 13);
         
+            // y label
             FRAME3.append("text")
                 .attr("text-anchor", "end")
                 .attr("transform", "rotate(-90)")

@@ -1,3 +1,4 @@
+/* main body styling */
 body {
     font-family: Garamond;
     padding-top: 40px;
@@ -10,6 +11,7 @@ h1 {
     text-align: center;
 }
 
+/* flexbox styling for two columns next to each other  */
 .flex {
   display: flex;
   flex-direction: row;
@@ -17,8 +19,27 @@ h1 {
 
 }
 
-/* map style */
+.mapcol {
+  float: left;
+  width: 60%;
+}
+
+.linecol {
+  float: right;
+  width: 40%;
+}
+
+/* flexbox styling for two line charts on top of each other */
+.lineflex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+
 .col1 {
+  font-family: "Roboto";
   float: left;
   width: 50%;
 }
@@ -28,22 +49,42 @@ h1 {
   width: 50%;
 }
 
+/* slider flexbox styling */
+.sliderflex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.sliderrow1 {
+  float: top;
+  width: 50%;
+}
+
+.sliderrow2 {
+  float: bottom;
+  width: 50%;
+}
+
+/* state outline styling */
 .state {
   stroke-width: 1;
   stroke: #ffffff;
 }
 
-/* hover style */
+/* hover styling */
 .state:hover {
   fill: red;
   cursor: pointer;
 }
 
+/* visualization font styling */
 .vis {
     font-family: "Roboto";
 }
 
-/* tooltip style */
+/* tooltip styling */
 .tooltip {
   position: absolute;
   height: auto;
@@ -56,3 +97,13 @@ h1 {
   font-size: medium;
 }
 
+/* line chart tickmarks styling */
+svg .tick > text {
+  font-size: 9px;
+  fill: currentColor;
+}
+
+/* slider styling */
+input[type="range"] {
+  width:210px;
+}

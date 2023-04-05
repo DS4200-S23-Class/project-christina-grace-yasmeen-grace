@@ -5,7 +5,7 @@
     <meta charset=utf-8/>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="js/d3.v6.1.1/d3.min.js"></script>
-    <script src="https://unpkg.com/d3-simple-slider"></script>
+    <!-- <script src="https://unpkg.com/d3-simple-slider"></script> -->
     <title>Food Insecurity</title>
 </head>
 
@@ -24,30 +24,55 @@
         <h2>Background</h2>
         TODO: Add link to report, demo video, link to data etc. here  
         <h3>Data</h3>
-            Within our project, we plan on using and visualizing two different datasets. These two datasets contain information about food stamp usage by state over time, as well as grocery prices by state and food category over time. The data from both of these datasets are collected by the U.S. Department of Agriculture (USDA). The data about grocery prices is collected by Information Resources Inc. and updated and managed by the USDA Economic Research Service (ERS), while the data on food stamp usage is provided and managed under the USDA Food and Nutrition Service (FNS). Since both of our datasets are provided directly from agencies of the federal government, there should not be too much bias or ethical issues. The weekly grocery prices are collected by Information Resources, Inc. (IRI) using a nationally representative sample of retail food establishments and USDA ERS updates this data for the public monthly. There is a possibility for bias in this dataset because IRI does not collect data in 12 states/areas: Alaska, Delaware, Hawaii, Idaho, Iowa, Kansas, Nebraska, New Jersey, North Dakota, Mississippi, Montana, and Washington, D.C., so we have some missing information. 
+            Within our project, we plan on using and visualizing two different datasets. These two datasets contain information about food stamp usage by state over time, as well as grocery prices by state and food category over time. The data from both of these datasets are collected by the U.S. Department of Agriculture (USDA). The data about grocery prices is collected by Information Resources Inc. and updated and managed by the USDA Economic Research Service (ERS), while the data on food stamp usage is provided and managed under the USDA Food and Nutrition Service (FNS). Since both of our datasets are provided directly from agencies of the federal government, there should not be too much bias or ethical issues. The weekly grocery prices are collected by Information Resources, Inc. (IRI) using a nationally representative sample of retail food establishments and USDA ERS updates this data for the public monthly. There is a possibility for bias in this dataset because IRI does not collect data on food prices in 8 states/areas: Alaska, Delaware, Hawaii, Idaho, New Jersey, North Dakota, Montana, and Washington D.C., so we have some missing information. Similarly, there is some missing data on food stamp usage for the states Kansas, Nebraska, Iowa, Mississippi, and Washington D.C. which will result in some empty line charts for those states. 
             <br>
-            <a href="data/cleanprices.csv">Grocery Store Prices Dataset</a>
-            <a href="data/cleanstamps.csv">Food Stamp Usage Dataset</a>
+            <br>
+            Download the grocery prices data: <a href="data/cleanprices.csv">Grocery Store Prices Dataset</a>
+            <br>
+            Download the food stamp usage data: <a href="data/cleanstamps.csv">Food Stamp Usage Dataset</a>
 
     </div>
 
     <div>
         <h2>Visualization</h2>
-        <!-- map vis -->
-        <div id="USMap" class="vis"></div>
-        <div id="selectDiv" class="vis">
-            <label for="selectButton" style="font-size:13px;">Select a food category</label>
-            <select id="selectButton"></select>
-        </div>
-        <!-- line chart vis -->
+
         <div class="flex">
-            <div class="col1">
-                <div id="stampLineChart" class="vis"></div>
+        <!-- map vis -->
+            <div class="mapcol">
+            <div id="USMap" class="vis"></div>
+                <!-- slider -->
+                <div class="sliderflex"> 
+                    <div id="sliderDiv" class="sliderrow1">
+                        <label for="mySlider" class="vis">Drag to select a year</label>
+                        <input type="range" id="mySlider" min="2019" max="2022" step="1" list="steplist">
+                            <datalist id="steplist">
+                                <option>2019</option>
+                                <option>2020</option>
+                                <option>2021</option>
+                                <option>2022</option>
+                            </datalist>
+                    </div>
+                </div>
+                <!-- dropdown -->
+                <div id="selectDiv" class="vis">
+                    <label for="selectButton" class="vis">Select a food category</label>
+                    <select id="selectButton"></select>
+                </div>
             </div>
-            <div class="col2">
-                <div id="stampLineChart" class="vis"></div>
-                <div id="priceLineChart" class="vis"></div>
+            
+            <!-- line chart vis -->
+            <div class="linecol">
+                <div class="lineflex">
+                    <div class="col1">
+                        <div id="stampLineChart" class="vis"></div>
+                    </div>
+                    <div class="col2">
+                        <div id="stampLineChart" class="vis"></div>
+                        <div id="priceLineChart" class="vis"></div>
+                    </div>
+                </div>
             </div>
+
         </div>
         <br>
     </div>
