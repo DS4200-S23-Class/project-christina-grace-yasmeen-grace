@@ -334,7 +334,7 @@ function buildPriceLine(cat, yr, state){
             FRAME2.append("g")
                     .attr('id', 'priceyaxis')
                     .attr("class", "axis")
-                    .call(d3.axisLeft(y))
+                    .call(d3.axisLeft(y).ticks(10, "$.2f"))
                     .attr('transform', "translate(" + MARGINS.left + "," + MARGINS.top + ')');
         
             // Add the line
@@ -364,18 +364,18 @@ function buildPriceLine(cat, yr, state){
             FRAME2.append("text")
                 .attr("text-anchor", "end")
                 .attr("x", VIS_WIDTH + MARGINS.left)
-                .attr("y", FRAME_HEIGHT)
+                .attr("y", 0.97 * FRAME_HEIGHT)
                 .text("Months")
-                .attr("font-size", 13);
+                .attr("font-size", 12);
         
             // y label
             FRAME2.append("text")
                 .attr("text-anchor", "end")
                 .attr("transform", "rotate(-90)")
-                .attr("y", MARGINS.top/3)
+                .attr("y", MARGINS.top/5)
                 .attr("x", -MARGINS.left)
-                .text("Unit Price ($)")
-                .attr("font-size", 13);
+                .text("Unit Price")
+                .attr("font-size", 12);
         }
         // call function
         plotPriceLine();
@@ -436,7 +436,7 @@ function buildStampLine(yr, state){
             // setting y axis
             FRAME3.append("g")
                     .attr('id', 'stampyaxis')
-                    .call(d3.axisLeft(y))
+                    .call(d3.axisLeft(y).ticks(10, ".2%"))
                     .attr('transform', "translate(" + MARGINS.left + "," + MARGINS.top + ')');
         
             // Add the line
@@ -466,18 +466,18 @@ function buildStampLine(yr, state){
             FRAME3.append("text")
                 .attr("text-anchor", "end")
                 .attr("x", VIS_WIDTH + MARGINS.left)
-                .attr("y", FRAME_HEIGHT)
+                .attr("y", 0.97 * FRAME_HEIGHT)
                 .text("Months")
-                .attr("font-size", 13);
+                .attr("font-size", 12);
         
             // y label
             FRAME3.append("text")
                 .attr("text-anchor", "end")
                 .attr("transform", "rotate(-90)")
-                .attr("y", MARGINS.top/3)
+                .attr("y", MARGINS.top/5)
                 .attr("x", -MARGINS.left)
                 .text("Population Percentage")
-                .attr("font-size", 13);
+                .attr("font-size", 12);
         }
         // call function
         plotStampLine();

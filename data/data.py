@@ -20,7 +20,7 @@ def main():
         stamps['Population'][i] = pops[year][stamps['State'][i]]
         stamps['Year'][i] = int(year)
     # adds Percentage of population given food stamps to stamps df
-    stamps['Percentage'] = stamps['Persons'] / stamps['Population'] * 100
+    stamps['Percentage'] = stamps['Persons'] / stamps['Population']
     stamps.drop(['index'], axis=1, inplace=True)
     # export df as csv
     stamps.to_csv('cleanstamps.csv', index=False)
@@ -36,11 +36,11 @@ def main():
     prices = prices[prices.Category != "Other"]
     # adds Unit Price to prices df
     prices['Unit Price'] = prices['Dollars'] / prices['Unit sales']
-    prices.to_csv('cleanprices.csv', index=False)
+    #prices.to_csv('cleanprices.csv', index=False)
 
     average_prices = prices.groupby(['State', 'Category', 'Year'])['Unit Price'].mean().reset_index()
     average_prices.columns = ['State', 'Category', 'Year', 'Average Unit Price']
-    average_prices.to_csv('averageprices.csv', index=False)
+    #average_prices.to_csv('averageprices.csv', index=False)
 
 
 
