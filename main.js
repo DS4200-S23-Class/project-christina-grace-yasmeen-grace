@@ -241,7 +241,7 @@ function buildMap(yr, cat) {
             .attr("text-anchor", 'start')
             .attr("x", 0)
             .attr('y', MAP_MARGINS.top + MAP_VIS_HEIGHT)
-            .text("Click each state to see the corresponding data over time")
+            .text("Click each state to see the corresponding data over time!")
             .attr("font-size", 16)
             .attr("font-weight", "bold");
 
@@ -279,7 +279,7 @@ buildMap(yr, cat);
 
 
 // line chart charts
-const FRAME_HEIGHT = 375;
+const FRAME_HEIGHT = 400;
 const FRAME_WIDTH = 550;
 const MARGINS = {left: 50, right: 50, top: 40, bottom: 40};
 const VIS_HEIGHT = FRAME_HEIGHT - MARGINS.top - MARGINS.bottom
@@ -323,8 +323,11 @@ function buildPriceLine(cat, yr, state){
             // adding x axis 
             FRAME2.append("g")
                     .attr('id', 'pricexaxis')
+                    .attr('transform', "translate(" + MARGINS.left + "," + (VIS_HEIGHT + MARGINS.top) + ')')
                     .call(d3.axisBottom(x))
-                    .attr('transform', "translate(" + MARGINS.left + "," + (VIS_HEIGHT + MARGINS.top) + ')');
+                    .selectAll("text") 
+                        .style("text-anchor", "end")
+                        .attr("transform", "rotate(-20)");
 
             let y = d3.scaleLinear()
                           .domain(d3.extent(prices, function(d) { return d.dataValue; }))
@@ -364,7 +367,7 @@ function buildPriceLine(cat, yr, state){
             FRAME2.append("text")
                 .attr("text-anchor", "end")
                 .attr("x", VIS_WIDTH + MARGINS.left)
-                .attr("y", 0.97 * FRAME_HEIGHT)
+                .attr("y", FRAME_HEIGHT)
                 .text("Months")
                 .attr("font-size", 12);
         
@@ -426,8 +429,11 @@ function buildStampLine(yr, state){
             // setting x axis
             FRAME3.append("g")
                     .attr('id', 'stampxaxis')
+                    .attr('transform', "translate(" + MARGINS.left + "," + (VIS_HEIGHT + MARGINS.top) + ')')
                     .call(d3.axisBottom(x))
-                    .attr('transform', "translate(" + MARGINS.left + "," + (VIS_HEIGHT + MARGINS.top) + ')');
+                    .selectAll("text") 
+                        .style("text-anchor", "end")
+                        .attr("transform", "rotate(-20)");
 
             let y = d3.scaleLinear()
                           .domain(d3.extent(stamps, function(d) { return d.dataValue; }))
@@ -466,7 +472,7 @@ function buildStampLine(yr, state){
             FRAME3.append("text")
                 .attr("text-anchor", "end")
                 .attr("x", VIS_WIDTH + MARGINS.left)
-                .attr("y", 0.97 * FRAME_HEIGHT)
+                .attr("y", FRAME_HEIGHT)
                 .text("Months")
                 .attr("font-size", 12);
         
