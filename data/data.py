@@ -36,11 +36,11 @@ def main():
     prices = prices[prices.Category != "Other"]
     # adds Unit Price to prices df
     prices['Unit Price'] = prices['Dollars'] / prices['Unit sales']
-    #prices.to_csv('cleanprices.csv', index=False)
+    prices.to_csv('cleanprices.csv', index=False)
 
     average_prices = prices.groupby(['State', 'Category', 'Year'])['Unit Price'].mean().reset_index()
     average_prices.columns = ['State', 'Category', 'Year', 'Average Unit Price']
-    #average_prices.to_csv('averageprices.csv', index=False)
+    average_prices.to_csv('averageprices.csv', index=False)
 
 
 

@@ -104,8 +104,22 @@ let cat = 'Dairy'
 
 // dropdown update map function
 function updateCat(newCat) {
-    cat = newCat
+    cat = newCat;
     FRAME1.select('#legendTicks').remove();
+    // removes line charts
+    FRAME2.select('#pricexaxis').remove();
+    FRAME2.select('#priceyaxis').remove();
+    FRAME2.select('#priceline').remove();
+    FRAME2.select('#pricetitle').remove();
+    FRAME2.select('#pricexlabel').remove();
+    FRAME2.select('#priceylabel').remove();
+    FRAME3.select('#stampxaxis').remove();
+    FRAME3.select('#stampyaxis').remove();
+    FRAME3.select('#stampline').remove();
+    FRAME3.select('#stamptitle').remove();
+    FRAME3.select('#stampxlabel').remove();
+    FRAME3.select('#stampylabel').remove();
+
     buildMap(yr, newCat);
 }
 
@@ -116,13 +130,26 @@ let slider = d3.select("#mySlider").on("change", function(d){
   });
 
 
-let yr = 2019;  
+let yr = 2021;  
 
 // slider update map function
 function updateYr(newYr) {
     yr = newYr
     FRAME1.select('#legendTicks').remove();
     buildMap(newYr, cat);
+    // removes line charts
+    FRAME2.select('#pricexaxis').remove();
+    FRAME2.select('#priceyaxis').remove();
+    FRAME2.select('#priceline').remove();
+    FRAME2.select('#pricetitle').remove();
+    FRAME2.select('#pricexlabel').remove();
+    FRAME2.select('#priceylabel').remove();
+    FRAME3.select('#stampxaxis').remove();
+    FRAME3.select('#stampyaxis').remove();
+    FRAME3.select('#stampline').remove();
+    FRAME3.select('#stamptitle').remove();
+    FRAME3.select('#stampxlabel').remove();
+    FRAME3.select('#stampylabel').remove();
 };
 
 
@@ -269,7 +296,14 @@ function buildMap(yr, cat) {
             .attr("text-anchor", 'start')
             .attr("x", 0)
             .attr('y', MAP_MARGINS.top + MAP_VIS_HEIGHT)
-            .text("Click each state to see the corresponding data over time!")
+            .text("Click each state to see the corresponding food stamp")
+            .attr("font-size", 16)
+            .attr("font-weight", "bold");
+        FRAME1.append('text')
+            .attr("text-anchor", 'middle')
+            .attr("x", MAP_MARGINS.left + 0.16 * MAP_VIS_WIDTH)
+            .attr('y', MAP_MARGINS.top + MAP_VIS_HEIGHT + 18)
+            .text("and unit price data over the year!")
             .attr("font-size", 16)
             .attr("font-weight", "bold");
 
@@ -394,6 +428,7 @@ function buildPriceLine(cat, yr, state){
             // x label
             FRAME2.append("text")
                 .attr("text-anchor", "end")
+                .attr('id', 'pricexlabel')
                 .attr("x", VIS_WIDTH + MARGINS.left)
                 .attr("y", FRAME_HEIGHT)
                 .text("Months")
@@ -402,6 +437,7 @@ function buildPriceLine(cat, yr, state){
             // y label
             FRAME2.append("text")
                 .attr("text-anchor", "end")
+                .attr('id', 'priceylabel')
                 .attr("transform", "rotate(-90)")
                 .attr("y", MARGINS.top/5)
                 .attr("x", -MARGINS.left)
@@ -449,7 +485,6 @@ function buildStampLine(yr, state){
     
         // plot line chart for stamp usage of corresponding selected state 
         function plotStampLine() {      
-           console.log(stamps)
             let x = d3.scaleTime()
                     .domain(d3.extent(stamps, function(d) { return d.dataDate; }))
                     .range([0, VIS_WIDTH]);
@@ -499,6 +534,7 @@ function buildStampLine(yr, state){
             // x label
             FRAME3.append("text")
                 .attr("text-anchor", "end")
+                .attr('id', 'stampxlabel')
                 .attr("x", VIS_WIDTH + MARGINS.left)
                 .attr("y", FRAME_HEIGHT)
                 .text("Months")
@@ -507,6 +543,7 @@ function buildStampLine(yr, state){
             // y label
             FRAME3.append("text")
                 .attr("text-anchor", "end")
+                .attr('id', 'stampylabel')
                 .attr("transform", "rotate(-90)")
                 .attr("y", MARGINS.top/5)
                 .attr("x", -MARGINS.left)
