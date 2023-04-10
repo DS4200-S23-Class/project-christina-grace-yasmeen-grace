@@ -287,7 +287,7 @@ function buildMap(yr, cat) {
         FRAME1.append('text')
             .attr("text-anchor", 'end')
             .attr("x", MAP_FRAME_WIDTH/2 + MAP_VIS_WIDTH/2.5)
-            .attr('y', MAP_MARGINS.top + MAP_VIS_HEIGHT + MAP_MARGINS.bottom)
+            .attr('y', MAP_MARGINS.top + 0.99 * MAP_VIS_HEIGHT + MAP_MARGINS.bottom)
             .text("*states colored white have no data and there is missing food stamp data for KS, NE, IA, MS")
             .attr("font-size", 11);
 
