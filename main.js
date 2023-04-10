@@ -288,13 +288,7 @@ function buildMap(yr, cat) {
             .attr("text-anchor", 'end')
             .attr("x", MAP_FRAME_WIDTH/2 + MAP_VIS_WIDTH/2.5)
             .attr('y', MAP_MARGINS.top + MAP_VIS_HEIGHT + MAP_MARGINS.bottom)
-            .text("*states colored white have no data")
-            .attr("font-size", 11);
-        FRAME1.append('text')
-            .attr("text-anchor", 'end')
-            .attr("x", MAP_FRAME_WIDTH/2 + MAP_VIS_WIDTH/2.5)
-            .attr('y', MAP_MARGINS.top + MAP_VIS_HEIGHT + MAP_MARGINS.bottom + 13)
-            .text("*missing food stamp data for KS, NE, IA, MS")
+            .text("*states colored white have no data and there is missing food stamp data for KS, NE, IA, MS")
             .attr("font-size", 11);
 
         // click state to show info text
