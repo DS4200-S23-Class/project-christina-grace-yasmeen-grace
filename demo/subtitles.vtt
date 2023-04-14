@@ -1,0 +1,78 @@
+WEBVTT
+
+00:00:04.600 --> 00:00:09.340
+Hi everyone, my name is Christina and I'll be&nbsp;
+showing a demo of my group's visualization on&nbsp;&nbsp;
+
+00:00:09.340 --> 00:00:13.900
+food prices and food stamp usage in the United&nbsp;
+States. Here you can see a colored map of the&nbsp;&nbsp;
+
+00:00:13.900 --> 00:00:19.180
+US based on unit prices of the chosen food prices,&nbsp;
+which is dairy right now. We didn't have data for&nbsp;&nbsp;
+
+00:00:19.180 --> 00:00:23.680
+the states in white, but states colored more red&nbsp;
+have relatively higher, more expensive prices and&nbsp;&nbsp;
+
+00:00:23.680 --> 00:00:27.520
+states colored more green have lower, cheaper&nbsp;
+prices. We chose these colors with the idea&nbsp;&nbsp;
+
+00:00:27.520 --> 00:00:32.080
+that more expensive prices are undesirable as it&nbsp;
+makes the food less affordable and cheaper prices&nbsp;&nbsp;
+
+00:00:32.080 --> 00:00:36.460
+are better. The legend on the bottom explicitly&nbsp;
+shows this and provides more specific information&nbsp;&nbsp;
+
+00:00:36.460 --> 00:00:41.080
+on the exact price corresponding to the colors.&nbsp;
+We thought that the use of a color gradient for&nbsp;&nbsp;
+
+00:00:41.080 --> 00:00:44.800
+the legend makes it visually appealing, but it&nbsp;
+is harder to discern the exact color shade of&nbsp;&nbsp;
+
+00:00:44.800 --> 00:00:49.600
+each state and derive the exact price from that.&nbsp;
+That’s why we incorporated a hover functionality,&nbsp;&nbsp;
+
+00:00:49.600 --> 00:00:57.160
+so you can see the actual average unit price. So&nbsp;
+in Oklahoma, the average unit price was $3.07.&nbsp;&nbsp;
+
+00:00:58.720 --> 00:01:02.140
+The next two interactive features&nbsp;
+are the slider and the dropdown.&nbsp;&nbsp;
+
+00:01:02.860 --> 00:01:07.540
+When you move the slider, the colors of the&nbsp;
+states as well as the legend ticks change to&nbsp;&nbsp;
+
+00:01:07.540 --> 00:01:13.300
+reflect the changing prices. As you can see, both&nbsp;
+the minimum and maximum unit price continuously&nbsp;&nbsp;
+
+00:01:13.300 --> 00:01:18.580
+increase over time which makes sense and shows&nbsp;
+inflation. Now for the dropdown. The initial&nbsp;&nbsp;
+
+00:01:18.580 --> 00:01:23.800
+map is set to view dairy prices, but we can&nbsp;
+choose from any in this list of food categories.&nbsp;&nbsp;
+
+00:01:25.180 --> 00:01:32.140
+Then the last functionality is the click function.&nbsp;
+So, when you click on each state, you can see&nbsp;&nbsp;
+
+00:01:33.640 --> 00:01:38.440
+two graphs pop up on the right that show&nbsp;
+the food stamp usage as well as the unit&nbsp;&nbsp;
+
+00:01:39.280 --> 00:01:43.780
+price throughout the year. Thanks for&nbsp;
+watching and I hope you enjoyed this demo!
+
